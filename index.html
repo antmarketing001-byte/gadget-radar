@@ -7,8 +7,8 @@
 <style>
 /* Layout: compact sticky console header (logo · view tabs · update time + language) over a dense single column.
    Compare = sticky device header + one spec group per row, every row on the same column grid so values sit under their device;
-   prices = sticky budget bar, lane chart, one table per category with one column per RAM/ROM version and a pinned name row;
-   device detail switches versions in place and flashes what changed; header has an Excel export (built in the browser). */
+   prices = sticky budget bar, one table per category with one column per RAM/ROM version and a pinned name row;
+   device detail switches versions in place and flashes what changed; news items open a story pop-up; header has an Excel export (built in the browser). */
 :root{
   --bg:#060A12; --grid:rgba(80,190,240,.045); --panel:#0D1422; --panel2:#111A2B; --line:#1C2840; --line2:#2A3B5E;
   --ink:#E7EEF9; --muted:#8C9CB8; --faint:#5A6A86;
@@ -153,6 +153,32 @@ main{padding-block:14px 64px}
 .chipd{display:inline-flex;align-items:center;gap:4px;height:22px;padding:0 8px;border-radius:5px;border:1px solid var(--line);background:var(--panel2);color:var(--muted);font-size:11px;transition:color .18s,border-color .18s}
 .chipd:hover{color:var(--accent);border-color:var(--accent)}
 .chipd svg{width:11px;height:11px}
+.ni{cursor:pointer}
+.ni:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.ni .more{display:inline-flex;align-items:center;gap:2px;margin-left:auto;font:600 10px var(--f-data);color:var(--faint);transition:color .18s}
+.ni .more svg{width:11px;height:11px}
+.ni:hover .more{color:var(--accent)}
+/* news detail pop-up */
+.panel.mid{width:min(620px,100%)}
+.nwp .nmeta2{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;font:500 10.5px var(--f-data);color:var(--faint)}
+.nwp .nmeta2 span{display:inline-flex;align-items:center;gap:4px}
+.nwp .nmeta2 svg{width:12px;height:12px;color:var(--accent)}
+.nwp h2{margin:10px 0 8px;font-size:18px;font-weight:700;line-height:1.45;letter-spacing:-.005em;text-wrap:pretty}
+.nwp .nsum2{margin:0;padding:10px 12px;border-left:2px solid var(--accent);border-radius:0 8px 8px 0;background:var(--accent-soft);font-size:13.5px;line-height:1.75;color:var(--ink)}
+.nrel{display:grid;gap:6px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.nrd{display:flex;align-items:center;gap:10px;width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:9px;background:var(--panel2);color:inherit;text-align:left;transition:border-color .18s,transform .15s,box-shadow .2s}
+.nrd:hover{border-color:color-mix(in srgb,var(--accent) 55%,var(--line));box-shadow:0 8px 20px -14px var(--accent)}
+.nrd:active{transform:scale(.98)}
+.nrd>svg{color:var(--faint);flex:none}
+.th.tn{width:40px;height:46px}
+.nrt{display:flex;flex-direction:column;gap:2px;min-width:0;flex:1}
+.nrt small{font:500 9px var(--f-data);letter-spacing:.12em;color:var(--faint);text-transform:uppercase}
+.nrt b{font-size:12.5px;font-weight:600;line-height:1.3;overflow-wrap:anywhere}
+.nrp{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;font-size:10px}
+.nrp .tag{font-size:10.5px;line-height:18px}
+.back{width:28px;height:28px;display:grid;place-items:center;border-radius:7px;border:1px solid var(--line);background:var(--panel);color:var(--muted);flex:none;transition:color .18s,border-color .18s}
+.back:hover{color:var(--accent);border-color:var(--accent)}
+.back svg{width:14px;height:14px}
 
 /* ---------- device cards ---------- */
 .ghead{display:flex;align-items:center;gap:8px;margin:18px 0 8px;font:600 10.5px var(--f-data);letter-spacing:.16em;color:var(--muted)}
@@ -473,7 +499,7 @@ table.mx{--lw:84px;--cw:118px;border-collapse:separate;border-spacing:0;table-la
   .search{flex:1 1 100%}
   .search input{width:100%}
   .ov{align-items:flex-end;padding:0}
-  .panel,.panel.small{width:100%;max-height:90vh;border-radius:16px 16px 0 0;border-bottom:0;transform:translateY(100%)}
+  .panel,.panel.small,.panel.mid{width:100%;max-height:90vh;border-radius:16px 16px 0 0;border-bottom:0;transform:translateY(100%)}
   .ov.show .panel{transform:none}
   .pb{padding-bottom:calc(14px + env(safe-area-inset-bottom,0px))}
   .pf{padding-bottom:calc(10px + env(safe-area-inset-bottom,0px))}
@@ -580,7 +606,7 @@ const L={
     add_cat:c=>`添加${c}`,search_cat:c=>`搜索${c}`,no_match:"没有匹配的机型",
     t_added:(c,n)=>`已加入${c}对比 · ${n}/4`,t_removed:c=>`已移出${c}对比`,t_max:"每个品类最多对比 4 款",
     price_title:"价格对比",budget:"预算",range:"范围 ±",under:"预算以内",in_range:(n,a,b)=>`<b>${n}</b> 款在 ${a} – ${b}`,price_empty:"这个价位没有机型，试试放宽范围",
-    health:"健康功能",imp_note:"马来西亚无官方渠道",n_vers:n=>`${n} 个版本`,price_date:"价格更新",mem_title:"按 RAM / ROM 筛选",mem_scope:"仅适用于手机、平板",mem_na:"当前品类没有 RAM / ROM 版本，请切换到手机或平板",mem_clear:"清除筛选",versions:"版本",std_ver:"标准版",new_title:"开卖 30 天内的新机",dl_title:"下载全部内容（Excel）",dl_ok:"Excel 文件已生成",dl_fail:"下载失败，请再试一次",dl_busy:"已有下载确认窗口，请先处理",x_brand:"品牌",x_model:"型号",x_version:"版本",x_price:"现价 (RM)",x_list:"原价 (RM)",x_status:"状态",x_date:"日期",x_region:"地区",x_cat:"品类",x_kind:"类型",x_title:"标题",x_summary:"摘要",x_source:"来源",totop:"回到顶部",yes:"支持",no:"不支持",u_d:"天",u_y:"年"},
+    health:"健康功能",imp_note:"马来西亚无官方渠道",news_detail:"资讯详情",news_more:"详情",news_devs:"相关机型",read_src:"阅读原文",back_news:"返回资讯",n_vers:n=>`${n} 个版本`,price_date:"价格更新",mem_title:"按 RAM / ROM 筛选",mem_scope:"仅适用于手机、平板",mem_na:"当前品类没有 RAM / ROM 版本，请切换到手机或平板",mem_clear:"清除筛选",versions:"版本",std_ver:"标准版",new_title:"开卖 30 天内的新机",dl_title:"下载全部内容（Excel）",dl_ok:"Excel 文件已生成",dl_fail:"下载失败，请再试一次",dl_busy:"已有下载确认窗口，请先处理",x_brand:"品牌",x_model:"型号",x_version:"版本",x_price:"现价 (RM)",x_list:"原价 (RM)",x_status:"状态",x_date:"日期",x_region:"地区",x_cat:"品类",x_kind:"类型",x_title:"标题",x_summary:"摘要",x_source:"来源",totop:"回到顶部",yes:"支持",no:"不支持",u_d:"天",u_y:"年"},
   en:{app:"MY Gadget Radar",tab_news:"News",tab_devices:"Devices",tab_compare:"Compare",tab_price:"Prices",updated:"Updated",upd_title:"Last automatic update",
     r_all:"All",r_my:"Malaysia",r_intl:"Global",n_stories:n=>`${n} stories`,news_empty_my:"No Malaysian news in this category yet",news_empty_intl:"No global news in this category yet",
     search:"Search brand or model",sort_label:"Sort",sort_new:"Newest",sort_pa:"Price low→high",sort_pd:"Price high→low",sort_ai:"Most AI features",n_models:n=>`${n} models`,
@@ -593,7 +619,7 @@ const L={
     add_cat:c=>`Add ${c.toLowerCase()}`,search_cat:c=>`Search ${c.toLowerCase()}`,no_match:"No matching models",
     t_added:(c,n)=>`Added to ${c.toLowerCase()} compare · ${n}/4`,t_removed:c=>`Removed from ${c.toLowerCase()} compare`,t_max:"Up to 4 models per category",
     price_title:"Price finder",budget:"Budget",range:"Range ±",under:"Under budget",in_range:(n,a,b)=>`<b>${n}</b> models between ${a} – ${b}`,price_empty:"No models at this price. Try a wider range.",
-    health:"Health features",imp_note:"Not officially sold in Malaysia",n_vers:n=>`${n} versions`,price_date:"Price checked",mem_title:"Filter by RAM / ROM",mem_scope:"Phones and tablets only",mem_na:"No RAM / ROM versions here. Switch to phones or tablets.",mem_clear:"Clear filter",versions:"Versions",std_ver:"Standard",new_title:"On sale within the last 30 days",dl_title:"Download everything (Excel)",dl_ok:"Excel file ready",dl_fail:"Download failed, please try again",dl_busy:"A download prompt is already open",x_brand:"Brand",x_model:"Model",x_version:"Version",x_price:"Price (RM)",x_list:"List price (RM)",x_status:"Status",x_date:"Date",x_region:"Region",x_cat:"Category",x_kind:"Type",x_title:"Title",x_summary:"Summary",x_source:"Source",totop:"Back to top",yes:"Yes",no:"No",u_d:"days",u_y:"yrs"}
+    health:"Health features",imp_note:"Not officially sold in Malaysia",news_detail:"Story",news_more:"Details",news_devs:"Related models",read_src:"Read the source",back_news:"Back to story",n_vers:n=>`${n} versions`,price_date:"Price checked",mem_title:"Filter by RAM / ROM",mem_scope:"Phones and tablets only",mem_na:"No RAM / ROM versions here. Switch to phones or tablets.",mem_clear:"Clear filter",versions:"Versions",std_ver:"Standard",new_title:"On sale within the last 30 days",dl_title:"Download everything (Excel)",dl_ok:"Excel file ready",dl_fail:"Download failed, please try again",dl_busy:"A download prompt is already open",x_brand:"Brand",x_model:"Model",x_version:"Version",x_price:"Price (RM)",x_list:"List price (RM)",x_status:"Status",x_date:"Date",x_region:"Region",x_cat:"Category",x_kind:"Type",x_title:"Title",x_summary:"Summary",x_source:"Source",totop:"Back to top",yes:"Yes",no:"No",u_d:"days",u_y:"yrs"}
 };
 const KIND={"上市":["launch","Launch"],"价格":["price","Price"],"优惠":["deal","Deal"],"传闻":["rumor","Rumour"],"行业":["","Industry"],"评测":["","Review"],"系统":["","Software"]};
 const STATUS={"在售":["","On sale"],"预购":["pre","Pre-order"],"即将上市":["soon","Coming soon"],"水货":["imp","Grey import"]};
@@ -612,7 +638,8 @@ const IC={
   sliders:SVG('<path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/>'),
   filter:SVG('<path d="M4 5h16l-6 7.5V19l-4 1.5v-8z"/>'),
   tag:SVG('<path d="M3.5 12.2V4.5a1 1 0 0 1 1-1h7.7l8.3 8.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0z"/><circle cx="8" cy="8" r="1.4"/>'),
-  open:SVG('<path d="M9 6l6 6-6 6"/>')
+  open:SVG('<path d="M9 6l6 6-6 6"/>'),
+  back:SVG('<path d="M15 6l-6 6 6 6"/>')
 };
 // rows: [key, zh, en, unit, better]   better: "high" | "low" | "bool" | null (listed only, never ranked)
 const SPEC={
@@ -678,7 +705,7 @@ const PRICED=VITEMS;
 const PMAX=PRICED.length?Math.max(...PRICED.map(d=>d.price_myr)):5000;
 const PTOP=Math.ceil((PMAX+1)/1000)*1000;
 
-const S={lang:"zh",view:"news",cat:"all",region:"all",q:"",sort:"new",brands:[],cmp:{phone:[],tablet:[],earbuds:[],watch:[]},opts:{},pop:null,open:null,pq:"",budget:3000,range:1000,under:false,pbrands:[],mem:{ram:[],rom:[]},vsel:{},flash:null};
+const S={lang:"zh",view:"news",cat:"all",region:"all",q:"",sort:"new",brands:[],cmp:{phone:[],tablet:[],earbuds:[],watch:[]},opts:{},pop:null,open:null,pq:"",budget:3000,range:1000,under:false,pbrands:[],mem:{ram:[],rom:[]},vsel:{},flash:null,back:null};
 
 const $=s=>document.querySelector(s);
 const $$=s=>Array.from(document.querySelectorAll(s));
@@ -819,19 +846,34 @@ function ndate(s){
   return m[3]?`<div class="nd">${m[3]}<small>${mon}</small></div>`:`<div class="nd">${mon}<small>${m[1]}</small></div>`;
 }
 function newsItem(n,i){
-  const url=safeUrl(n.url);
   const devs=arr(n.device_ids).map(id=>BYID.get(id)).filter(Boolean);
   const title=esc(ntxt(n,"title"));
   const k=KIND[n.kind]||["",n.kind||""];
-  return`<article class="ni ${n.region==="MY"?"my":""}" style="--i:${Math.min(i,14)}">
+  return`<article class="ni ${n.region==="MY"?"my":""}" style="--i:${Math.min(i,14)}" data-action="news" data-id="${esc(n.id)}" tabindex="0" role="button" aria-haspopup="dialog" aria-label="${title}">
     ${ndate(n.date)}
     <div style="min-width:0">
-      <div class="nm"><span class="kind ${k[0]}">${esc(S.lang==="en"?k[1]:(n.kind||"资讯"))}</span><span>${esc(n.source||host(n.url))}</span>${CAT_KEYS.includes(n.category)?`<span>${cn(n.category)}</span>`:""}</div>
-      <h3>${url?`<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${title}<span class="ext">↗</span></a>`:title}</h3>
+      <div class="nm"><span class="kind ${k[0]}">${esc(S.lang==="en"?k[1]:(n.kind||"资讯"))}</span><span>${esc(n.source||host(n.url))}</span>${CAT_KEYS.includes(n.category)?`<span>${cn(n.category)}</span>`:""}<span class="more">${T("news_more")}${IC.open}</span></div>
+      <h3>${title}</h3>
       ${ntxt(n,"summary")?`<p>${esc(ntxt(n,"summary"))}</p>`:""}
       ${devs.length?`<div class="ndev">${devs.map(d=>`<button class="chipd" data-action="open" data-id="${esc(d.id)}">${IC[d.category]}${esc(dname(d))}</button>`).join("")}</div>`:""}
     </div>
   </article>`;
+}
+/* news detail pop-up: full summary, related models (tap to open their profile) and the source link */
+function nfull(s){const m=/^(\d{4})-(\d{2})(?:-(\d{2}))?/.exec(String(s||""));if(!m)return"—";if(!m[3])return S.lang==="en"?`${MON[+m[2]-1]} ${m[1]}`:`${m[1]} 年 ${+m[2]} 月`;return S.lang==="en"?`${+m[3]} ${MON[+m[2]-1]} ${m[1]}`:`${m[1]} 年 ${+m[2]} 月 ${+m[3]} 日`}
+function newsHTML(n){
+  const url=safeUrl(n.url);
+  const devs=arr(n.device_ids).map(id=>BYID.get(id)).filter(Boolean);
+  const k=KIND[n.kind]||["",n.kind||""];
+  const my=n.region==="MY";
+  return`<div class="ph"><span class="flag ${my?"":"intl"}">${my?"MY":"INTL"}</span><span class="t">${T("news_detail")}</span><button class="x" data-action="close" aria-label="${T("close")}">${IC.x}</button></div>
+  <div class="pb nwp">
+    <div class="nmeta2"><span class="kind ${k[0]}">${esc(S.lang==="en"?k[1]:(n.kind||"资讯"))}</span><span>${esc(nfull(n.date))}</span><span>${esc(n.source||host(n.url))}</span>${CAT_KEYS.includes(n.category)?`<span>${IC[n.category]}${cn(n.category)}</span>`:""}</div>
+    <h2>${esc(ntxt(n,"title"))}</h2>
+    ${ntxt(n,"summary")?`<p class="nsum2">${esc(ntxt(n,"summary"))}</p>`:""}
+    ${devs.length?`<div class="sec"><div class="sec-h">${T("news_devs")}<span class="n">${devs.length}</span></div><div class="nrel">${devs.map(d=>`<button class="nrd" data-action="open" data-id="${esc(d.id)}">${thumb(d,"tn")}<span class="nrt"><small>${esc(d.brand||"")}</small><b>${esc(d.model||"")}</b><span class="nrp">${price(d)}${status(d)}</span></span>${IC.open}</button>`).join("")}</div></div>`:""}
+  </div>
+  <div class="pf">${url?`<a class="btn pri" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${T("read_src")} ↗</a>`:""}<button class="btn ghost" data-action="close">${T("close")}</button></div>`;
 }
 function renderNews(){
   const list=NEWS.filter(n=>S.cat==="all"||n.category===S.cat);
@@ -1063,7 +1105,7 @@ function deviceHTML(d){
   const feats=arr(dtxt(d,"features")),ai=arr(dtxt(d,"ai_features")),hp=arr(dtxt(d,"health"));
   const srcs=arr(d.sources).map(safeUrl).filter(Boolean);
   const pn=dtxt(d,"price_note");
-  return`<div class="ph"><span class="s">${IC[d.category]}</span><span class="t">${T("profile",cn(d.category))}</span><button class="x" data-action="close" aria-label="${T("close")}">${IC.x}</button></div>
+  return`<div class="ph">${S.back?`<button class="back" data-action="pop-back" aria-label="${T("back_news")}" title="${T("back_news")}">${IC.back}</button>`:""}<span class="s">${IC[d.category]}</span><span class="t">${T("profile",cn(d.category))}</span><button class="x" data-action="close" aria-label="${T("close")}">${IC.x}</button></div>
   <div class="pb">
     <div class="dh">
       ${thumb(d,"td")}
@@ -1140,17 +1182,18 @@ function pbrandsHTML(){
   <div class="pb"><div class="tgs">${list.map(([b,n])=>`<button class="tg ${S.pbrands.includes(b)?"on":""}" data-action="pbrand" data-b="${esc(b)}">${esc(b)}<span class="n">${n}</span></button>`).join("")}</div></div>
   <div class="pf"><button class="btn ghost" data-action="pbrand-clear">${T("pb_clear")}</button><button class="btn pri" data-action="close">${T("done")}</button></div>`;
 }
-const POP={device:()=>{const d=BYID.get(S.open);return d?deviceHTML(d):""},opts:optsHTML,picker:pickerHTML,brands:brandsHTML,pbrands:pbrandsHTML,mem:memHTML};
+const POP={device:()=>{const d=BYID.get(S.open);return d?deviceHTML(d):""},opts:optsHTML,picker:pickerHTML,brands:brandsHTML,pbrands:pbrandsHTML,mem:memHTML,news:()=>{const n=NEWS.find(x=>x.id===S.open);return n?newsHTML(n):""}};
 let closeT=null;
 /* the phone / browser Back button closes an open popup instead of leaving the page behind it */
 let popHist=false;
 function openPop(kind,id){
   if(kind==="device"&&!BYID.get(id))return;
+  if(kind==="news"&&!NEWS.some(x=>x.id===id))return;
   if(!popHist){try{history.pushState({radarPop:1},"",location.href);popHist=true}catch(e){}}
   S.pop=kind;S.open=id||null;
   const ov=$("#ov"),p=$("#panel");
   clearTimeout(closeT);
-  p.className="panel"+(kind==="device"?"":" small");
+  p.className="panel"+(kind==="device"?"":kind==="news"?" mid":" small");
   p.innerHTML=POP[kind]();
   ov.hidden=false;
   requestAnimationFrame(()=>requestAnimationFrame(()=>ov.classList.add("show")));
@@ -1167,7 +1210,7 @@ function repaintDevice(){const p=$("#panel"),pb=p.querySelector&&p.querySelector
 /* keepHist: the popup's history entry was already used up (Back was pressed) or is reused by the caller */
 function closePop(keepHist){
   const ov=$("#ov");
-  ov.classList.remove("show");S.pop=null;S.open=null;S.pq="";
+  ov.classList.remove("show");S.pop=null;S.open=null;S.pq="";S.back=null;
   clearTimeout(closeT);closeT=setTimeout(()=>{if(!S.pop)ov.hidden=true},300);
   if(popHist){popHist=false;if(!keepHist){try{history.back()}catch(e){}}}
 }
@@ -1298,7 +1341,9 @@ document.addEventListener("click",e=>{
     case"lang":if(el.dataset.l!==S.lang){S.lang=el.dataset.l;savePrefs();applyStatic();render();paintPop()}break;
     case"cat":S.cat=el.dataset.c;savePrefs();render();break;
     case"region":S.region=el.dataset.r;renderNews();break;
-    case"open":{const id=el.dataset.id;if(el.dataset.v!=null&&el.dataset.v!=="")S.vsel[id]=+el.dataset.v;else delete S.vsel[id];openPop("device",id);break}
+    case"open":{const id=el.dataset.id;if(el.dataset.v!=null&&el.dataset.v!=="")S.vsel[id]=+el.dataset.v;else delete S.vsel[id];S.back=S.pop==="news"?{kind:"news",id:S.open}:null;openPop("device",id);break}
+    case"news":S.back=null;openPop("news",el.dataset.id);break;
+    case"pop-back":{const b=S.back;S.back=null;if(b)openPop(b.kind,b.id);break}
     case"variant":{const d=BYID.get(el.dataset.id);if(!d)break;const ni=+el.dataset.i;if(ni===vIndex(d))break;const a=curDev(d);S.vsel[d.id]=ni;const b=curDev(d);const keys=[];if(a.price_myr!==b.price_myr)keys.push("price_myr");if(a.launch_my!==b.launch_my)keys.push("launch_my");(SPEC[d.category]||[]).forEach(g=>g.rows.forEach(r=>{if(fmt(val(a,r[0]),r[3])!==fmt(val(b,r[0]),r[3]))keys.push(r[0])}));S.flash={id:d.id,keys};repaintDevice();S.flash=null;break}
     case"xlsx":exportXlsx();break;
     case"close":closePop();break;
@@ -1345,6 +1390,7 @@ document.addEventListener("change",e=>{if(e.target.id==="sort"){S.sort=e.target.
 document.addEventListener("keydown",e=>{
   if(e.key==="Escape"&&S.pop){closePop();return}
   if((e.key==="Enter"||e.key===" ")&&e.target&&e.target.dataset&&e.target.dataset.card){e.preventDefault();openPop("device",e.target.dataset.card)}
+  if((e.key==="Enter"||e.key===" ")&&e.target&&e.target.dataset&&e.target.dataset.action==="news"){e.preventDefault();S.back=null;openPop("news",e.target.dataset.id)}
 });
 window.addEventListener("hashchange",()=>setView(location.hash.slice(1)));
 window.addEventListener("resize",()=>{measure();moveInd()});
@@ -1364,5 +1410,6 @@ measure();
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>{measure();moveInd()});
 })();
 </script>
+
 
 </body></html>
