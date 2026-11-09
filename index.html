@@ -419,7 +419,11 @@ table.mx{--lw:84px;--cw:118px;border-collapse:separate;border-spacing:0;table-la
 .x{margin-left:auto;width:28px;height:28px;display:grid;place-items:center;border-radius:7px;border:1px solid var(--line);background:var(--panel);color:var(--muted);transition:color .18s,border-color .18s}
 .x:hover{color:var(--ink);border-color:var(--line2)}
 .x svg{width:14px;height:14px}
-.pb{padding:14px;overflow:auto;flex:1;min-height:0}
+.pb{padding:14px;overflow:auto;flex:1;min-height:0;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+/* while a pop-up is open the page behind it stays still: the root stops scrolling, the scrim takes no swipe, and the panel never hands its scroll to the page */
+html.lock,html.lock body{overflow:hidden;overscroll-behavior:none}
+.ov{overscroll-behavior:contain}
+.scrim{touch-action:none}
 .pf{display:flex;gap:8px;justify-content:flex-end;padding:10px 14px;border-top:1px solid var(--line);background:var(--panel2);flex:none}
 .dh{display:flex;flex-wrap:wrap;align-items:flex-start;gap:10px 18px}
 .dh .bb{font:500 10px var(--f-data);letter-spacing:.16em;color:var(--faint);text-transform:uppercase}
@@ -1186,6 +1190,16 @@ const POP={device:()=>{const d=BYID.get(S.open);return d?deviceHTML(d):""},opts:
 let closeT=null;
 /* the phone / browser Back button closes an open popup instead of leaving the page behind it */
 let popHist=false;
+/* page scroll lock while a pop-up is open (the scrollbar's width is kept as padding so nothing shifts sideways) */
+let scrollLocked=false;
+function lockScroll(on){
+  const de=document.documentElement,b=document.body;
+  if(!de||!b||!de.classList)return;
+  if(on&&!scrollLocked){const sw=(window.innerWidth||0)-(de.clientWidth||0);scrollLocked=true;de.classList.add("lock");if(sw>0&&b.style)b.style.paddingRight=sw+"px"}
+  else if(!on&&scrollLocked){scrollLocked=false;de.classList.remove("lock");if(b.style)b.style.paddingRight=""}
+}
+/* older phone browsers ignore overflow:hidden for touch: block swipes that start outside the panel's scrolling area */
+document.addEventListener("touchmove",e=>{if(scrollLocked&&!(e.target&&e.target.closest&&e.target.closest(".pb")))e.preventDefault()},{passive:false});
 function openPop(kind,id){
   if(kind==="device"&&!BYID.get(id))return;
   if(kind==="news"&&!NEWS.some(x=>x.id===id))return;
@@ -1195,7 +1209,7 @@ function openPop(kind,id){
   clearTimeout(closeT);
   p.className="panel"+(kind==="device"?"":kind==="news"?" mid":" small");
   p.innerHTML=POP[kind]();
-  ov.hidden=false;
+  ov.hidden=false;lockScroll(true);
   requestAnimationFrame(()=>requestAnimationFrame(()=>ov.classList.add("show")));
   const x=p.querySelector&&p.querySelector(".x");if(x&&x.focus)setTimeout(()=>x.focus({preventScroll:true}),40);
 }
@@ -1210,7 +1224,7 @@ function repaintDevice(){const p=$("#panel"),pb=p.querySelector&&p.querySelector
 /* keepHist: the popup's history entry was already used up (Back was pressed) or is reused by the caller */
 function closePop(keepHist){
   const ov=$("#ov");
-  ov.classList.remove("show");S.pop=null;S.open=null;S.pq="";S.back=null;
+  ov.classList.remove("show");S.pop=null;S.open=null;S.pq="";S.back=null;lockScroll(false);
   clearTimeout(closeT);closeT=setTimeout(()=>{if(!S.pop)ov.hidden=true},300);
   if(popHist){popHist=false;if(!keepHist){try{history.back()}catch(e){}}}
 }
