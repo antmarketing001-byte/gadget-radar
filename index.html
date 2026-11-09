@@ -495,8 +495,7 @@ table.mx{--lw:84px;--cw:118px;border-collapse:separate;border-spacing:0;table-la
   .mx th,.mx td{padding:5px 5px}
   .bud-in input{width:70px}
   .ptb .ttl{display:none}
-  /* phones: nothing floats over the content. Back-to-top = tap the active bottom tab; the price controls scroll away so only the model names stay pinned */
-  .totop{display:none}
+  /* phones: tapping the active bottom tab also scrolls to the top; the price controls scroll away so only the model names stay pinned */
   .ptb{position:static;margin:0 0 8px;padding:0}
   .ptb .sp{display:none}
   .mxh{top:calc(var(--hh) + env(safe-area-inset-top,0px))}
@@ -966,8 +965,8 @@ function renderPrice(){
   $("#v-price").innerHTML=`<div class="ptb"><div class="tb">
       <div class="ttl">${IC.tag}${T("price_title")}</div>
       <span class="sp"></span>
-      <label class="bud-in"><span>${T("budget")} RM</span><input id="budget" type="number" inputmode="numeric" min="0" step="100" value="${S.budget}" aria-label="${T("budget")}"></label>
-      <label class="bud-in ${S.under?"off":""}" id="range-wrap"><span>${T("range")} RM</span><input id="range" type="number" inputmode="numeric" min="0" step="100" value="${S.range}" aria-label="${T("range")}" ${S.under?"disabled":""}></label>
+      <label class="bud-in"><span>${T("budget")} RM</span><input id="budget" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" value="${S.budget}" aria-label="${T("budget")}"></label>
+      <label class="bud-in ${S.under?"off":""}" id="range-wrap"><span>${T("range")} RM</span><input id="range" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" value="${S.range}" aria-label="${T("range")}" ${S.under?"disabled":""}></label>
       <button class="btn ${S.under?"act":""}" id="under-btn" data-action="under" aria-pressed="${S.under}">${T("under")}</button>
       <button class="btn" id="mem-btn" data-action="mem"></button>
       <button class="btn" id="pbrand-btn" data-action="pbrands"></button>
@@ -989,31 +988,11 @@ function renderPriceRes(){
   const [lo,hi]=bounds();
   const cats=S.cat==="all"?CAT_KEYS:[S.cat];
   const inR=d=>typeof d.price_myr==="number"&&d.price_myr>=lo&&d.price_myr<=hi&&memOK(d);
-  const pct=v=>Math.max(0,Math.min(100,v/PTOP*100));
-  const step=PTOP<=10000?1000:2000;
-  const ticks=[];for(let v=0;v<=PTOP;v+=step)ticks.push(v);
-  const narrow=window.matchMedia&&matchMedia("(max-width:760px)").matches;
-  const maxLv=narrow?4:2,gapPct=narrow?2.8:2.4;
-  const lanes=cats.map(c=>{
-    const items=PRICED.filter(d=>d.category===c).sort((a,b)=>a.price_myr-b.price_myr);
-    const last=Array(maxLv+1).fill(-99);
-    const dots=items.map(d=>{const p=pct(d.price_myr);let lv=0;while(lv<maxLv&&p-last[lv]<gapPct)lv++;last[lv]=p;
-      return`<button class="pdot c${CAT_KEYS.indexOf(c)} ${inR(d)?"in":""}${S.pbrands.length?(S.pbrands.includes(d.brand)?" hl":" dm"):""}" style="left:${p.toFixed(2)}%;top:${4+lv*9}px" data-action="open" data-id="${esc(d.id)}" data-v="${d._vi!=null?d._vi:""}" title="${esc(dname(d))}${d._v?" "+esc(vlabel(d._v)):""} · ${esc(rm(d.price_myr))}" aria-label="${esc(dname(d))}${d._v?" "+esc(vlabel(d._v)):""} ${esc(rm(d.price_myr))}"></button>`}).join("");
-    return{c,dots};
-  });
-  const lad=`<div class="lad-wrap"><div class="lad">
-    <div>${lanes.map(l=>`<div class="ln c${CAT_KEYS.indexOf(l.c)}">${IC[l.c]}<span>${cn(l.c)}</span></div>`).join("")}<div class="ln ax"></div></div>
-    <div class="plot">
-      <div class="band" style="left:${pct(lo).toFixed(2)}%;width:${(pct(hi)-pct(lo)).toFixed(2)}%"></div>
-      <div class="budl" style="left:${pct(S.budget).toFixed(2)}%"><b>${esc(rm(S.budget))}</b></div>
-      ${lanes.map(l=>`<div class="track">${l.dots}</div>`).join("")}
-      <div class="axis">${ticks.map(v=>`<span style="left:${pct(v).toFixed(2)}%">${v?v/1000+"k":"0"}</span>`).join("")}</div>
-    </div></div></div>`;
   const total=cats.reduce((n,c)=>n+PRICED.filter(d=>d.category===c&&inR(d)).length,0);
   const anyRank=cats.some(c=>PRICED.filter(d=>d.category===c&&inR(d)).length>3);
   const sum=`<div class="psum"><span>${T("in_range",total,esc(rm(lo)),esc(rm(hi)))}</span>${legendHTML(anyRank)}</div>`;
   const sections=cats.map(c=>matrixHTML(c,PRICED.filter(d=>d.category===c&&inR(d)))).filter(Boolean);
-  $("#price-res").innerHTML=lad+sum+(sections.length?`<div class="pgroups">${sections.join("")}</div>`:`<div class="empty"><p>${T("price_empty")}</p></div>`);
+  $("#price-res").innerHTML=sum+(sections.length?`<div class="pgroups">${sections.join("")}</div>`:`<div class="empty"><p>${T("price_empty")}</p></div>`);
   measure();
 }
 
@@ -1162,8 +1141,11 @@ function pbrandsHTML(){
 }
 const POP={device:()=>{const d=BYID.get(S.open);return d?deviceHTML(d):""},opts:optsHTML,picker:pickerHTML,brands:brandsHTML,pbrands:pbrandsHTML,mem:memHTML};
 let closeT=null;
+/* the phone / browser Back button closes an open popup instead of leaving the page behind it */
+let popHist=false;
 function openPop(kind,id){
   if(kind==="device"&&!BYID.get(id))return;
+  if(!popHist){try{history.pushState({radarPop:1},"",location.href);popHist=true}catch(e){}}
   S.pop=kind;S.open=id||null;
   const ov=$("#ov"),p=$("#panel");
   clearTimeout(closeT);
@@ -1181,11 +1163,14 @@ function paintPop(){
   p.innerHTML=html;
 }
 function repaintDevice(){const p=$("#panel"),pb=p.querySelector&&p.querySelector(".pb"),st=pb?pb.scrollTop:0;paintPop();const pb2=p.querySelector&&p.querySelector(".pb");if(pb2)pb2.scrollTop=st}
-function closePop(){
+/* keepHist: the popup's history entry was already used up (Back was pressed) or is reused by the caller */
+function closePop(keepHist){
   const ov=$("#ov");
   ov.classList.remove("show");S.pop=null;S.open=null;S.pq="";
   clearTimeout(closeT);closeT=setTimeout(()=>{if(!S.pop)ov.hidden=true},300);
+  if(popHist){popHist=false;if(!keepHist){try{history.back()}catch(e){}}}
 }
+window.addEventListener("popstate",()=>{if(S.pop){popHist=false;closePop(true)}else popHist=false});
 
 /* ---------- Excel export: a real .xlsx written in the browser (stored zip + inline strings), one sheet per category, one row per version ---------- */
 const CRC=(()=>{const t=new Uint32Array(256);for(let n=0;n<256;n++){let c=n;for(let k=0;k<8;k++)c=c&1?0xEDB88320^(c>>>1):c>>>1;t[n]=c>>>0}return t})();
@@ -1319,7 +1304,7 @@ document.addEventListener("click",e=>{
     case"top":toTop();break;
     case"toggle-cmp":toggleCmp(el.dataset.id);break;
     case"clear-cmp":S.cmp[cmpCat()]=[];savePrefs();render();break;
-    case"go-cmp":S.cat=el.dataset.c;savePrefs();closePop();if(location.hash==="#compare")setView("compare");else location.hash="compare";break;
+    case"go-cmp":{S.cat=el.dataset.c;savePrefs();const had=popHist;closePop(true);if(had){try{history.replaceState(null,"","#compare")}catch(e){}setView("compare")}else if(location.hash==="#compare")setView("compare");else location.hash="compare";break}
     case"picker":S.pq="";openPop("picker");break;
     case"opts":openPop("opts");break;
     case"brands":openPop("brands");break;
@@ -1345,8 +1330,10 @@ document.addEventListener("input",e=>{
   const t=e.target;
   if(t.id==="q"){S.q=t.value;renderDevices()}
   else if(t.id==="pq"){S.pq=t.value;const l=document.getElementById("pk-list");if(l)l.innerHTML=pickListHTML()}
-  else if(t.id==="budget"||t.id==="range"){const v=Math.round(Number(t.value));if(t.value!==""&&Number.isFinite(v)&&v>=0){if(t.id==="budget")S.budget=v;else S.range=v;savePrefs();renderPriceRes()}}
+  else if(t.id==="budget"||t.id==="range"){const raw=String(t.value).replace(/[^\d]/g,"");if(raw!==""){const v=Number(raw);if(Number.isFinite(v)&&v>=0){if(t.id==="budget")S.budget=v;else S.range=v;savePrefs();renderPriceRes()}}}
 });
+/* budget / range: a left-empty field shows the value in use again instead of staying blank */
+document.addEventListener("focusout",e=>{const t=e.target;if(t&&(t.id==="budget"||t.id==="range")&&String(t.value).replace(/[^\d]/g,"")==="")t.value=String(t.id==="budget"?S.budget:S.range)});
 document.addEventListener("change",e=>{if(e.target.id==="sort"){S.sort=e.target.value;savePrefs();renderDevices()}});
 document.addEventListener("keydown",e=>{
   if(e.key==="Escape"&&S.pop){closePop();return}
