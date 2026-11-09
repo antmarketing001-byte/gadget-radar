@@ -700,8 +700,9 @@ function loadPrefs(){
     if(["new","price-asc","price-desc","ai"].includes(o.sort))S.sort=o.sort;
     if(o.lang==="en"||o.lang==="zh")S.lang=o.lang;
     if(Array.isArray(o.brands))S.brands=o.brands.filter(b=>typeof b==="string");
-    if(typeof o.budget==="number"&&o.budget>=0)S.budget=o.budget;
-    if(typeof o.range==="number"&&o.range>=0)S.range=o.range;
+    /* a saved 0 came from the old scroll-wheel bug, so 0 falls back to the defaults (RM3,000 ± RM1,000) */
+    if(typeof o.budget==="number"&&o.budget>0)S.budget=o.budget;
+    if(typeof o.range==="number"&&o.range>0)S.range=o.range;
     if(typeof o.under==="boolean")S.under=o.under;
     if(Array.isArray(o.pbrands))S.pbrands=o.pbrands.filter(b=>typeof b==="string");
     if(o.mem&&typeof o.mem==="object")S.mem={ram:arr(o.mem.ram).filter(n=>typeof n==="number"),rom:arr(o.mem.rom).filter(n=>typeof n==="number")};
@@ -1332,6 +1333,12 @@ document.addEventListener("input",e=>{
   else if(t.id==="pq"){S.pq=t.value;const l=document.getElementById("pk-list");if(l)l.innerHTML=pickListHTML()}
   else if(t.id==="budget"||t.id==="range"){const raw=String(t.value).replace(/[^\d]/g,"");if(raw!==""){const v=Number(raw);if(Number.isFinite(v)&&v>=0){if(t.id==="budget")S.budget=v;else S.range=v;savePrefs();renderPriceRes()}}}
 });
+/* budget / range: tapping the field selects the whole number, so typing replaces it without deleting first */
+const isBud=t=>t&&(t.id==="budget"||t.id==="range");
+function selAll(t){try{t.setSelectionRange(0,String(t.value).length)}catch(e){try{t.select()}catch(e2){}}}
+document.addEventListener("focusin",e=>{const t=e.target;if(!isBud(t))return;t._sel=1;selAll(t);setTimeout(()=>{if(document.activeElement===t)selAll(t)},0)});
+document.addEventListener("pointerup",e=>{const t=e.target;if(isBud(t)&&t._sel){t._sel=0;e.preventDefault();selAll(t);setTimeout(()=>selAll(t),0)}});
+document.addEventListener("click",e=>{const t=e.target;if(isBud(t)&&t._sel){t._sel=0;selAll(t)}});
 /* budget / range: a left-empty field shows the value in use again instead of staying blank */
 document.addEventListener("focusout",e=>{const t=e.target;if(t&&(t.id==="budget"||t.id==="range")&&String(t.value).replace(/[^\d]/g,"")==="")t.value=String(t.id==="budget"?S.budget:S.range)});
 document.addEventListener("change",e=>{if(e.target.id==="sort"){S.sort=e.target.value;savePrefs();renderDevices()}});
