@@ -648,19 +648,21 @@ const IC={
 // rows: [key, zh, en, unit, better]   better: "high" | "low" | "bool" | null (listed only, never ranked)
 const SPEC={
   phone:[
-    {g:"screen",zh:"屏幕",en:"Display",rows:[["display_size_in","尺寸","Size","″",null],["display_type","类型","Type","",null],["resolution","分辨率","Resolution","",null],["cover_size_in","外屏尺寸","Cover screen","″",null],["cover_type","外屏类型","Cover type","",null],["refresh_hz","刷新率","Refresh","Hz","high"],["brightness_nits","峰值亮度","Peak brightness","nits","high"]]},
+    {g:"screen",zh:"屏幕",en:"Display",rows:[["display_size_in","尺寸","Size","″",null],["display_type","类型","Type","",null],["resolution","分辨率","Resolution","",null],["cover_size_in","外屏尺寸","Cover screen","″",null],["cover_type","外屏类型","Cover type","",null],["refresh_hz","刷新率","Refresh","Hz","high"],["brightness_nits","峰值亮度","Peak brightness","nits","high"],["dimming","调光","Dimming","",null]]},
     {g:"perf",zh:"性能",en:"Performance",rows:[["chipset","芯片","Chip","",null],["antutu","安兔兔跑分","AnTuTu","score","high"],["ram_gb","内存","RAM","GB","high"],["storage_gb","存储","Storage","storage","high"]]},
     {g:"camera",zh:"相机",en:"Camera",rows:[["main_cam_mp","主摄","Main","MP","high"],["ultrawide_mp","超广角","Ultrawide","MP","high"],["tele_mp","长焦","Telephoto","MP","high"],["zoom_x","光学变焦","Optical zoom","×","high"],["front_mp","前置","Front","MP","high"]]},
     {g:"battery",zh:"电池",en:"Battery",rows:[["battery_mah","容量","Capacity","mAh","high"],["wired_w","有线快充","Wired","W","high"],["wireless_w","无线充电","Wireless","W","high"]]},
+    {g:"more",zh:"散热 · 扬声器 · 认证",en:"Cooling · Speakers · Certifications",rows:[["cooling","散热","Cooling","",null],["speakers","扬声器","Speakers","",null],["certs","认证","Certifications","",null]]},
     {g:"body",zh:"机身",en:"Body",rows:[["weight_g","重量","Weight","g","low"],["thickness_mm","厚度","Thickness","mm","low"],["thickness_folded_mm","折叠厚度","Folded thickness","mm","low"],["thickness_unfolded_mm","展开厚度","Unfolded thickness","mm","low"],["thickness_note","厚度说明","Thickness note","",null],["ip","防护","Rating","",null]]},
     {g:"sys",zh:"系统",en:"Software",rows:[["os","系统","OS","",null],["update_years","更新承诺","Updates","y","high"]]},
     {g:"price",zh:"价格",en:"Price",rows:[["price_myr","起售价","From","RM",null]]}
   ],
   tablet:[
-    {g:"screen",zh:"屏幕",en:"Display",rows:[["display_size_in","尺寸","Size","″",null],["display_type","类型","Type","",null],["resolution","分辨率","Resolution","",null],["refresh_hz","刷新率","Refresh","Hz","high"],["brightness_nits","峰值亮度","Peak brightness","nits","high"]]},
+    {g:"screen",zh:"屏幕",en:"Display",rows:[["display_size_in","尺寸","Size","″",null],["display_type","类型","Type","",null],["resolution","分辨率","Resolution","",null],["refresh_hz","刷新率","Refresh","Hz","high"],["brightness_nits","峰值亮度","Peak brightness","nits","high"],["dimming","调光","Dimming","",null]]},
     {g:"perf",zh:"性能",en:"Performance",rows:[["chipset","芯片","Chip","",null],["antutu","安兔兔跑分","AnTuTu","score","high"],["ram_gb","内存","RAM","GB","high"],["storage_gb","存储","Storage","storage","high"]]},
     {g:"camera",zh:"相机",en:"Camera",rows:[["rear_mp","后摄","Rear","MP","high"],["front_mp","前置","Front","MP","high"]]},
     {g:"battery",zh:"电池",en:"Battery",rows:[["battery_mah","容量","Capacity","mAh","high"],["wired_w","有线快充","Wired","W","high"]]},
+    {g:"more",zh:"散热 · 扬声器 · 认证",en:"Cooling · Speakers · Certifications",rows:[["cooling","散热","Cooling","",null],["speakers","扬声器","Speakers","",null],["certs","认证","Certifications","",null]]},
     {g:"body",zh:"机身",en:"Body",rows:[["weight_g","重量","Weight","g","low"],["thickness_mm","厚度","Thickness","mm","low"]]},
     {g:"conn",zh:"配件与网络",en:"Accessories & network",rows:[["stylus","手写笔","Stylus","",null],["cellular","蜂窝版","Cellular","","bool"]]},
     {g:"sys",zh:"系统",en:"Software",rows:[["os","系统","OS","",null]]},
