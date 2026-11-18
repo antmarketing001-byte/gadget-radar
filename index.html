@@ -488,6 +488,23 @@ html.lock,html.lock body{overflow:hidden;overscroll-behavior:none}
 .pk .nm2 small{display:block;font:500 9.5px var(--f-data);letter-spacing:.1em;color:var(--faint);text-transform:uppercase}
 .pk .pp{margin-left:auto;font:500 11px var(--f-data);color:var(--muted);white-space:nowrap}
 .pk:disabled{opacity:.45;cursor:not-allowed}
+.tg.part{color:var(--ink);border-color:color-mix(in srgb,var(--accent) 45%,var(--line));background:var(--accent-soft)}
+.tg.part::before{background:linear-gradient(var(--accent),var(--accent)) center/7px 2px no-repeat;box-shadow:inset 0 0 0 1.5px var(--accent)}
+.tg.gh{font-weight:600}
+.tg.dim{opacity:.5}
+.tgs.rows{margin:7px 0 0 2px;gap:5px}
+.tgs.rows .tg{height:26px;padding:0 9px;font-size:11.5px;gap:6px}
+.tgs.rows .tg::before{width:9px;height:9px}
+.grp{margin:0 0 12px;padding:0 0 11px;border-bottom:1px dashed var(--line)}
+.grp:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+.grp .gl{font:600 11px var(--f-body);color:var(--accent);margin:0 0 6px}
+.ohint{margin:8px 0 0;font-size:11px;line-height:1.5;color:var(--faint)}
+.og .lbl .cnt2{margin-left:8px;color:var(--accent);letter-spacing:0}
+.ocats{display:flex;width:100%}
+.ocats button{flex:1;min-width:0;padding:0 4px;display:inline-flex;align-items:center;justify-content:center;gap:4px}
+.ocats .n{font:500 9.5px var(--f-data);color:var(--faint)}
+.ncols.one{max-width:860px}
+.ohint+.grp{margin-top:12px}
 
 .toast{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom,0px));z-index:80;display:flex;align-items:center;gap:8px;max-width:calc(100% - 32px);padding:8px 14px;border-radius:9px;border:1px solid color-mix(in srgb,var(--accent) 40%,var(--line));background:var(--panel2);color:var(--ink);font-size:12px;box-shadow:var(--shadow);transform:translate(-50%,12px);opacity:0;transition:opacity .2s,transform .28s cubic-bezier(.2,.8,.2,1);pointer-events:none}
 .toast.show{opacity:1;transform:translate(-50%,0)}
@@ -623,7 +640,7 @@ const L={
     cmp_title:c=>`${c}对比`,add_model:"添加机型",add_short:"添加",models:"机型",options:"对比内容",clear:"清空",pick_more:(n,c)=>`再选 ${n} 款${c}开始对比`,max_per:"同品类最多 4 款",
     leads:n=>`最优 ×${n}`,best:"优",adv:n=>`优势 ${n} 项`,best_note:"该项最优",rank_note:"超过 3 款时显示前三名",pb_title:"突出显示品牌",pb_clear:"取消突出",rows:n=>`${n} 项`,rank:"名次",hi_better:"↑ 越高越好",lo_better:"↓ 越低越好",listed:"并列展示 · 不评高低",features:"软件功能",feat_short:"软件",ai:"AI 功能",not_listed:"来源未列出",no_opts:"没有选择任何对比内容，点「对比内容」勾选",
     profile:c=>`${c} · 机型资料`,my_launch:"大马上市",specs:"配置",none_official:"官网资料暂未列出",sources:"来源",close:"关闭",
-    opt_groups:"配置分组",opt_feats:"功能",opt_display:"显示",diff_only:"只看有差异的项",show_all:"全部显示",done:"完成",
+    opt_groups:"配置分组",opt_feats:"功能",opt_display:"显示",diff_only:"只看有差异的项",show_all:"全部显示",done:"完成",opt_rows:"具体项目（点选显示 / 隐藏）",opt_cat:"品类",opt_marks:"显示最优 / 排名标记",opt_core:"仅核心",opt_card:"卡片上显示的规格",opt_card_hint:n=>`列表卡片最多显示 ${n} 项，点选添加或取消`,card_max:n=>`卡片最多 ${n} 项，请先取消一项`,card_reset:"恢复默认",opt_hint_price:"排序和「优势」只按显示的项目计算",news_empty_all:"这个品类暂时没有资讯",
     add_cat:c=>`添加${c}`,search_cat:c=>`搜索${c}`,no_match:"没有匹配的机型",
     t_added:(c,n)=>`已加入${c}对比 · ${n}/4`,t_removed:c=>`已移出${c}对比`,t_max:"每个品类最多对比 4 款",
     price_title:"价格对比",budget:"预算",range:"范围 ±",under:"预算以内",in_range:(n,a,b)=>`<b>${n}</b> 款在 ${a} – ${b}`,promo:"限时优惠",promo_until:d=>`限时优惠 · 至 ${d}`,pv_label:"显示方式",pv_list:"列表",pv_table:"对比表",list_note:"优势多的排前面，点开看详情",swipe:"左右滑动看全部",price_empty:"这个价位没有机型，试试放宽范围",
@@ -636,7 +653,7 @@ const L={
     cmp_title:c=>`Compare ${c}`,add_model:"Add model",add_short:"Add",models:"Models",options:"Options",clear:"Clear",pick_more:(n,c)=>`Pick ${n} more ${c.toLowerCase()} to compare`,max_per:"Up to 4 per category",
     leads:n=>`Best ×${n}`,best:"Best",adv:n=>`${n} wins`,best_note:"best in this row",rank_note:"top 3 shown when more than 3 models",pb_title:"Highlight brands",pb_clear:"No highlight",rows:n=>`${n} rows`,rank:"Rank",hi_better:"↑ higher is better",lo_better:"↓ lower is better",listed:"Side by side · not ranked",features:"Software features",feat_short:"Software",ai:"AI features",not_listed:"Not listed",no_opts:"Nothing selected. Open Options to choose what to compare.",
     profile:c=>`${c} · Profile`,my_launch:"MY launch",specs:"Specs",none_official:"Not listed on the official site yet",sources:"Sources",close:"Close",
-    opt_groups:"Spec groups",opt_feats:"Features",opt_display:"Display",diff_only:"Differences only",show_all:"Show all",done:"Done",
+    opt_groups:"Spec groups",opt_feats:"Features",opt_display:"Display",diff_only:"Differences only",show_all:"Show all",done:"Done",opt_rows:"Items (tap to show or hide)",opt_cat:"Category",opt_marks:"Best / rank marks",opt_core:"Essentials",opt_card:"Specs on each card",opt_card_hint:n=>`Up to ${n} specs on each list card; tap to add or remove`,card_max:n=>`Up to ${n} specs per card; remove one first`,card_reset:"Reset",opt_hint_price:"Order and “wins” count only the items shown",news_empty_all:"No news in this category yet",
     add_cat:c=>`Add ${c.toLowerCase()}`,search_cat:c=>`Search ${c.toLowerCase()}`,no_match:"No matching models",
     t_added:(c,n)=>`Added to ${c.toLowerCase()} compare · ${n}/4`,t_removed:c=>`Removed from ${c.toLowerCase()} compare`,t_max:"Up to 4 models per category",
     price_title:"Price finder",budget:"Budget",range:"Range ±",under:"Under budget",in_range:(n,a,b)=>`<b>${n}</b> models between ${a} – ${b}`,promo:"Limited-time price",promo_until:d=>`Promo until ${d}`,pv_label:"View",pv_list:"List",pv_table:"Table",list_note:"Most wins first · tap for details",swipe:"swipe sideways for all",price_empty:"No models at this price. Try a wider range.",
@@ -740,7 +757,7 @@ const PRICED=VITEMS;
 const PMAX=PRICED.length?Math.max(...PRICED.map(d=>d.price_myr)):5000;
 const PTOP=Math.ceil((PMAX+1)/1000)*1000;
 
-const S={lang:"zh",view:"news",cat:"all",region:"all",q:"",sort:"new",brands:[],cmp:{phone:[],tablet:[],earbuds:[],watch:[]},opts:{},pop:null,open:null,pq:"",budget:3000,range:1000,under:false,pbrands:[],mem:{ram:[],rom:[]},pview:"list",vsel:{},flash:null,back:null};
+const S={lang:"zh",view:"news",cat:"all",region:"all",q:"",sort:"new",brands:[],cmp:{phone:[],tablet:[],earbuds:[],watch:[]},opts:{},pop:null,open:null,pq:"",budget:3000,range:1000,under:false,pbrands:[],mem:{ram:[],rom:[]},pview:"list",popts:{},oscope:"cmp",ocat:"phone",vsel:{},flash:null,back:null};
 
 const $=s=>document.querySelector(s);
 const $$=s=>Array.from(document.querySelectorAll(s));
@@ -768,10 +785,11 @@ function loadPrefs(){
     if(typeof o.under==="boolean")S.under=o.under;
     if(Array.isArray(o.pbrands))S.pbrands=o.pbrands.filter(b=>typeof b==="string");
     if(o.pview==="list"||o.pview==="table")S.pview=o.pview;
+    if(o.popts&&typeof o.popts==="object")S.popts=o.popts;
     if(o.mem&&typeof o.mem==="object")S.mem={ram:arr(o.mem.ram).filter(n=>typeof n==="number"),rom:arr(o.mem.rom).filter(n=>typeof n==="number")};
   }catch(e){}
 }
-function savePrefs(){try{localStorage.setItem("radar-v3",JSON.stringify({cmp:S.cmp,opts:S.opts,cat:S.cat,sort:S.sort,lang:S.lang,brands:S.brands,budget:S.budget,range:S.range,under:S.under,pbrands:S.pbrands,mem:S.mem,pview:S.pview}))}catch(e){}}
+function savePrefs(){try{localStorage.setItem("radar-v3",JSON.stringify({cmp:S.cmp,opts:S.opts,cat:S.cat,sort:S.sort,lang:S.lang,brands:S.brands,budget:S.budget,range:S.range,under:S.under,pbrands:S.pbrands,mem:S.mem,pview:S.pview,popts:S.popts}))}catch(e){}}
 
 /* ---------- data access (English falls back to Chinese) ---------- */
 function enDev(d){return S.lang==="en"&&EN.devices?EN.devices[d.id]:null}
@@ -813,8 +831,24 @@ function isNew(d){if((d.status||"在售")!=="在售")return false;const t=launch
 function status(d){const s=STATUS[d.status||"在售"]||["",d.status];const nw=isNew(d)||(!d._v&&vlist(d).some(v=>v.launch_my&&isNew(vdev(d,v))));return`<span class="st ${s[0]}">${esc(S.lang==="en"?s[1]:(d.status||"在售"))}</span>${nw?`<span class="nw" title="${T("new_title")}">NEW</span>`:""}`}
 const vlabel=v=>v?(S.lang==="en"&&v.label_en?v.label_en:(v.label||"")):"";
 function thumb(d,cls){const src=d.image&&/^img\/[\w-]+\/[\w-]+\.png$/.test(d.image)?d.image:"";return`<span class="th ${cls||""}${src?"":" ph"}">${src?`<img src="${esc(src)}" alt="" loading="lazy" decoding="async">`:IC[d.category]||""}</span>`}
-function opts(cat){const o=S.opts[cat]||{};return{off:arr(o.off),feat:o.feat!==false,ai:o.ai!==false,health:o.health!==false,diff:!!o.diff}}
-function setOpts(cat,p){S.opts[cat]=Object.assign(opts(cat),p);savePrefs()}
+/* content options exist twice with the same shape: sc "cmp" = compare page, sc "price" = price page. off = hidden groups, hide = hidden single rows */
+function opts(cat,sc){const o=((sc==="price"?S.popts:S.opts)||{})[cat]||{};return{off:arr(o.off),hide:arr(o.hide),feat:o.feat!==false,ai:o.ai!==false,health:o.health!==false,diff:!!o.diff,marks:o.marks!==false,card:Array.isArray(o.card)?o.card:null}}
+function setOpts(cat,p,sc){const st=sc==="price"?S.popts:S.opts;st[cat]=Object.assign(opts(cat,sc),p);savePrefs()}
+const rowOn=(o,g,k)=>!o.off.includes(g.g)&&!o.hide.includes(k);
+const popGroups=(cat,sc)=>(SPEC[cat]||[]).filter(g=>sc==="price"?g.g!=="price":true);
+function gstate(o,g){const n=g.rows.filter(r=>rowOn(o,g,r[0])).length;return n===g.rows.length?"on":n?"part":"off"}
+/* how many things the user switched off (badge on the price page button) */
+function ocustom(c,sc){const o=opts(c,sc);let n=0;for(const g of popGroups(c,sc))for(const r of g.rows)if(!rowOn(o,g,r[0]))n++;return n+(!o.feat?1:0)+(!o.ai?1:0)+(c==="watch"&&!o.health?1:0)+(o.diff?1:0)+(!o.marks?1:0)+(sc==="price"&&o.card?1:0)}
+const KEYROWS={phone:["display_size_in","refresh_hz","brightness_nits","chipset","ram_gb","storage_gb","main_cam_mp","battery_mah","wired_w","weight_g"],tablet:["display_size_in","refresh_hz","chipset","ram_gb","storage_gb","battery_mah","weight_g","cellular"],earbuds:["anc","anc_db","battery_total_h","bt_version","ip"],watch:["display_size_in","battery_days","water","gps","lte"]};
+const CARDMAX=6;
+/* on a card the label stands without its group heading, so a few generic row names get a clearer one */
+const CLAB={battery_mah:["电池","Battery"],display_size_in:["屏幕","Screen"],display_type:["面板","Panel"]};
+const clab=r=>{const o=CLAB[r[0]];return o?(S.lang==="en"?o[1]:o[0]):(S.lang==="en"?r[2]:r[1])};
+const oscope=()=>S.oscope==="price"?"price":"cmp";
+const ocat=()=>oscope()==="price"?(CAT_KEYS.includes(S.ocat)?S.ocat:"phone"):cmpCat();
+function optCatDefault(){if(S.cat!=="all")return S.cat;return CAT_KEYS.find(k=>PRICED.some(d=>d.category===k&&inPrice(d)))||"phone"}
+function oitems(cat,sc){return sc==="price"?PRICED.filter(d=>d.category===cat&&inPrice(d)):S.cmp[cat].map(id=>BYID.get(id)).filter(Boolean)}
+function cardRows(cat){const o=opts(cat,"price");if(!o.card)return HEAD[cat]||[];const set=new Set(o.card),out=[];for(const g of SPEC[cat]||[])for(const r of g.rows)if(set.has(r[0])){const o=CLAB[r[0]];out.push([r[0],o?o[0]:r[1],o?o[1]:r[2]])}return out}
 function cmpCat(){return S.cat==="all"?(CAT_KEYS.find(k=>S.cmp[k].length)||"phone"):S.cat}
 function rowOf(cat,k){for(const g of SPEC[cat]||[])for(const r of g.rows)if(r[0]===k)return r;return null}
 /* dense ranking: equal values share a place; places 1–3 get a badge; yes/no rows only mark the "yes" side */
@@ -887,14 +921,14 @@ function ndate(s){
   const mon=MON[Number(m[2])-1]||m[2];
   return m[3]?`<div class="nd">${m[3]}<small>${mon}</small></div>`:`<div class="nd">${mon}<small>${m[1]}</small></div>`;
 }
-function newsItem(n,i){
+function newsItem(n,i,flag){
   const devs=arr(n.device_ids).map(id=>BYID.get(id)).filter(Boolean);
   const title=esc(ntxt(n,"title"));
   const k=KIND[n.kind]||["",n.kind||""];
   return`<article class="ni ${n.region==="MY"?"my":""}" style="--i:${Math.min(i,14)}" data-action="news" data-id="${esc(n.id)}" tabindex="0" role="button" aria-haspopup="dialog" aria-label="${title}">
     ${ndate(n.date)}
     <div style="min-width:0">
-      <div class="nm"><span class="kind ${k[0]}">${esc(S.lang==="en"?k[1]:(n.kind||"资讯"))}</span><span>${esc(n.source||host(n.url))}</span>${CAT_KEYS.includes(n.category)?`<span>${cn(n.category)}</span>`:""}<span class="more">${T("news_more")}${IC.open}</span></div>
+      <div class="nm">${flag?`<span class="flag ${n.region==="MY"?"":"intl"}">${n.region==="MY"?"MY":"INTL"}</span>`:""}<span class="kind ${k[0]}">${esc(S.lang==="en"?k[1]:(n.kind||"资讯"))}</span><span>${esc(n.source||host(n.url))}</span>${CAT_KEYS.includes(n.category)?`<span>${cn(n.category)}</span>`:""}<span class="more">${T("news_more")}${IC.open}</span></div>
       <h3>${title}</h3>
       ${ntxt(n,"summary")?`<p>${esc(ntxt(n,"summary"))}</p>`:""}
       ${devs.length?`<div class="ndev">${devs.map(d=>`<button class="chipd" data-action="open" data-id="${esc(d.id)}">${IC[d.category]}${esc(dname(d))}</button>`).join("")}</div>`:""}
@@ -922,13 +956,13 @@ function renderNews(){
   const my=list.filter(n=>n.region==="MY"),intl=list.filter(n=>n.region!=="MY");
   const col=(items,isMy)=>`<div style="min-width:0">
     <h2 class="nhead"><span class="flag ${isMy?"":"intl"}">${isMy?"MY":"INTL"}</span>${isMy?T("r_my"):T("r_intl")}<span class="n">${items.length}</span></h2>
-    ${items.length?`<div class="nlist">${items.map(newsItem).join("")}</div>`:`<div class="empty"><p>${isMy?T("news_empty_my"):T("news_empty_intl")}</p></div>`}
+    ${items.length?`<div class="nlist">${items.map((n,i)=>newsItem(n,i)).join("")}</div>`:`<div class="empty"><p>${isMy?T("news_empty_my"):T("news_empty_intl")}</p></div>`}
   </div>`;
   const seg=`<div class="seg" role="group">${[["all","r_all"],["MY","r_my"],["INTL","r_intl"]].map(([k,l])=>`<button data-action="region" data-r="${k}" aria-pressed="${S.region===k}">${T(l)}</button>`).join("")}</div>`;
   let body;
   if(S.region==="MY")body=`<div class="ncols">${col(my,true)}</div>`;
   else if(S.region==="INTL")body=`<div class="ncols">${col(intl,false)}</div>`;
-  else body=`<div class="ncols two">${col(my,true)}${col(intl,false)}</div>`;
+  else body=`<div class="ncols one"><div style="min-width:0"><h2 class="nhead"><span class="flag">MY</span><span class="flag intl">INTL</span>${T("r_all")}<span class="n">${list.length}</span></h2>${list.length?`<div class="nlist">${list.map((n,i)=>newsItem(n,i,true)).join("")}</div>`:`<div class="empty"><p>${T("news_empty_all")}</p></div>`}</div></div>`;
   $("#v-news").innerHTML=`<div class="tb">${seg}<span class="sp"></span><span class="cnt">${T("n_stories",list.length)}</span></div>${body}`;
 }
 
@@ -992,7 +1026,7 @@ function renderCompare(){
   const cat=cmpCat();
   const devs=S.cmp[cat].map(id=>BYID.get(id)).filter(Boolean);
   const o=opts(cat);
-  const nOn=SPEC[cat].filter(g=>!o.off.includes(g.g)).length+(o.feat?1:0)+(o.ai?1:0);
+  const nOn=popGroups(cat,"cmp").filter(g=>gstate(o,g)!=="off").length+(o.feat?1:0)+(o.ai?1:0);
   let h=`<div class="tb">
     <div class="ttl">${IC[cat]}${T("cmp_title",cn(cat))}<span class="cnt">${devs.length}/${MAX}</span></div>
     <span class="sp"></span>
@@ -1013,6 +1047,7 @@ function renderCompare(){
     if(o.off.includes(g.g))continue;
     let rows="",cnt=0;
     for(const [k,zh,en,u,better] of g.rows){
+      if(o.hide.includes(k))continue;
       const vals=devs.map(d=>val(d,k));
       const shown=vals.map(v=>fmt(v,u));
       if(shown.every(s=>s==="—"))continue;
@@ -1020,7 +1055,7 @@ function renderCompare(){
       const rk=ranks(better,vals);
       if(rk)rk.forEach((r,i)=>{if(r===1)firsts[i]++});
       const dir=better==="high"?"↑":better==="low"?"↓":"";
-      rows+=`<div class="row cols"><div class="rl">${rowLab(devs.every(isFold)?devs[0]:null,k,zh,en)}${dir?`<span class="dir">${dir}</span>`:""}</div>${shown.map((s,i)=>{const r=rk?rk[i]:0;return`<div class="rv c${i}${r===1?" k1":""}${s==="—"?" nil":""}">${esc(s)}${r===1?bestB():""}</div>`}).join("")}</div>`;
+      rows+=`<div class="row cols"><div class="rl">${rowLab(devs.every(isFold)?devs[0]:null,k,zh,en)}${dir?`<span class="dir">${dir}</span>`:""}</div>${shown.map((s,i)=>{const r=rk?rk[i]:0;return`<div class="rv c${i}${r===1&&o.marks?" k1":""}${s==="—"?" nil":""}">${esc(s)}${r===1&&o.marks?bestB():""}</div>`}).join("")}</div>`;
       cnt++;
     }
     if(cnt)groups.push(`<section class="box" style="--i:${groups.length}"><div class="bh"><span class="k"></span><b>${lab(g)}</b><span class="r">${T("rows",cnt)}</span></div>${rows}</section>`);
@@ -1039,13 +1074,14 @@ function renderCompare(){
       <button class="rm" data-action="toggle-cmp" data-id="${esc(d.id)}" aria-label="${T("rm_cmp")}">${IC.x}</button>
     </div>`).join("")}
   </div>`;
-  h+=legendHTML().replace('class="legend"','class="legend" style="display:flex"');
+  if(o.marks)h+=legendHTML().replace('class="legend"','class="legend" style="display:flex"');
   h+=`<div class="cmp" data-n="${n}" style="--n:${n}">${bar}${groups.length?`<div class="groups">${groups.join("")}</div>`:`<div class="empty"><p>${T("no_opts")}</p></div>`}</div>`;
   $("#v-compare").innerHTML=h;
 }
 
 /* ---------- prices ---------- */
 function bounds(){const b=S.budget;return S.under?[0,b]:[Math.max(0,b-S.range),b+S.range]}
+function inPrice(d){const [lo,hi]=bounds();return typeof d.price_myr==="number"&&d.price_myr>=lo&&d.price_myr<=hi&&memOK(d)}
 function renderPrice(){
   $("#v-price").innerHTML=`<div class="ptb"><div class="tb">
       <div class="ttl">${IC.tag}${T("price_title")}</div>
@@ -1055,6 +1091,7 @@ function renderPrice(){
       <button class="btn ${S.under?"act":""}" id="under-btn" data-action="under" aria-pressed="${S.under}">${T("under")}</button>
       <button class="btn" id="mem-btn" data-action="mem"></button>
       <button class="btn" id="pbrand-btn" data-action="pbrands"></button>
+      <button class="btn" id="popt-btn" data-action="popts"></button>
     </div></div><div id="price-res"></div>`;
   renderPriceRes();
 }
@@ -1065,6 +1102,8 @@ function syncPriceBar(){
   if(ub){ub.classList.toggle("act",S.under);ub.setAttribute("aria-pressed",String(S.under))}
   const pb=document.getElementById("pbrand-btn");
   if(pb){const n=S.pbrands.length;pb.className="btn"+(n?" act":"");pb.innerHTML=`${IC.filter}${T("brands")}${n?`<span class="badge">${n}</span>`:""}`}
+  const ob=document.getElementById("popt-btn");
+  if(ob){const n=(S.cat==="all"?CAT_KEYS:[S.cat]).reduce((a,c)=>a+ocustom(c,"price"),0);ob.className="btn"+(n?" act":"");ob.innerHTML=`${IC.sliders}${T("options")}${n?`<span class="badge">${n}</span>`:""}`}
   const mb=document.getElementById("mem-btn");
   if(mb){const n=S.mem.ram.length+S.mem.rom.length;mb.className="btn"+(n?" act":"");mb.innerHTML=`${IC.sliders}RAM &amp; ROM${n?`<span class="badge">${n}</span>`:""}`}
 }
@@ -1073,7 +1112,7 @@ function renderPriceRes(){
   const [lo,hi]=bounds();
   const cats=S.cat==="all"?CAT_KEYS:[S.cat];
   const asList=S.pview!=="table";
-  const inR=d=>typeof d.price_myr==="number"&&d.price_myr>=lo&&d.price_myr<=hi&&memOK(d);
+  const inR=inPrice;
   const per=cats.map(c=>[c,PRICED.filter(d=>d.category===c&&inR(d))]);
   const total=per.reduce((n,[,l])=>n+l.length,0);
   const anyRank=per.some(([,l])=>l.length>3);
@@ -1093,7 +1132,7 @@ function plistHTML(c,items){
 }
 function pcard(d,adv,cls){
   const on=S.cmp[d.category].includes(d.id),diff=d.price_myr-S.budget,vl=d._v?vlabel(d._v):"";
-  const mini=(HEAD[d.category]||[]).map(([k,zh,en])=>{const r=rowOf(d.category,k);const v=fmt(val(d,k),r?r[3]:"");return`<div><dt>${S.lang==="en"?en:zh}</dt><dd title="${esc(v)}">${esc(v)}</dd></div>`}).join("");
+  const mini=cardRows(d.category).map(([k,zh,en])=>{const r=rowOf(d.category,k);const v=fmt(val(d,k),r?r[3]:"");return`<div><dt>${S.lang==="en"?en:zh}</dt><dd title="${esc(v)}">${esc(v)}</dd></div>`}).join("");
   return`<article class="card pc${on?" sel":""}${cls}" data-action="open" data-id="${esc(d.id)}" data-v="${d._vi!=null?d._vi:""}" data-pc="1" tabindex="0" role="button" aria-label="${esc(dname(d)+(vl?" "+vl:""))}">
     <button class="add ${on?"on":""}" data-action="toggle-cmp" data-id="${esc(d.id)}" aria-pressed="${on}" aria-label="${on?T("rm_cmp"):T("add_cmp")}">${on?IC.check:IC.plus}</button>
     <div class="ch">${thumb(d,"tc")}<div class="ct">
@@ -1103,7 +1142,7 @@ function pcard(d,adv,cls){
       <div class="pr">${price(d)}</div>
       <div class="pd">${oldOf(d._v||d)?`<s class="old">${esc(rm(oldOf(d._v||d)))}</s>`:""}<span class="delta ${diff<=0?"lo":"hi"}">${diff<=0?"−":"+"}${esc(rm(Math.abs(diff)))}</span></div>
     </div></div>
-    <dl class="mini">${mini}</dl>
+    ${mini?`<dl class="mini">${mini}</dl>`:""}
     ${promoTag(d._v||d)?`<div class="cx">${promoTag(d._v||d)}</div>`:""}
     <div class="cf"><span class="adv">${T("adv",adv)}</span>${status(d)}</div>
   </article>`;
@@ -1111,13 +1150,15 @@ function pcard(d,adv,cls){
 
 /* one column per model version (RAM/ROM or size); columns ordered by number of "best" rows. More than 3 columns → top-3 badges, otherwise only the best is marked */
 function mxCalc(c,items){
-  const groups=[];
+  const groups=[],o=opts(c,"price");
   for(const g of SPEC[c]){
     const gr=[];
     for(const r of g.rows){
       if(r[0]==="price_myr")continue;
+      if(!rowOn(o,g,r[0]))continue;
       const vals=items.map(d=>val(d,r[0]));
       if(vals.every(v=>v==null||v===""))continue;
+      if(o.diff){const sh=vals.map(v=>fmt(v,r[3]));if(sh.every(x=>x===sh[0]))continue}
       gr.push({r,vals,rk:ranks(r[4],vals)});
     }
     if(gr.length)groups.push({g,gr});
@@ -1133,7 +1174,8 @@ function matrixHTML(c,items){
   const hl=S.pbrands;
   const {groups,adv,order}=mxCalc(c,items);
   const cls=i=>hl.length?(hl.includes(items[i].brand)?" hl":" dim"):"";
-  const mark=k=>useRank?badge(k):(k===1?bestB():"");
+  const o=opts(c,"price");
+  const mark=k=>o.marks?(useRank?badge(k):(k===1?bestB():"")):"";
   const span=items.length;
   const head=order.map(i=>{const d=items[i],on=S.cmp[c].includes(d.id),diff=d.price_myr-S.budget;
     return`<th class="mh${cls(i)}" data-action="open" data-id="${esc(d.id)}" data-v="${d._vi!=null?d._vi:""}">
@@ -1146,12 +1188,13 @@ function matrixHTML(c,items){
     body+=`<tr class="gr"><th class="lc">${lab(g)}</th><td colspan="${span}"></td></tr>`;
     gr.forEach(({r,vals,rk})=>{
       const dir=r[4]==="high"?"↑":r[4]==="low"?"↓":"";
-      body+=`<tr><th class="lc">${rowLab(items.every(isFold)?items[0]:null,r[0],r[1],r[2])}${dir?`<span class="dir">${dir}</span>`:""}</th>${order.map(i=>{const s=fmt(vals[i],r[3]);const k=rk?rk[i]:0;return`<td class="${k===1?"k1":""}${s==="—"?" nil":""}${cls(i)}">${esc(s)}${mark(k)}</td>`}).join("")}</tr>`;
+      body+=`<tr><th class="lc">${rowLab(items.every(isFold)?items[0]:null,r[0],r[1],r[2])}${dir?`<span class="dir">${dir}</span>`:""}</th>${order.map(i=>{const s=fmt(vals[i],r[3]);const k=rk?rk[i]:0;return`<td class="${k===1&&o.marks?"k1":""}${s==="—"?" nil":""}${cls(i)}">${esc(s)}${mark(k)}</td>`}).join("")}</tr>`;
     });
   });
   const listRows=(title,key)=>`<tr class="gr"><th class="lc">${title}</th><td colspan="${span}"></td></tr><tr class="ls"><th class="lc"></th>${order.map(i=>{const l=arr(dtxt(items[i],key));return`<td class="${l.length?"":"nil"}${cls(i)}">${l.length?`<ul>${l.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:T("not_listed")}</td>`}).join("")}</tr>`;
-  if(c==="watch")body+=listRows(T("health"),"health");
-  body+=listRows(T("features"),"features")+listRows(T("ai"),"ai_features");
+  if(c==="watch"&&o.health)body+=listRows(T("health"),"health");
+  if(o.feat)body+=listRows(T("features"),"features");
+  if(o.ai)body+=listRows(T("ai"),"ai_features");
   const cols=`<colgroup><col class="lcw">${order.map(()=>"<col>").join("")}</colgroup>`;
   return`<section class="box"><div class="bh">${IC[c]}<b>${cn(c)}</b><span class="r">${T("n_models",span)}${span>2?` · ${T("swipe")}`:""}</span></div>
     <div class="mxh"><table class="mx" style="--n:${span}">${cols}<thead><tr><th class="lc"><span class="lc-n">${esc(cn(c))}</span></th>${head}</tr></thead></table></div>
@@ -1203,14 +1246,27 @@ function deviceHTML(d){
   </div>`;
 }
 function optsHTML(){
-  const cat=cmpCat(),o=opts(cat);
-  return`<div class="ph"><span class="t">${T("options")}</span><span class="s">${cn(cat)}</span><button class="x" data-action="close" aria-label="${T("close")}">${IC.x}</button></div>
-  <div class="pb">
-    <div class="og"><span class="lbl">${T("opt_groups")}</span><div class="tgs">${SPEC[cat].map(g=>`<button class="tg ${o.off.includes(g.g)?"":"on"}" data-action="opt-group" data-g="${g.g}">${lab(g)}</button>`).join("")}</div></div>
+  const sc=oscope(),cat=ocat(),o=opts(cat,sc),items=oitems(cat,sc);
+  const has=k=>items.some(d=>{const v=val(d,k);return v!=null&&v!==""});
+  const rl=r=>S.lang==="en"?r[2]:r[1];
+  const listView=sc==="price"&&S.pview!=="table";
+  const catSeg=sc==="price"?`<div class="og"><div class="seg ocats" role="group" aria-label="${T("opt_cat")}">${CAT_KEYS.map(c=>`<button data-action="opt-cat" data-c="${c}" aria-pressed="${c===cat}">${cn(c)}<span class="n">${PRICED.filter(d=>d.category===c&&inPrice(d)).length}</span></button>`).join("")}</div><p class="ohint">${T("opt_hint_price")}</p></div>`:"";
+  let body;
+  if(listView){
+    const cur=new Set(o.card||(HEAD[cat]||[]).map(x=>x[0]));
+    body=`<div class="og"><span class="lbl">${T("opt_card")}<span class="cnt2">${cur.size}/${CARDMAX}</span></span><p class="ohint">${T("opt_card_hint",CARDMAX)}</p>${popGroups(cat,sc).map(g=>`<div class="grp"><div class="gl">${lab(g)}</div><div class="tgs rows">${g.rows.map(r=>`<button class="tg ${cur.has(r[0])?"on":""}${has(r[0])?"":" dim"}" data-action="opt-card" data-k="${r[0]}">${esc(clab(r))}</button>`).join("")}</div></div>`).join("")}</div>`;
+  }else{
+    const rows=popGroups(cat,sc).map(g=>{
+      const st=gstate(o,g),multi=g.rows.length>1,nOn=g.rows.filter(r=>rowOn(o,g,r[0])).length;
+      return`<div class="grp"><div class="tgs"><button class="tg gh ${st==="on"?"on":st==="part"?"part":""}" data-action="opt-group" data-g="${g.g}">${lab(g)}${multi?`<span class="n">${nOn}/${g.rows.length}</span>`:""}</button></div>${multi?`<div class="tgs rows">${g.rows.map(r=>`<button class="tg ${rowOn(o,g,r[0])?"on":""}${has(r[0])?"":" dim"}" data-action="opt-row" data-g="${g.g}" data-k="${r[0]}">${esc(rl(r))}</button>`).join("")}</div>`:""}</div>`}).join("");
+    body=`<div class="og"><span class="lbl">${T("opt_rows")}</span>${rows}</div>
     <div class="og"><span class="lbl">${T("opt_feats")}</span><div class="tgs"><button class="tg ${o.feat?"on":""}" data-action="opt-feat">${T("features")}</button><button class="tg ${o.ai?"on":""}" data-action="opt-ai">${T("ai")}</button>${cat==="watch"?`<button class="tg ${o.health?"on":""}" data-action="opt-health">${T("health")}</button>`:""}</div></div>
-    <div class="og"><span class="lbl">${T("opt_display")}</span><div class="tgs"><button class="tg ${o.diff?"on":""}" data-action="opt-diff">${T("diff_only")}</button></div></div>
-  </div>
-  <div class="pf"><button class="btn ghost" data-action="opt-all">${T("show_all")}</button><button class="btn pri" data-action="close">${T("done")}</button></div>`;
+    <div class="og"><span class="lbl">${T("opt_display")}</span><div class="tgs"><button class="tg ${o.diff?"on":""}" data-action="opt-diff">${T("diff_only")}</button><button class="tg ${o.marks?"on":""}" data-action="opt-marks">${T("opt_marks")}</button></div></div>`;
+  }
+  const foot=listView?`<button class="btn ghost" data-action="opt-card-reset">${T("card_reset")}</button>`:`<button class="btn ghost" data-action="opt-all">${T("show_all")}</button><button class="btn ghost" data-action="opt-core">${T("opt_core")}</button>`;
+  return`<div class="ph"><span class="t">${T("options")}</span><span class="s">${cn(cat)}</span><button class="x" data-action="close" aria-label="${T("close")}">${IC.x}</button></div>
+  <div class="pb">${catSeg}${body}</div>
+  <div class="pf">${foot}<button class="btn pri" data-action="close">${T("done")}</button></div>`;
 }
 function pickListHTML(){
   const cat=cmpCat(),q=S.pq.trim().toLowerCase();
@@ -1277,7 +1333,7 @@ function openPop(kind,id){
   S.pop=kind;S.open=id||null;
   const ov=$("#ov"),p=$("#panel");
   clearTimeout(closeT);
-  p.className="panel"+(kind==="device"?"":kind==="news"?" mid":" small");
+  p.className="panel"+(kind==="device"?"":kind==="news"||kind==="opts"?" mid":" small");
   p.innerHTML=POP[kind]();
   ov.hidden=false;lockScroll(true);
   requestAnimationFrame(()=>requestAnimationFrame(()=>ov.classList.add("show")));
@@ -1290,6 +1346,7 @@ function paintPop(){
   const html=POP[S.pop]();if(!html){closePop();return}
   p.innerHTML=html;
 }
+function optsApply(){if(oscope()==="price")renderPriceRes();else renderCompare()}
 function repaintDevice(){const p=$("#panel"),pb=p.querySelector&&p.querySelector(".pb"),st=pb?pb.scrollTop:0;paintPop();const pb2=p.querySelector&&p.querySelector(".pb");if(pb2)pb2.scrollTop=st}
 /* keepHist: the popup's history entry was already used up (Back was pressed) or is reused by the caller */
 function closePop(keepHist){
@@ -1436,16 +1493,19 @@ document.addEventListener("click",e=>{
     case"clear-cmp":S.cmp[cmpCat()]=[];savePrefs();render();break;
     case"go-cmp":{S.cat=el.dataset.c;savePrefs();const had=popHist;closePop(true);if(had){try{history.replaceState(null,"","#compare")}catch(e){}setView("compare")}else if(location.hash==="#compare")setView("compare");else location.hash="compare";break}
     case"picker":S.pq="";openPop("picker");break;
-    case"opts":openPop("opts");break;
+    case"opts":S.oscope="cmp";openPop("opts");break;
+    case"popts":S.oscope="price";S.ocat=optCatDefault();openPop("opts");break;
     case"brands":openPop("brands");break;
     case"brand":{const b=el.dataset.b,i=S.brands.indexOf(b);if(i>=0)S.brands.splice(i,1);else S.brands.push(b);savePrefs();paintPop();renderDevices();break}
     case"brand-clear":S.brands=[];savePrefs();paintPop();renderDevices();break;
-    case"opt-group":{const c=cmpCat(),o=opts(c),off=new Set(o.off);if(off.has(el.dataset.g))off.delete(el.dataset.g);else off.add(el.dataset.g);setOpts(c,{off:[...off]});paintPop();renderCompare();break}
-    case"opt-feat":{const c=cmpCat();setOpts(c,{feat:!opts(c).feat});paintPop();renderCompare();break}
-    case"opt-ai":{const c=cmpCat();setOpts(c,{ai:!opts(c).ai});paintPop();renderCompare();break}
-    case"opt-health":{const c=cmpCat();setOpts(c,{health:!opts(c).health});paintPop();renderCompare();break}
-    case"opt-diff":{const c=cmpCat();setOpts(c,{diff:!opts(c).diff});paintPop();renderCompare();break}
-    case"opt-all":{const c=cmpCat();setOpts(c,{off:[],feat:true,ai:true,health:true,diff:false});paintPop();renderCompare();break}
+    case"opt-cat":S.ocat=el.dataset.c;repaintDevice();break;
+    case"opt-group":{const sc=oscope(),c=ocat(),o=opts(c,sc),g=(SPEC[c]||[]).find(x=>x.g===el.dataset.g);if(!g)break;const keys=g.rows.map(r=>r[0]),off=new Set(o.off);if(gstate(o,g)==="on")off.add(g.g);else off.delete(g.g);setOpts(c,{off:[...off],hide:o.hide.filter(k=>!keys.includes(k))},sc);repaintDevice();optsApply();break}
+    case"opt-row":{const sc=oscope(),c=ocat(),o=opts(c,sc),g=(SPEC[c]||[]).find(x=>x.g===el.dataset.g),k=el.dataset.k;if(!g)break;let hide=o.hide.slice();if(o.off.includes(g.g))hide=[...new Set([...hide,...g.rows.map(r=>r[0])])].filter(x=>x!==k);else{const i=hide.indexOf(k);if(i>=0)hide.splice(i,1);else hide.push(k)}setOpts(c,{off:o.off.filter(x=>x!==g.g),hide},sc);repaintDevice();optsApply();break}
+    case"opt-feat":case"opt-ai":case"opt-health":case"opt-diff":case"opt-marks":{const sc=oscope(),c=ocat(),key=a.slice(4);setOpts(c,{[key]:!opts(c,sc)[key]},sc);repaintDevice();optsApply();break}
+    case"opt-all":{const sc=oscope(),c=ocat();setOpts(c,{off:[],hide:[],feat:true,ai:true,health:true,diff:false,marks:true,card:null},sc);repaintDevice();optsApply();break}
+    case"opt-core":{const sc=oscope(),c=ocat(),keep=new Set(KEYROWS[c]||[]),hide=[];(SPEC[c]||[]).forEach(g=>g.rows.forEach(r=>{if(r[0]!=="price_myr"&&!keep.has(r[0]))hide.push(r[0])}));setOpts(c,{off:[],hide,feat:false,ai:false,health:false},sc);repaintDevice();optsApply();break}
+    case"opt-card":{const c=ocat(),o=opts(c,"price"),cur=o.card||(HEAD[c]||[]).map(x=>x[0]),k=el.dataset.k,i=cur.indexOf(k),n=cur.slice();if(i>=0)n.splice(i,1);else{if(n.length>=CARDMAX){toast(T("card_max",CARDMAX));break}n.push(k)}setOpts(c,{card:n},"price");repaintDevice();renderPriceRes();break}
+    case"opt-card-reset":{setOpts(ocat(),{card:null},"price");repaintDevice();renderPriceRes();break}
     case"preset":{S.budget=Number(el.dataset.v);savePrefs();const bi=document.getElementById("budget");if(bi)bi.value=String(S.budget);renderPriceRes();break}
     case"under":S.under=!S.under;savePrefs();renderPriceRes();break;
     case"pview":{const v=el.dataset.v==="table"?"table":"list";if(v!==S.pview){S.pview=v;savePrefs();renderPriceRes()}break}

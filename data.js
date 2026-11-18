@@ -3,7 +3,7 @@
    features = 配置以外的软件 / 系统功能；ai_features = 官方点名的 AI 功能；health = 手表健康功能；variants = 各内存 / 尺寸版本的独立售价；image = 去背机型图；specs.dimming / cooling / speakers / certs = 调光、散热、扬声器、认证（手机与平板）。
    限时优惠：price_myr = 现在实付价，price_old = 原价，promo_until / promo_from = 优惠起止日（马来西亚日期）；过了 promo_until 页面会自动改回原价。 */
 window.RADAR_DATA = {
- "updated": "2026-11-17T12:00:00+08:00",
+ "updated": "2026-11-18T12:00:00+08:00",
  "schedule": "每天更新一次",
  "devices": [
   {
