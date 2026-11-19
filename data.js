@@ -3,7 +3,7 @@
    features = 配置以外的软件 / 系统功能；ai_features = 官方点名的 AI 功能；health = 手表健康功能；variants = 各内存 / 尺寸版本的独立售价；image = 去背机型图；specs.dimming / cooling / speakers / certs = 调光、散热、扬声器、认证（手机与平板）。
    限时优惠：price_myr = 现在实付价，price_old = 原价，promo_until / promo_from = 优惠起止日（马来西亚日期）；过了 promo_until 页面会自动改回原价。 */
 window.RADAR_DATA = {
- "updated": "2026-11-18T12:00:00+08:00",
+ "updated": "2026-11-19T12:30:00+08:00",
  "schedule": "每天更新一次",
  "devices": [
   {
@@ -391,30 +391,33 @@ window.RADAR_DATA = {
    "brand": "RedMagic",
    "model": "RedMagic 12 Pro",
    "launch_my": "2026-11-10",
-   "price_myr": 4499,
+   "price_myr": 3999,
    "status": "在售",
-   "price_note": "11 月 10 日起在售 · 11.11 促销已于 11 月 11 日结束",
+   "price_note": "官方商店仍以优惠价销售（原定 11 月 11 日结束，未公布新截止日）；现为预购，约 30 个工作日发货；16+1TB 暂缺货",
    "variants": [
     {
      "label": "12+256GB",
      "ram_gb": 12,
      "storage_gb": 256,
-     "price_myr": 4499,
-     "price_date": "2026-11-10"
+     "price_myr": 3999,
+     "price_date": "2026-11-19",
+     "price_old": 4499
     },
     {
      "label": "16+512GB",
      "ram_gb": 16,
      "storage_gb": 512,
-     "price_myr": 4999,
-     "price_date": "2026-11-10"
+     "price_myr": 4499,
+     "price_date": "2026-11-19",
+     "price_old": 4999
     },
     {
      "label": "16+1TB",
      "ram_gb": 16,
      "storage_gb": 1024,
-     "price_myr": 5899,
-     "price_date": "2026-11-10"
+     "price_myr": 5399,
+     "price_date": "2026-11-19",
+     "price_old": 5899
     }
    ],
    "specs": {
@@ -2062,16 +2065,16 @@ window.RADAR_DATA = {
    "brand": "Redmi",
    "model": "REDMI Note 17",
    "launch_my": "2026-09",
-   "price_myr": 749,
+   "price_myr": 779,
    "status": "在售",
    "image": "img/phone/redmi-note-17.png",
    "price_note": "",
    "variants": [
     {
      "label": "4+128GB",
-     "price_myr": 749,
+     "price_myr": 779,
      "price_old": 849,
-     "price_date": "2026-09-14",
+     "price_date": "2026-11-19",
      "ram_gb": 4,
      "storage_gb": 128
     }
@@ -2126,24 +2129,22 @@ window.RADAR_DATA = {
    "brand": "Redmi",
    "model": "REDMI Note 17 5G",
    "launch_my": "2026-09",
-   "price_myr": 999,
+   "price_myr": 1099,
    "status": "在售",
    "image": "img/phone/redmi-note-17-5g.png",
-   "price_note": "",
+   "price_note": "11.11 优惠已结束，mi.com 恢复原价；6+128GB 暂缺货",
    "variants": [
     {
      "label": "6+128GB",
-     "price_myr": 999,
-     "price_old": 1099,
-     "price_date": "2026-09-14",
+     "price_myr": 1099,
+     "price_date": "2026-11-19",
      "ram_gb": 6,
      "storage_gb": 128
     },
     {
      "label": "8+256GB",
-     "price_myr": 1199,
-     "price_old": 1299,
-     "price_date": "2026-10-15",
+     "price_myr": 1299,
+     "price_date": "2026-11-19",
      "ram_gb": 8,
      "storage_gb": 256
     }
@@ -2202,7 +2203,7 @@ window.RADAR_DATA = {
    "price_myr": 1299,
    "status": "在售",
    "image": "img/phone/redmi-note-17-pro-5g.png",
-   "price_note": "",
+   "price_note": "8+256GB / 8+512GB 的 11.11 优惠已结束，恢复原价；6+128GB 仍为 RM1,299（原价 RM1,399）",
    "variants": [
     {
      "label": "6+128GB",
@@ -2214,17 +2215,15 @@ window.RADAR_DATA = {
     },
     {
      "label": "8+256GB",
-     "price_myr": 1499,
-     "price_old": 1599,
-     "price_date": "2026-09-14",
+     "price_myr": 1599,
+     "price_date": "2026-11-19",
      "ram_gb": 8,
      "storage_gb": 256
     },
     {
      "label": "8+512GB",
-     "price_myr": 1799,
-     "price_old": 1899,
-     "price_date": "2026-09-14",
+     "price_myr": 1899,
+     "price_date": "2026-11-19",
      "ram_gb": 8,
      "storage_gb": 512
     }
@@ -2289,24 +2288,22 @@ window.RADAR_DATA = {
    "brand": "Redmi",
    "model": "REDMI Note 17 Pro Max 5G",
    "launch_my": "2026-09",
-   "price_myr": 1799,
+   "price_myr": 1999,
    "status": "在售",
    "image": "img/phone/redmi-note-17-pro-max-5g.png",
-   "price_note": "",
+   "price_note": "11.11 优惠已结束，mi.com 恢复原价 RM1,999 / RM2,299",
    "variants": [
     {
      "label": "8+256GB",
-     "price_myr": 1799,
-     "price_old": 1999,
-     "price_date": "2026-09-14",
+     "price_myr": 1999,
+     "price_date": "2026-11-19",
      "ram_gb": 8,
      "storage_gb": 256
     },
     {
      "label": "8+512GB",
-     "price_myr": 2099,
-     "price_old": 2299,
-     "price_date": "2026-10-05",
+     "price_myr": 2299,
+     "price_date": "2026-11-19",
      "ram_gb": 8,
      "storage_gb": 512
     }
@@ -5006,18 +5003,19 @@ window.RADAR_DATA = {
    "brand": "vivo",
    "model": "Y31s 5G",
    "launch_my": "2026-06",
-   "price_myr": 999,
+   "price_myr": 939,
    "status": "在售",
-   "price_note": "",
+   "price_note": "vivo 官网限时闪购至 11 月 30 日：6+128GB 紫色 RM939（黑色 RM999）",
    "variants": [
     {
      "label": "6+128GB",
-     "price_myr": 999,
+     "price_myr": 939,
      "price_old": 1299,
      "launch_my": "2026-08",
-     "price_date": "2026-11-15",
+     "price_date": "2026-11-19",
      "ram_gb": 6,
-     "storage_gb": 128
+     "storage_gb": 128,
+     "promo_until": "2026-11-30"
     },
     {
      "label": "6+256GB",
@@ -5418,18 +5416,19 @@ window.RADAR_DATA = {
    "brand": "iQOO",
    "model": "iQOO Z11x 5G",
    "launch_my": "2026-05",
-   "price_myr": 1269,
+   "price_myr": 999,
    "status": "在售",
    "image": "img/phone/iqoo-z11x-5g.png",
-   "price_note": "",
+   "price_note": "vivo 官网限时闪购至 11 月 30 日：8+128GB 银色 RM999（其他颜色 RM1,269）",
    "variants": [
     {
      "label": "8+128GB",
-     "price_myr": 1269,
+     "price_myr": 999,
      "price_old": 1499,
-     "price_date": "2026-11-15",
+     "price_date": "2026-11-19",
      "ram_gb": 8,
-     "storage_gb": 128
+     "storage_gb": 128,
+     "promo_until": "2026-11-30"
     },
     {
      "label": "8+256GB",
@@ -15529,9 +15528,8 @@ window.RADAR_DATA = {
     },
     {
      "label": "8+256GB",
-     "price_myr": 1999,
-     "price_old": 2099,
-     "price_date": "2026-10-05",
+     "price_myr": 2099,
+     "price_date": "2026-11-19",
      "ram_gb": 8,
      "storage_gb": 256
     }
@@ -23070,16 +23068,16 @@ window.RADAR_DATA = {
    "brand": "Xiaomi",
    "model": "Watch S5",
    "launch_my": "2026-06",
-   "price_myr": 659,
+   "price_myr": 719,
    "status": "在售",
    "image": "img/watch/xiaomi-watch-s5.png",
    "price_note": "",
    "variants": [
     {
      "label": "46mm",
-     "price_myr": 659,
-     "price_old": 799,
-     "price_date": "2026-10-05",
+     "price_myr": 719,
+     "price_old": 899,
+     "price_date": "2026-11-19",
      "specs": {
       "case_mm": 46
      }
@@ -25874,9 +25872,768 @@ window.RADAR_DATA = {
     "https://www.lowyat.net/2026/407735/cmf-clip-pro-buds-neo-malaysia/",
     "https://technave.com/gadget/CMF-Clip-Pro-and-Buds-Neo-Malaysia-launch-starting-price-at-RM129-47667.html"
    ]
+  },
+  {
+   "id": "xiaomi-18-pro",
+   "category": "phone",
+   "brand": "Xiaomi",
+   "model": "Xiaomi 18 Pro",
+   "launch_my": "2026-11-18",
+   "price_myr": 3999,
+   "status": "预购",
+   "price_note": "预购优惠价至 11 月 26 日，之后恢复 RM4,799（12+256GB） / RM5,299（12+512GB）；mi.com、小米之家及官方 Shopee / Lazada / TikTok Shop；256GB 目前显示「到货通知」",
+   "variants": [
+    {
+     "label": "12+256GB",
+     "ram_gb": 12,
+     "storage_gb": 256,
+     "price_myr": 3999,
+     "price_old": 4799,
+     "price_date": "2026-11-19",
+     "promo_until": "2026-11-26"
+    },
+    {
+     "label": "12+512GB",
+     "ram_gb": 12,
+     "storage_gb": 512,
+     "price_myr": 4999,
+     "price_old": 5299,
+     "price_date": "2026-11-19",
+     "promo_until": "2026-11-26"
+    }
+   ],
+   "specs": {
+    "display_size_in": 6.4,
+    "display_type": "LTPO · Xiaomi HyperRGB 2.0",
+    "resolution": "2436×1120",
+    "refresh_hz": 120,
+    "brightness_nits": 4000,
+    "chipset": "Snapdragon 8 Elite Gen 6",
+    "ram_gb": 12,
+    "storage_gb": 512,
+    "main_cam_mp": 200,
+    "ultrawide_mp": 50,
+    "tele_mp": 200,
+    "zoom_x": null,
+    "front_mp": 50,
+    "battery_mah": 6000,
+    "wired_w": 90,
+    "wireless_w": 50,
+    "weight_g": 198,
+    "thickness_mm": 8.46,
+    "ip": "IP68",
+    "os": "Xiaomi HyperOS 4",
+    "update_years": null,
+    "dimming": "DC 调光",
+    "cooling": "Xiaomi 3D IceLoop 散热系统",
+    "speakers": "立体声双扬声器 · Dolby Atmos",
+    "certs": "TÜV 莱茵低蓝光（硬件级）· TÜV 莱茵无频闪 · TÜV 莱茵昼夜节律友好 · TÜV 莱茵屏幕防窥认证"
+   },
+   "features": [
+    "2.7 吋 AMOLED 背屏（912×596，1–120Hz）",
+    "Xiaomi Privacy Display 硬件防窥屏",
+    "防窥模式与防偷看提醒",
+    "超声波屏下指纹",
+    "红外遥控",
+    "徕卡影像风格",
+    "8K 30fps 视频",
+    "4K 120fps Dolby Vision 视频",
+    "Wi-Fi 7",
+    "双卡（支持 eSIM）"
+   ],
+   "ai_features": [
+    "AI 写作",
+    "AI 语音识别",
+    "AI 同声传译",
+    "AI 搜索",
+    "AI 动态壁纸",
+    "AI 创作助手",
+    "背屏 GenAI 小应用",
+    "Google Gemini",
+    "圈选即搜 (Circle to Search)"
+   ],
+   "sources": [
+    "https://www.mi.com/my/product/xiaomi-18-pro/buy/",
+    "https://www.mi.com/my/product/xiaomi-18-pro/specs/",
+    "https://soyacincau.com/2026/11/18/xiaomi-18-pro-and-18-pro-max-malaysia-launch-price-specs/"
+   ]
+  },
+  {
+   "id": "xiaomi-18-pro-max",
+   "category": "phone",
+   "brand": "Xiaomi",
+   "model": "Xiaomi 18 Pro Max",
+   "launch_my": "2026-11-18",
+   "price_myr": 5499,
+   "status": "预购",
+   "price_note": "预购优惠价至 11 月 26 日，之后恢复 RM5,999（12+256GB） / RM6,499（12+512GB）；mi.com、小米之家及官方 Shopee / Lazada / TikTok Shop；256GB 目前显示「到货通知」",
+   "variants": [
+    {
+     "label": "12+256GB",
+     "ram_gb": 12,
+     "storage_gb": 256,
+     "price_myr": 5499,
+     "price_old": 5999,
+     "price_date": "2026-11-19",
+     "promo_until": "2026-11-26"
+    },
+    {
+     "label": "12+512GB",
+     "ram_gb": 12,
+     "storage_gb": 512,
+     "price_myr": 5999,
+     "price_old": 6499,
+     "price_date": "2026-11-19",
+     "promo_until": "2026-11-26"
+    }
+   ],
+   "specs": {
+    "display_size_in": 6.9,
+    "display_type": "LTPO · Xiaomi HyperRGB 2.0",
+    "resolution": "2624×1208",
+    "refresh_hz": 120,
+    "brightness_nits": 4000,
+    "chipset": "Snapdragon 8 Elite Extreme Gen 6",
+    "ram_gb": 12,
+    "storage_gb": 512,
+    "main_cam_mp": 200,
+    "ultrawide_mp": 50,
+    "tele_mp": 200,
+    "zoom_x": null,
+    "front_mp": 50,
+    "battery_mah": 7050,
+    "wired_w": 100,
+    "wireless_w": 50,
+    "weight_g": 229,
+    "thickness_mm": 8.39,
+    "ip": "IP68",
+    "os": "Xiaomi HyperOS 4",
+    "update_years": null,
+    "dimming": "DC 调光",
+    "cooling": "Xiaomi 3D IceLoop 散热系统",
+    "speakers": "三扬声器 · Dolby Atmos",
+    "certs": "TÜV 莱茵低蓝光（硬件级）· TÜV 莱茵无频闪 · TÜV 莱茵昼夜节律友好 · TÜV 莱茵屏幕防窥认证"
+   },
+   "features": [
+    "2.9 吋 AMOLED 背屏（976×596，1–120Hz）",
+    "Xiaomi Privacy Display 硬件防窥屏",
+    "防窥模式与防偷看提醒",
+    "超声波屏下指纹",
+    "红外遥控",
+    "徕卡影像风格",
+    "8K 30fps 视频",
+    "4K 120fps Dolby Vision 视频",
+    "Wi-Fi 7",
+    "双卡（支持 eSIM）"
+   ],
+   "ai_features": [
+    "AI 写作",
+    "AI 语音识别",
+    "AI 同声传译",
+    "AI 搜索",
+    "AI 动态壁纸",
+    "AI 创作助手",
+    "背屏 GenAI 小应用",
+    "Google Gemini",
+    "圈选即搜 (Circle to Search)"
+   ],
+   "sources": [
+    "https://www.mi.com/my/product/xiaomi-18-pro-max/buy/",
+    "https://www.mi.com/my/product/xiaomi-18-pro-max/specs/",
+    "https://soyacincau.com/2026/11/18/xiaomi-18-pro-and-18-pro-max-malaysia-launch-price-specs/"
+   ]
+  },
+  {
+   "id": "xiaomi-smart-band-11",
+   "category": "watch",
+   "brand": "Xiaomi",
+   "model": "Smart Band 11",
+   "launch_my": "2026-11",
+   "price_myr": 199,
+   "status": "在售",
+   "price_note": "mi.com 售价 RM199（标价 RM249）；陶瓷版 RM299（标价 RM349）；未见官方发布消息",
+   "variants": [
+    {
+     "label": "标准版",
+     "label_en": "Standard",
+     "price_myr": 199,
+     "price_old": 249,
+     "price_date": "2026-11-19"
+    },
+    {
+     "label": "陶瓷版",
+     "label_en": "Ceramic Edition",
+     "price_myr": 299,
+     "price_old": 349,
+     "price_date": "2026-11-19"
+    }
+   ],
+   "specs": {
+    "display_size_in": 1.72,
+    "display_type": "AMOLED · 212×520",
+    "brightness_nits": 1500,
+    "battery_mah": 233,
+    "battery_days": 21,
+    "weight_g": 15.58,
+    "water": "5ATM",
+    "gps": null,
+    "lte": null,
+    "health_sensors": "光学心率与血氧传感器、加速度计、陀螺仪、电子罗盘、环境光传感器"
+   },
+   "features": [
+    "9.99mm 轻薄机身",
+    "铝合金框架（陶瓷版为陶瓷框架）",
+    "150+ 运动模式",
+    "蓝牙 5.4",
+    "线性马达",
+    "磁吸充电约 90 分钟"
+   ],
+   "health": [
+    "双 LED 双 PD 高精度心率监测",
+    "血氧监测",
+    "睡眠管理助手与睡眠洞察",
+    "行为记录"
+   ],
+   "ai_features": [],
+   "sources": [
+    "https://www.mi.com/my/product/xiaomi-smart-band-11/buy/",
+    "https://www.mi.com/my/product/xiaomi-smart-band-11/specs/",
+    "https://www.mi.com/my/event/xiaomi-new-smart-devices/"
+   ]
+  },
+  {
+   "id": "xiaomi-watch-s5-41mm",
+   "category": "watch",
+   "brand": "Xiaomi",
+   "model": "Watch S5 41mm",
+   "launch_my": "2026-11",
+   "price_myr": 799,
+   "status": "在售",
+   "price_note": "mi.com 售价 RM799（标价 RM899）；陶瓷白 RM899（标价 RM999，暂缺货）；未见官方发布消息",
+   "variants": [
+    {
+     "label": "41mm 不锈钢",
+     "label_en": "41mm stainless steel",
+     "price_myr": 799,
+     "price_old": 899,
+     "price_date": "2026-11-19",
+     "specs": {
+      "case_mm": 41
+     }
+    },
+    {
+     "label": "41mm 陶瓷白",
+     "label_en": "41mm Ceramic White",
+     "price_myr": 899,
+     "price_old": 999,
+     "price_date": "2026-11-19",
+     "specs": {
+      "case_mm": 41
+     }
+    }
+   ],
+   "specs": {
+    "display_size_in": 1.32,
+    "case_mm": 41,
+    "display_type": "AMOLED · 466×466",
+    "brightness_nits": 3000,
+    "battery_mah": 590,
+    "battery_days": 14,
+    "weight_g": 36,
+    "water": "5ATM",
+    "gps": "GPS | Galileo | Glonass | BeiDou | QZSS",
+    "lte": null,
+    "os": "Xiaomi HyperOS 4",
+    "health_sensors": "心率与血氧传感器、加速度计、陀螺仪、环境光传感器、电子罗盘、气压计、温度传感器"
+   },
+   "features": [
+    "不锈钢机身与悬浮表耳",
+    "NFC 支付（Xiaomi Pay / Google Wallet）",
+    "支持扬声器与麦克风",
+    "双模蓝牙 BLE / BT 5.4",
+    "150+ 运动模式",
+    "互动宠物表盘",
+    "60Hz 刷新率"
+   ],
+   "health": [
+    "全新三传感器系统",
+    "四 LED 四 PD 心率与血氧监测",
+    "压力监测",
+    "皮肤温度监测（±0.1°C）",
+    "经期预测",
+    "睡眠 HRV 指数"
+   ],
+   "ai_features": [],
+   "sources": [
+    "https://www.mi.com/my/product/xiaomi-watch-s5-41mm/specs/",
+    "https://www.mi.com/my/xiaomi-watch-s5-41mm/",
+    "https://www.mi.com/my/event/xiaomi-new-smart-devices/"
+   ]
+  },
+  {
+   "id": "xiaomi-clip",
+   "category": "earbuds",
+   "brand": "Xiaomi",
+   "model": "Xiaomi Clip",
+   "launch_my": "2026-11",
+   "price_myr": 599,
+   "price_old": 699,
+   "status": "在售",
+   "price_note": "mi.com 售价 RM599（标价 RM699）；未见官方发布消息",
+   "specs": {
+    "anc": null,
+    "driver": null,
+    "codecs": "AAC / SBC / LHDC 5.0",
+    "bt_version": 5.4,
+    "battery_buds_h": 9,
+    "battery_total_h": 38,
+    "bud_weight_g": 5.5,
+    "weight_total_g": 52.44,
+    "ip": "IP57"
+   },
+   "features": [
+    "开放式耳夹设计",
+    "频响 20Hz–48kHz",
+    "充电 10 分钟听 3.5 小时",
+    "USB-C 充电"
+   ],
+   "ai_features": [],
+   "sources": [
+    "https://www.mi.com/my/product/xiaomi-clip/specs/",
+    "https://www.mi.com/my/event/xiaomi-new-smart-devices/"
+   ]
+  },
+  {
+   "id": "realme-watch-s5",
+   "category": "watch",
+   "brand": "realme",
+   "model": "Watch S5",
+   "launch_my": "2026-11",
+   "price_myr": null,
+   "status": "即将上市",
+   "price_note": "大马官网已上架介绍页，尚未标价、未开放购买；大马售价未公布",
+   "specs": {
+    "display_size_in": 1.43,
+    "display_type": "AMOLED",
+    "brightness_nits": 1500,
+    "battery_mah": 460,
+    "battery_days": 20,
+    "weight_g": 32,
+    "water": "5ATM",
+    "gps": "独立 GPS · 5 GNSS",
+    "lte": null,
+    "health_sensors": null
+   },
+   "features": [
+    "三键式设计",
+    "110 种运动模式",
+    "AOD 息屏显示",
+    "智能夜视模式",
+    "旋转表冠切换主题色",
+    "湿手触控",
+    "11.8mm 机身"
+   ],
+   "health": [
+    "心率监测与异常提醒",
+    "血氧监测",
+    "压力监测",
+    "睡眠分析",
+    "女性健康",
+    "环境噪音提醒"
+   ],
+   "ai_features": [
+    "一键唤醒 Gemini AI 助手"
+   ],
+   "sources": [
+    "https://www.realme.com/my/realme-watch-s5"
+   ]
+  },
+  {
+   "id": "infinix-zclip-2-pro",
+   "category": "earbuds",
+   "brand": "Infinix",
+   "model": "ZCLIP 2 Pro",
+   "launch_my": "2026-11-10",
+   "price_myr": 399,
+   "status": "在售",
+   "price_note": "",
+   "specs": {
+    "anc": null,
+    "driver": "双 11mm 单元",
+    "battery_total_h": 35
+   },
+   "features": [
+    "开放式耳夹设计",
+    "4 麦克风通话环境降噪 (ENC)",
+    "自动左右耳识别",
+    "充电盒快充"
+   ],
+   "ai_features": [
+    "AI 实时翻译（160+ 种语言，Folax AI）"
+   ],
+   "sources": [
+    "https://www.lowyat.net/2026/409350/infinix-zclip-2-pro-malaysia/",
+    "https://productnation.co/my/32273/infinix-zclip-2-pro-malaysia-rm399-kiP7/"
+   ]
+  },
+  {
+   "id": "sony-mdr-3r",
+   "category": "earbuds",
+   "brand": "Sony",
+   "model": "MDR-3R",
+   "launch_my": "2026-11",
+   "price_myr": 259,
+   "status": "预购",
+   "price_note": "有线耳机（USB-C）；Sony 大马官网预购，标准版 11 月中旬起发货；Stranger Things 版 RM299，年底发货",
+   "variants": [
+    {
+     "label": "标准版",
+     "label_en": "Standard",
+     "price_myr": 259,
+     "price_date": "2026-11-19"
+    },
+    {
+     "label": "Stranger Things 版",
+     "label_en": "Stranger Things Edition",
+     "price_myr": 299,
+     "price_date": "2026-11-19"
+    }
+   ],
+   "specs": {
+    "anc": false,
+    "driver": "23mm 动圈单元",
+    "bt_version": null
+   },
+   "features": [
+    "USB-C 有线连接，无需充电或配对",
+    "线控与麦克风",
+    "复古 Walkman 风格设计",
+    "可更换海绵耳垫",
+    "超薄金属头梁"
+   ],
+   "ai_features": [],
+   "sources": [
+    "https://soyacincau.com/2026/11/06/sony-mdr-3r-retro-headphones-usb-c-price-malaysia/"
+   ]
+  },
+  {
+   "id": "iphone-duo",
+   "category": "phone",
+   "brand": "Apple",
+   "model": "iPhone Duo",
+   "launch_my": "2026-10-23",
+   "price_myr": 9499,
+   "status": "在售",
+   "price_note": "",
+   "variants": [
+    {
+     "label": "256GB",
+     "storage_gb": 256,
+     "price_myr": 9499,
+     "price_date": "2026-11-19"
+    },
+    {
+     "label": "512GB",
+     "storage_gb": 512,
+     "price_myr": 10499,
+     "price_date": "2026-11-19"
+    },
+    {
+     "label": "1TB",
+     "storage_gb": 1024,
+     "price_myr": 12499,
+     "price_date": "2026-11-19"
+    },
+    {
+     "label": "2TB",
+     "storage_gb": 2048,
+     "price_myr": 15499,
+     "price_date": "2026-11-19"
+    }
+   ],
+   "specs": {
+    "display_size_in": 7.6,
+    "display_type": "Super Retina XDR OLED",
+    "resolution": "2670×1878",
+    "cover_size_in": 5.4,
+    "cover_type": "Super Retina XDR OLED · 2034×1398",
+    "refresh_hz": 120,
+    "brightness_nits": 3000,
+    "chipset": "A20 Pro",
+    "ram_gb": null,
+    "storage_gb": 2048,
+    "main_cam_mp": 48,
+    "ultrawide_mp": 48,
+    "tele_mp": null,
+    "zoom_x": null,
+    "front_mp": 12,
+    "battery_mah": null,
+    "wired_w": null,
+    "wireless_w": 25,
+    "weight_g": 254,
+    "thickness_mm": null,
+    "thickness_folded_mm": 11.3,
+    "thickness_unfolded_mm": 5.2,
+    "ip": "IP68",
+    "os": "iOS 27",
+    "update_years": null,
+    "dimming": null,
+    "cooling": null,
+    "speakers": "立体声双扬声器",
+    "certs": null
+   },
+   "features": [
+    "钛金属折叠设计",
+    "侧键 Touch ID",
+    "双 eSIM（不支持实体 SIM）",
+    "支持 Apple Pencil (USB-C)",
+    "MagSafe / Qi2 25W 无线充电",
+    "相机控制键",
+    "Wi-Fi 7",
+    "卫星紧急 SOS 与车祸检测"
+   ],
+   "ai_features": [
+    "Apple Intelligence",
+    "Siri AI"
+   ],
+   "sources": [
+    "https://www.apple.com/my/iphone-duo/specs/",
+    "https://www.apple.com/my/shop/buy-iphone/iphone-duo",
+    "https://soyacincau.com/2026/09/10/apple-iphone-duo-launched-malaysia-price-spec-features-rm9499/",
+    "https://soyacincau.com/2026/10/23/iphone-duo-now-in-malaysia-apple-store-trx-launch-day-queue/"
+   ]
+  },
+  {
+   "id": "lenovo-yoga-tab-gen2",
+   "category": "tablet",
+   "brand": "Lenovo",
+   "model": "Yoga Tab Gen 2",
+   "launch_my": "2026-11-03",
+   "price_myr": 2899,
+   "status": "在售",
+   "price_note": "RM2,899 起（含二合一键盘套装）；联想专卖店有售",
+   "specs": {
+    "display_size_in": 11,
+    "display_type": "PureSight Pro",
+    "resolution": "4K",
+    "refresh_hz": 144,
+    "brightness_nits": 1100,
+    "chipset": "Dimensity 9500s",
+    "ram_gb": 12,
+    "storage_gb": 512,
+    "rear_mp": 13,
+    "front_mp": 8,
+    "battery_mah": 11000,
+    "wired_w": null,
+    "weight_g": 480,
+    "thickness_mm": null,
+    "stylus": "Tab Pen Pro 2",
+    "cellular": null,
+    "os": null,
+    "dimming": null,
+    "cooling": null,
+    "speakers": "四扬声器 · Dolby Atmos",
+    "certs": null
+   },
+   "features": [
+    "可拆卸二合一键盘",
+    "microSD 扩展至 2TB",
+    "双麦克风"
+   ],
+   "ai_features": [],
+   "sources": [
+    "https://www.lowyat.net/2026/409005/lenovo-yoga-tab-plus-gen-2-malaysia/",
+    "https://pokde.net/gadget/tablet/lenovo-tablet-lineup-malaysia-launch",
+    "https://www.lenovo.com/my/en/tablets/"
+   ]
+  },
+  {
+   "id": "lenovo-idea-tab-pro-gen2",
+   "category": "tablet",
+   "brand": "Lenovo",
+   "model": "Idea Tab Pro Gen 2",
+   "launch_my": "2026-11-03",
+   "price_myr": 2899,
+   "status": "在售",
+   "price_note": "RM2,899 起（含二合一键盘套装）；联想专卖店有售",
+   "specs": {
+    "display_size_in": 13,
+    "display_type": "PureSight Pro · Dolby Vision",
+    "resolution": "3.5K",
+    "refresh_hz": null,
+    "brightness_nits": null,
+    "chipset": "Snapdragon 8s Gen 4",
+    "ram_gb": 12,
+    "storage_gb": 512,
+    "rear_mp": 13,
+    "front_mp": 8,
+    "battery_mah": 10200,
+    "wired_w": 45,
+    "weight_g": 600,
+    "thickness_mm": 6.2,
+    "stylus": null,
+    "cellular": null,
+    "os": null,
+    "dimming": null,
+    "cooling": null,
+    "speakers": "JBL 四扬声器 · Dolby Atmos",
+    "certs": null
+   },
+   "features": [
+    "可选哑光防眩光屏",
+    "键盘 Smart Key 快捷键",
+    "Smarter Reader 阅读应用"
+   ],
+   "ai_features": [
+    "Qira AI 助手（今年稍后推送）",
+    "AI 实时转写",
+    "AI 摘要",
+    "Smart Key 一键 AI 文本生成"
+   ],
+   "sources": [
+    "https://www.lowyat.net/2026/409005/lenovo-yoga-tab-plus-gen-2-malaysia/",
+    "https://pokde.net/gadget/tablet/lenovo-tablet-lineup-malaysia-launch",
+    "https://www.lenovo.com/my/en/tablets/"
+   ]
+  },
+  {
+   "id": "lenovo-tab-plus-gen2",
+   "category": "tablet",
+   "brand": "Lenovo",
+   "model": "Tab Plus Gen 2",
+   "launch_my": "2026-06",
+   "price_myr": 2299,
+   "status": "在售",
+   "price_note": "因内存涨价，现售 RM2,299 起（附带肩带收纳包）",
+   "specs": {
+    "display_size_in": 12.1,
+    "display_type": "LCD · Dolby Vision · HDR10",
+    "resolution": "2.5K",
+    "refresh_hz": null,
+    "brightness_nits": 800,
+    "chipset": "Dimensity 7400",
+    "ram_gb": 12,
+    "storage_gb": 256,
+    "rear_mp": 13,
+    "front_mp": 8,
+    "battery_mah": 10200,
+    "wired_w": 45,
+    "weight_g": null,
+    "thickness_mm": null,
+    "stylus": null,
+    "cellular": null,
+    "os": null,
+    "dimming": null,
+    "cooling": null,
+    "speakers": "JBL 九单元扬声器 · Dolby Atmos",
+    "certs": null
+   },
+   "features": [
+    "360° 旋转支架",
+    "蓝牙音箱模式",
+    "microSD 扩展至 2TB"
+   ],
+   "ai_features": [],
+   "sources": [
+    "https://www.lowyat.net/2026/409005/lenovo-yoga-tab-plus-gen-2-malaysia/",
+    "https://pokde.net/gadget/tablet/lenovo-tablet-lineup-malaysia-launch",
+    "https://www.lenovo.com/my/en/tablets/"
+   ]
   }
  ],
  "news": [
+  {
+   "id": "2026-11-19-redmi-note-17-prices-back-my",
+   "region": "MY",
+   "category": "phone",
+   "kind": "价格",
+   "date": "2026-11-19",
+   "source": "Xiaomi Malaysia",
+   "url": "https://www.mi.com/my/product/redmi-note-17-pro-max-5g/buy/",
+   "title": "Redmi Note 17 系列 11.11 优惠结束，mi.com 价格回升",
+   "summary": "Note 17 Pro Max 5G 恢复 RM1,999 / RM2,299，Note 17 5G 恢复 RM1,099 / RM1,299，Note 17 Pro 5G 8+256GB / 8+512GB 回到 RM1,599 / RM1,899，Note 17 4+128GB 现为 RM779。",
+   "device_ids": [
+    "redmi-note-17-pro-max-5g",
+    "redmi-note-17-pro-5g",
+    "redmi-note-17-5g",
+    "redmi-note-17"
+   ]
+  },
+  {
+   "id": "2026-11-19-redmagic-12-pro-sale-continues-my",
+   "region": "MY",
+   "category": "phone",
+   "kind": "优惠",
+   "date": "2026-11-19",
+   "source": "REDMAGIC Malaysia",
+   "url": "https://my.redmagic.gg/products/redmagic-12-pro",
+   "title": "RedMagic 12 Pro 官网优惠价延续，仍是 RM3,999 起",
+   "summary": "原定 11 月 11 日结束的减 RM500 优惠仍在官方商店生效：12+256GB RM3,999、16+512GB RM4,499、16+1TB RM5,399；目前为预购，约 30 个工作日发货。",
+   "device_ids": [
+    "redmagic-12-pro"
+   ]
+  },
+  {
+   "id": "2026-11-19-vivo-flash-deals-my",
+   "region": "MY",
+   "category": "phone",
+   "kind": "优惠",
+   "date": "2026-11-19",
+   "source": "vivo Malaysia E-Store",
+   "url": "https://shop.vivo.com/my/",
+   "title": "vivo 官网闪购至 11 月 30 日：iQOO Z11x RM999、Y31s 5G RM939",
+   "summary": "闪购价限指定颜色：iQOO Z11x 5G 8+128GB 银色 RM999（原价 RM1,499），vivo Y31s 5G 6+128GB 紫色 RM939（原价 RM1,299），另有 Y21 5G 8+256GB RM1,099。",
+   "device_ids": [
+    "iqoo-z11x-5g",
+    "vivo-y31s-5g",
+    "vivo-y21-5g"
+   ]
+  },
+  {
+   "id": "2026-11-19-xiaomi-wearables-quiet-my",
+   "region": "MY",
+   "category": "watch",
+   "kind": "上市",
+   "date": "2026-11-19",
+   "source": "Xiaomi Malaysia",
+   "url": "https://www.mi.com/my/event/xiaomi-new-smart-devices/",
+   "title": "小米手环 11、Watch S5 41mm 与 Xiaomi Clip 悄悄在马开卖",
+   "summary": "mi.com 新品页已上架并可下单：小米手环 11 RM199（原价 RM249）、Watch S5 41mm RM799（原价 RM899）、Xiaomi Clip 耳夹耳机 RM599（原价 RM699）；未见官方发布消息。",
+   "device_ids": [
+    "xiaomi-smart-band-11",
+    "xiaomi-watch-s5-41mm",
+    "xiaomi-clip"
+   ]
+  },
+  {
+   "id": "2026-11-19-realme-watch-s5-listed-my",
+   "region": "MY",
+   "category": "watch",
+   "kind": "上市",
+   "date": "2026-11-19",
+   "source": "realme Malaysia",
+   "url": "https://www.realme.com/my/realme-watch-s5",
+   "title": "realme Watch S5 悄悄上架大马官网，售价未公布",
+   "summary": "官网介绍页显示 1.43 吋 AMOLED、1500 尼特、20 天续航、独立 GPS 与 5ATM，可一键唤醒 Gemini；暂未标价、未开放购买，未见官方发布消息。",
+   "device_ids": [
+    "realme-watch-s5"
+   ]
+  },
+  {
+   "id": "2026-11-18-xiaomi-18-pro-series-my",
+   "region": "MY",
+   "category": "phone",
+   "kind": "上市",
+   "date": "2026-11-18",
+   "source": "SoyaCincau",
+   "url": "https://soyacincau.com/2026/11/18/xiaomi-18-pro-and-18-pro-max-malaysia-launch-price-specs/",
+   "title": "小米 18 Pro / 18 Pro Max 在马开放预购，预购价 RM3,999 起",
+   "summary": "双 200MP 徕卡主摄与长焦、背屏和硬件防窥屏；预购优惠至 11 月 26 日：18 Pro RM3,999 / RM4,999，18 Pro Max RM5,499 / RM5,999（原价 RM4,799–RM6,499）。",
+   "device_ids": [
+    "xiaomi-18-pro",
+    "xiaomi-18-pro-max"
+   ]
+  },
   {
    "id": "2026-11-17-honor-magic9-pro-max-launch-date-my",
    "region": "MY",
@@ -26189,6 +26946,34 @@ window.RADAR_DATA = {
    ]
   },
   {
+   "id": "2026-11-06-infinix-zclip-2-pro-my",
+   "region": "MY",
+   "category": "earbuds",
+   "kind": "上市",
+   "date": "2026-11-06",
+   "source": "Lowyat.NET",
+   "url": "https://www.lowyat.net/2026/409350/infinix-zclip-2-pro-malaysia/",
+   "title": "Infinix ZCLIP 2 Pro 耳夹式耳机在马推出，售价 RM399",
+   "summary": "开放式耳夹设计，双 11mm 单元，连充电盒续航 35 小时，支持 160+ 种语言 AI 实时翻译；11 月 10 日起在官方门店、Shopee 与 TikTok Shop 开卖。",
+   "device_ids": [
+    "infinix-zclip-2-pro"
+   ]
+  },
+  {
+   "id": "2026-11-06-sony-mdr-3r-my",
+   "region": "MY",
+   "category": "earbuds",
+   "kind": "上市",
+   "date": "2026-11-06",
+   "source": "SoyaCincau",
+   "url": "https://soyacincau.com/2026/11/06/sony-mdr-3r-retro-headphones-usb-c-price-malaysia/",
+   "title": "Sony MDR-3R 复古有线耳机登陆大马，RM259 起",
+   "summary": "Walkman 风格的 USB-C 有线头戴耳机，23mm 单元，Sony 官网开放预购，11 月中旬发货；Stranger Things 联名版 RM299。",
+   "device_ids": [
+    "sony-mdr-3r"
+   ]
+  },
+  {
    "id": "2026-11-05-honor-magic9-teaser-my",
    "region": "MY",
    "category": "phone",
@@ -26328,7 +27113,10 @@ window.RADAR_DATA = {
    "summary": "Yoga Tab Plus Gen 2（RM3,999）、Yoga Tab Gen 2 与 Idea Tab Pro Gen 2（RM2,899）、Tab Plus Gen 2（RM2,299），以及 8.8 吋电竞平板 Legion Tab（RM3,399）。",
    "device_ids": [
     "yoga-tab-plus-gen2",
-    "legion-tab-gen5"
+    "legion-tab-gen5",
+    "lenovo-yoga-tab-gen2",
+    "lenovo-idea-tab-pro-gen2",
+    "lenovo-tab-plus-gen2"
    ]
   },
   {
@@ -26402,6 +27190,20 @@ window.RADAR_DATA = {
    "summary": "首次支持 IP67 防尘防水，比上代贵 RM800。10 月 29 日预购，11 月 6 日开卖。",
    "device_ids": [
     "ipad-mini-2026"
+   ]
+  },
+  {
+   "id": "2026-10-23-iphone-duo-on-sale-my",
+   "region": "MY",
+   "category": "phone",
+   "kind": "上市",
+   "date": "2026-10-23",
+   "source": "SoyaCincau",
+   "url": "https://soyacincau.com/2026/10/23/iphone-duo-now-in-malaysia-apple-store-trx-launch-day-queue/",
+   "title": "iPhone Duo 折叠屏在马开卖，RM9,499 起",
+   "summary": "苹果首款折叠屏手机 10 月 23 日起在大马发售：7.6 吋内屏、5.4 吋外屏、A20 Pro，256GB RM9,499 至 2TB RM15,499；首批供货紧张。",
+   "device_ids": [
+    "iphone-duo"
    ]
   },
   {

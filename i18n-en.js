@@ -24,7 +24,7 @@ window.RADAR_EN = {
    }
   },
   "redmagic-12-pro": {
-   "price_note": "On sale since 10 November · the 11.11 promo ended on 11 November",
+   "price_note": "The official store is still selling at the sale price (originally until 11 November; no new end date given); currently pre-order, ships in about 30 working days; 16+1TB out of stock",
    "features": [
     "Bypass charging while gaming"
    ],
@@ -643,7 +643,8 @@ window.RADAR_EN = {
     "dimming": "DC dimming",
     "speakers": "Stereo speakers",
     "certs": "TÜV SÜD 5-star battery · TÜV Rheinland Low Blue Light · TÜV Rheinland Circadian Friendly"
-   }
+   },
+   "price_note": "The 11.11 offer has ended and mi.com is back to the regular price; 6+128GB is out of stock"
   },
   "redmi-note-17-pro-5g": {
    "features": [
@@ -677,7 +678,8 @@ window.RADAR_EN = {
     "dimming": "PWM 3840 Hz · DC dimming",
     "speakers": "Stereo speakers · Dolby Atmos",
     "certs": "SGS 5-star premium performance · TÜV SÜD 5-star battery · TÜV SÜD 5-star mechanical damage resistance · TÜV SÜD water-resistance endurance · TÜV Rheinland Flicker Free · TÜV Rheinland Circadian Friendly"
-   }
+   },
+   "price_note": "The 11.11 offer on 8+256GB / 8+512GB has ended (back to regular price); 6+128GB is still RM1,299 (regular RM1,399)"
   },
   "redmi-note-17-pro-max-5g": {
    "features": [
@@ -714,7 +716,8 @@ window.RADAR_EN = {
     "dimming": "PWM 3840 Hz · DC dimming",
     "speakers": "Stereo speakers · Dolby Atmos",
     "certs": "SGS 5-star premium performance · TÜV SÜD 5-star battery · TÜV SÜD 5-star mechanical damage resistance · TÜV SÜD water-resistance endurance · TÜV Rheinland Flicker Free · TÜV Rheinland Circadian Friendly"
-   }
+   },
+   "price_note": "The 11.11 offer has ended; mi.com is back to RM1,999 / RM2,299"
   },
   "samsung-galaxy-a07s": {
    "features": [
@@ -1671,7 +1674,8 @@ window.RADAR_EN = {
    "specs": {
     "speakers": "Stereo speakers · 400% volume",
     "certs": "SGS 5-star drop resistance · TÜV Rheinland Low Blue Light"
-   }
+   },
+   "price_note": "vivo E-Store flash deal until 30 November: 6+128GB Purple RM939 (Black RM999)"
   },
   "xiaomi-17t": {
    "features": [
@@ -1817,7 +1821,8 @@ window.RADAR_EN = {
    "specs": {
     "speakers": "Stereo speakers",
     "certs": "TÜV Rheinland Low Blue Light"
-   }
+   },
+   "price_note": "vivo E-Store flash deal until 30 November: 8+128GB Silver RM999 (other colours RM1,269)"
   },
   "oppo-a6c": {
    "features": [
@@ -9067,6 +9072,229 @@ window.RADAR_EN = {
     "microSD expansion up to 1TB"
    ],
    "ai_features": []
+  },
+  "xiaomi-18-pro": {
+   "price_note": "Pre-order price until 26 November, then back to RM4,799 (12+256GB) / RM5,299 (12+512GB); mi.com, Xiaomi stores and official Shopee / Lazada / TikTok Shop; 256GB currently shows \"Notify me\"",
+   "features": [
+    "2.7-inch AMOLED rear display (912×596, 1–120Hz)",
+    "Xiaomi Privacy Display (hardware privacy screen)",
+    "Privacy Mode and Privacy Notice",
+    "Ultrasonic in-display fingerprint",
+    "IR blaster",
+    "Leica photographic styles",
+    "8K 30fps video",
+    "4K 120fps Dolby Vision video",
+    "Wi-Fi 7",
+    "Dual SIM (eSIM supported)"
+   ],
+   "ai_features": [
+    "AI Writing",
+    "AI Speech Recognition",
+    "AI Interpreter",
+    "AI Search",
+    "AI Dynamic Wallpapers",
+    "AI Creativity Assistant",
+    "GenAI Apps on the rear display",
+    "Google Gemini",
+    "Circle to Search"
+   ],
+   "specs": {
+    "dimming": "DC dimming",
+    "cooling": "Xiaomi 3D IceLoop cooling system",
+    "speakers": "Stereo speakers · Dolby Atmos",
+    "certs": "TÜV Rheinland Low Blue Light (Hardware) · TÜV Rheinland Flicker Free · TÜV Rheinland Circadian Friendly · TÜV Rheinland Screen Privacy Protection"
+   }
+  },
+  "xiaomi-18-pro-max": {
+   "price_note": "Pre-order price until 26 November, then back to RM5,999 (12+256GB) / RM6,499 (12+512GB); mi.com, Xiaomi stores and official Shopee / Lazada / TikTok Shop; 256GB currently shows \"Notify me\"",
+   "features": [
+    "2.9-inch AMOLED rear display (976×596, 1–120Hz)",
+    "Xiaomi Privacy Display (hardware privacy screen)",
+    "Privacy Mode and Privacy Notice",
+    "Ultrasonic in-display fingerprint",
+    "IR blaster",
+    "Leica photographic styles",
+    "8K 30fps video",
+    "4K 120fps Dolby Vision video",
+    "Wi-Fi 7",
+    "Dual SIM (eSIM supported)"
+   ],
+   "ai_features": [
+    "AI Writing",
+    "AI Speech Recognition",
+    "AI Interpreter",
+    "AI Search",
+    "AI Dynamic Wallpapers",
+    "AI Creativity Assistant",
+    "GenAI Apps on the rear display",
+    "Google Gemini",
+    "Circle to Search"
+   ],
+   "specs": {
+    "dimming": "DC dimming",
+    "cooling": "Xiaomi 3D IceLoop cooling system",
+    "speakers": "Triple speakers · Dolby Atmos",
+    "certs": "TÜV Rheinland Low Blue Light (Hardware) · TÜV Rheinland Flicker Free · TÜV Rheinland Circadian Friendly · TÜV Rheinland Screen Privacy Protection"
+   }
+  },
+  "xiaomi-smart-band-11": {
+   "price_note": "RM199 on mi.com (list price RM249); Ceramic Edition RM299 (list RM349); no official announcement seen",
+   "features": [
+    "9.99mm slim body",
+    "Aluminium alloy frame (ceramic frame on Ceramic Edition)",
+    "150+ sports modes",
+    "Bluetooth 5.4",
+    "Linear motor",
+    "Magnetic charging in about 90 min"
+   ],
+   "health": [
+    "Dual-LED, dual-PD high-precision heart rate",
+    "Blood oxygen monitoring",
+    "Sleep management assistant with sleep insights",
+    "Behaviour records"
+   ],
+   "specs": {
+    "health_sensors": "Optical heart rate & SpO2 sensor, accelerometer, gyroscope, e-compass, ambient light sensor"
+   }
+  },
+  "xiaomi-watch-s5-41mm": {
+   "price_note": "RM799 on mi.com (list price RM899); Ceramic White RM899 (list RM999, out of stock); no official announcement seen",
+   "features": [
+    "Stainless steel body with floating lugs",
+    "NFC payments (Xiaomi Pay / Google Wallet)",
+    "Speaker and microphone",
+    "Dual-mode Bluetooth BLE / BT 5.4",
+    "150+ sports modes",
+    "Interactive pet watch faces",
+    "60Hz refresh rate"
+   ],
+   "health": [
+    "New 3-sensor system",
+    "Four-LED, four-PD heart rate and SpO2",
+    "Stress monitoring",
+    "Skin temperature (±0.1°C)",
+    "Period prediction",
+    "Sleep HRV index"
+   ],
+   "specs": {
+    "health_sensors": "Heart rate & SpO2 sensor, accelerometer, gyroscope, ambient light, e-compass, barometer, temperature sensor"
+   }
+  },
+  "xiaomi-clip": {
+   "price_note": "RM599 on mi.com (list price RM699); no official announcement seen",
+   "features": [
+    "Open-ear clip-on design",
+    "20Hz–48kHz frequency response",
+    "10-min charge: 3.5 hours",
+    "USB-C charging"
+   ]
+  },
+  "realme-watch-s5": {
+   "price_note": "Product page is up on realme Malaysia, but no price or purchase option yet; Malaysian price not announced",
+   "features": [
+    "Triple-action button design",
+    "110 sports modes",
+    "Always-on display",
+    "Smart night vision",
+    "Rotate the crown to switch colour themes",
+    "Wet-hand touch",
+    "11.8mm body"
+   ],
+   "health": [
+    "Heart rate monitoring with alerts",
+    "Blood oxygen monitoring",
+    "Stress monitoring",
+    "Sleep analysis",
+    "Women's health",
+    "Ambient noise alerts"
+   ],
+   "ai_features": [
+    "One-touch Gemini AI assistant"
+   ],
+   "specs": {
+    "gps": "Independent GPS · 5 GNSS"
+   }
+  },
+  "infinix-zclip-2-pro": {
+   "features": [
+    "Open-ear clip-on design",
+    "4-mic environmental noise cancellation for calls (ENC)",
+    "Automatic left/right detection",
+    "Fast-charging case"
+   ],
+   "ai_features": [
+    "AI real-time translation (160+ languages, Folax AI)"
+   ],
+   "specs": {
+    "driver": "Dual 11mm drivers"
+   }
+  },
+  "sony-mdr-3r": {
+   "price_note": "Wired headphones (USB-C); pre-order on Sony Malaysia online store, standard model ships from mid-November; Stranger Things Edition RM299, ships towards year-end",
+   "features": [
+    "Wired USB-C, no charging or pairing",
+    "In-line remote and mic",
+    "Retro Walkman-style design",
+    "Swappable foam earpads",
+    "Ultra-slim metal headband"
+   ],
+   "specs": {
+    "driver": "23mm dynamic driver"
+   }
+  },
+  "iphone-duo": {
+   "features": [
+    "Titanium foldable design",
+    "Touch ID in the side button",
+    "Dual eSIM (no physical SIM)",
+    "Apple Pencil (USB-C) support",
+    "MagSafe / Qi2 25W wireless charging",
+    "Camera Control",
+    "Wi-Fi 7",
+    "Emergency SOS and Crash Detection"
+   ],
+   "specs": {
+    "speakers": "Stereo speakers"
+   }
+  },
+  "lenovo-yoga-tab-gen2": {
+   "price_note": "From RM2,899 (with 2-in-1 keyboard pack); at Lenovo Exclusive Stores",
+   "features": [
+    "Detachable 2-in-1 keyboard",
+    "microSD up to 2TB",
+    "Dual microphones"
+   ],
+   "specs": {
+    "speakers": "Quad speakers · Dolby Atmos"
+   }
+  },
+  "lenovo-idea-tab-pro-gen2": {
+   "price_note": "From RM2,899 (with 2-in-1 keyboard pack); at Lenovo Exclusive Stores",
+   "features": [
+    "Optional matte anti-glare display",
+    "Smart Key on the keyboard",
+    "Smarter Reader app"
+   ],
+   "ai_features": [
+    "Qira AI assistant (arriving later this year)",
+    "AI live transcription",
+    "AI summaries",
+    "Smart Key quick AI text generation"
+   ],
+   "specs": {
+    "speakers": "Quad JBL speakers · Dolby Atmos"
+   }
+  },
+  "lenovo-tab-plus-gen2": {
+   "price_note": "Now from RM2,299 after a price rise due to memory costs (comes with a shoulder-strap sleeve)",
+   "features": [
+    "360° rotating kickstand",
+    "Bluetooth speaker mode",
+    "microSD up to 2TB"
+   ],
+   "specs": {
+    "speakers": "JBL 9-unit speakers · Dolby Atmos"
+   }
   }
  },
  "news": {
@@ -9249,6 +9477,42 @@ window.RADAR_EN = {
   "2026-11-17-honor-magic9-pro-max-launch-date-my": {
    "title": "HONOR Magic9 Pro Max sets 24 November Malaysia launch",
    "summary": "HONOR confirmed the Magic9 Pro Max launches in Malaysia on 24 November at 3pm with a Facebook livestream. It is the only Magic9 model coming here; the price is not yet announced."
+  },
+  "2026-11-18-xiaomi-18-pro-series-my": {
+   "title": "Xiaomi 18 Pro / 18 Pro Max open for pre-order in Malaysia from RM3,999",
+   "summary": "Dual 200MP Leica main and telephoto cameras, a rear display and a hardware privacy screen. Pre-order prices until 26 November: 18 Pro RM3,999 / RM4,999, 18 Pro Max RM5,499 / RM5,999 (regular RM4,799–RM6,499)."
+  },
+  "2026-11-19-redmi-note-17-prices-back-my": {
+   "title": "Redmi Note 17 series 11.11 prices end, mi.com prices go back up",
+   "summary": "Note 17 Pro Max 5G is back to RM1,999 / RM2,299, Note 17 5G to RM1,099 / RM1,299, Note 17 Pro 5G 8+256GB / 8+512GB to RM1,599 / RM1,899, and Note 17 4+128GB is now RM779."
+  },
+  "2026-11-19-redmagic-12-pro-sale-continues-my": {
+   "title": "RedMagic 12 Pro sale price continues on the official store, still from RM3,999",
+   "summary": "The RM500-off offer that was due to end on 11 November is still live on the official store: 12+256GB RM3,999, 16+512GB RM4,499, 16+1TB RM5,399; currently pre-order, shipping in about 30 working days."
+  },
+  "2026-11-19-vivo-flash-deals-my": {
+   "title": "vivo E-Store flash deals until 30 November: iQOO Z11x RM999, Y31s 5G RM939",
+   "summary": "Flash prices apply to selected colours: iQOO Z11x 5G 8+128GB Silver RM999 (regular RM1,499), vivo Y31s 5G 6+128GB Purple RM939 (regular RM1,299), plus Y21 5G 8+256GB at RM1,099."
+  },
+  "2026-11-06-infinix-zclip-2-pro-my": {
+   "title": "Infinix ZCLIP 2 Pro clip-on earbuds launch in Malaysia at RM399",
+   "summary": "Open-ear clip-on design with dual 11mm drivers, 35 hours with the case and AI real-time translation in 160+ languages; on sale from 10 November at official stores, Shopee and TikTok Shop."
+  },
+  "2026-11-06-sony-mdr-3r-my": {
+   "title": "Sony MDR-3R retro wired headphones arrive in Malaysia from RM259",
+   "summary": "Walkman-style wired USB-C headphones with 23mm drivers, on pre-order at Sony's online store and shipping from mid-November; the Stranger Things Edition is RM299."
+  },
+  "2026-10-23-iphone-duo-on-sale-my": {
+   "title": "iPhone Duo foldable goes on sale in Malaysia from RM9,499",
+   "summary": "Apple's first foldable went on sale in Malaysia on 23 October: 7.6-inch inner and 5.4-inch cover screens, A20 Pro, from RM9,499 (256GB) to RM15,499 (2TB); early supply is tight."
+  },
+  "2026-11-19-xiaomi-wearables-quiet-my": {
+   "title": "Xiaomi Smart Band 11, Watch S5 41mm and Xiaomi Clip quietly go on sale in Malaysia",
+   "summary": "Listed and purchasable on mi.com's new-devices page: Smart Band 11 RM199 (list RM249), Watch S5 41mm RM799 (list RM899), Xiaomi Clip clip-on earbuds RM599 (list RM699); no official announcement seen."
+  },
+  "2026-11-19-realme-watch-s5-listed-my": {
+   "title": "realme Watch S5 quietly listed on realme Malaysia, price not announced",
+   "summary": "The product page shows a 1.43-inch 1500-nit AMOLED, 20-day battery, independent GPS, 5ATM and one-touch Gemini; no price or purchase option yet and no official announcement seen."
   }
  }
 };
