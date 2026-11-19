@@ -3,7 +3,7 @@
    features = 配置以外的软件 / 系统功能；ai_features = 官方点名的 AI 功能；health = 手表健康功能；variants = 各内存 / 尺寸版本的独立售价；image = 去背机型图；specs.dimming / cooling / speakers / certs = 调光、散热、扬声器、认证（手机与平板）。
    限时优惠：price_myr = 现在实付价，price_old = 原价，promo_until / promo_from = 优惠起止日（马来西亚日期）；过了 promo_until 页面会自动改回原价。 */
 window.RADAR_DATA = {
- "updated": "2026-11-19T12:30:00+08:00",
+ "updated": "2026-11-19T10:35:00+08:00",
  "schedule": "每天更新一次",
  "devices": [
   {
@@ -67,6 +67,7 @@ window.RADAR_DATA = {
    "launch_my": "2026-09-21",
    "price_myr": 2699,
    "status": "在售",
+   "image": "img/phone/realme-16-pro-5g-harry-potter-edition.png",
    "price_note": "全球限量 5,000 台，RM2,699（发布价）；硬件与标准版 16 Pro 5G 相同",
    "specs": {
     "display_size_in": 6.78,
@@ -128,6 +129,7 @@ window.RADAR_DATA = {
    "launch_my": "2026-11-02",
    "price_myr": 2999,
    "status": "在售",
+   "image": "img/phone/sony-xperia-10-viii.png",
    "price_note": "8+128GB 单一版本；早鸟优惠至 11 月 30 日（内容未核实）",
    "variants": [
     {
@@ -190,6 +192,7 @@ window.RADAR_DATA = {
    "launch_my": "2026-11-19",
    "price_myr": null,
    "status": "预购",
+   "image": "img/phone/huawei-nova-16s-pro.png",
    "price_note": "11 月 19 日下午 3 点在马发布；现可付 RM100 订金预订，最高 RM600 回扣，赠品最高值 RM1,956；售价未公布",
    "variants": [
     {
@@ -253,6 +256,7 @@ window.RADAR_DATA = {
    "launch_my": "2026-11-19",
    "price_myr": null,
    "status": "预购",
+   "image": "img/phone/huawei-nova-16s.png",
    "price_note": "11 月 19 日下午 3 点在马发布；现可付 RM100 订金预订，最高 RM600 回扣，赠品最高值 RM1,956；售价未公布",
    "variants": [
     {
@@ -18496,6 +18500,7 @@ window.RADAR_DATA = {
    "launch_my": "2026-09-21",
    "price_myr": 399,
    "status": "在售",
+   "image": "img/earbuds/realme-buds-t500-pro-harry-potter-edition.png",
    "price_note": "RM399（发布价）",
    "specs": {
     "driver": "12.4mm",
@@ -25881,6 +25886,7 @@ window.RADAR_DATA = {
    "launch_my": "2026-11-18",
    "price_myr": 3999,
    "status": "预购",
+   "image": "img/phone/xiaomi-18-pro.png",
    "price_note": "预购优惠价至 11 月 26 日，之后恢复 RM4,799（12+256GB） / RM5,299（12+512GB）；mi.com、小米之家及官方 Shopee / Lazada / TikTok Shop；256GB 目前显示「到货通知」",
    "variants": [
     {
@@ -25966,6 +25972,7 @@ window.RADAR_DATA = {
    "launch_my": "2026-11-18",
    "price_myr": 5499,
    "status": "预购",
+   "image": "img/phone/xiaomi-18-pro-max.png",
    "price_note": "预购优惠价至 11 月 26 日，之后恢复 RM5,999（12+256GB） / RM6,499（12+512GB）；mi.com、小米之家及官方 Shopee / Lazada / TikTok Shop；256GB 目前显示「到货通知」",
    "variants": [
     {
@@ -26051,6 +26058,7 @@ window.RADAR_DATA = {
    "launch_my": "2026-11",
    "price_myr": 199,
    "status": "在售",
+   "image": "img/watch/xiaomi-smart-band-11.png",
    "price_note": "mi.com 售价 RM199（标价 RM249）；陶瓷版 RM299（标价 RM349）；未见官方发布消息",
    "variants": [
     {
@@ -26109,6 +26117,7 @@ window.RADAR_DATA = {
    "launch_my": "2026-11",
    "price_myr": 799,
    "status": "在售",
+   "image": "img/watch/xiaomi-watch-s5-41mm.png",
    "price_note": "mi.com 售价 RM799（标价 RM899）；陶瓷白 RM899（标价 RM999，暂缺货）；未见官方发布消息",
    "variants": [
     {
@@ -26179,6 +26188,7 @@ window.RADAR_DATA = {
    "price_myr": 599,
    "price_old": 699,
    "status": "在售",
+   "image": "img/earbuds/xiaomi-clip.png",
    "price_note": "mi.com 售价 RM599（标价 RM699）；未见官方发布消息",
    "specs": {
     "anc": null,
@@ -26211,6 +26221,7 @@ window.RADAR_DATA = {
    "launch_my": "2026-11",
    "price_myr": null,
    "status": "即将上市",
+   "image": "img/watch/realme-watch-s5.png",
    "price_note": "大马官网已上架介绍页，尚未标价、未开放购买；大马售价未公布",
    "specs": {
     "display_size_in": 1.43,
@@ -26256,6 +26267,7 @@ window.RADAR_DATA = {
    "launch_my": "2026-11-10",
    "price_myr": 399,
    "status": "在售",
+   "image": "img/earbuds/infinix-zclip-2-pro.png",
    "price_note": "",
    "specs": {
     "anc": null,
@@ -26284,6 +26296,7 @@ window.RADAR_DATA = {
    "launch_my": "2026-11",
    "price_myr": 259,
    "status": "预购",
+   "image": "img/earbuds/sony-mdr-3r.png",
    "price_note": "有线耳机（USB-C）；Sony 大马官网预购，标准版 11 月中旬起发货；Stranger Things 版 RM299，年底发货",
    "variants": [
     {
@@ -26324,6 +26337,7 @@ window.RADAR_DATA = {
    "launch_my": "2026-10-23",
    "price_myr": 9499,
    "status": "在售",
+   "image": "img/phone/iphone-duo.png",
    "price_note": "",
    "variants": [
     {
@@ -26411,6 +26425,7 @@ window.RADAR_DATA = {
    "launch_my": "2026-11-03",
    "price_myr": 2899,
    "status": "在售",
+   "image": "img/tablet/lenovo-yoga-tab-gen2.png",
    "price_note": "RM2,899 起（含二合一键盘套装）；联想专卖店有售",
    "specs": {
     "display_size_in": 11,
@@ -26455,6 +26470,7 @@ window.RADAR_DATA = {
    "launch_my": "2026-11-03",
    "price_myr": 2899,
    "status": "在售",
+   "image": "img/tablet/lenovo-idea-tab-pro-gen2.png",
    "price_note": "RM2,899 起（含二合一键盘套装）；联想专卖店有售",
    "specs": {
     "display_size_in": 13,
@@ -26504,6 +26520,7 @@ window.RADAR_DATA = {
    "launch_my": "2026-06",
    "price_myr": 2299,
    "status": "在售",
+   "image": "img/tablet/lenovo-tab-plus-gen2.png",
    "price_note": "因内存涨价，现售 RM2,299 起（附带肩带收纳包）",
    "specs": {
     "display_size_in": 12.1,
