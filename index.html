@@ -1,9 +1,19 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#060A12;color:#E7EEF9}@media (prefers-color-scheme:light){:root{color-scheme:light}body{background:#EEF3F9;color:#0A1324}}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
 <title>大马数码雷达</title>
+<meta name="description" content="大马数码雷达：马来西亚手机、平板、耳机、手表的最新价格、规格对比、上市与优惠资讯，每天更新。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="大马数码雷达 · MY Gadget Radar">
+<meta property="og:title" content="大马数码雷达 · MY Gadget Radar">
+<meta property="og:description" content="马来西亚手机、平板、耳机、手表：最新价格、规格对比、上市与优惠资讯，每天更新。">
+<meta property="og:url" content="https://my-gadget-radar.pages.dev/">
+<meta property="og:image" content="https://my-gadget-radar.pages.dev/og.png?v=5abab8e3">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#060A12">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23060A12'/%3E%3Cg fill='none' stroke='%232A3B5E' stroke-width='1.4'%3E%3Ccircle cx='16' cy='16' r='12'/%3E%3Ccircle cx='16' cy='16' r='7.5'/%3E%3Ccircle cx='16' cy='16' r='3'/%3E%3C/g%3E%3Cpath d='M16 16 L16 4 A12 12 0 0 1 26.4 10 Z' fill='%233CCBF4' fill-opacity='.5'/%3E%3Ccircle cx='21.5' cy='9.8' r='2' fill='%233CCBF4'/%3E%3C/svg%3E">
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* Layout: compact sticky console header (logo · view tabs · update time + language) over a dense single column.
    Compare = sticky device header + one spec group per row, every row on the same column grid so values sit under their device;
@@ -568,11 +578,172 @@ html.lock,html.lock body{overflow:hidden;overscroll-behavior:none}
   .lad .ln:not(.ax),.track{height:50px}
   .pdot{width:8px;height:8px;margin-left:-4px}
 }
+/* ---------- 2026-11-20 refresh (comes after the phone block on purpose: it overrides earlier rules) ---------- */
+/* cards: the chip gets its own full row and long values wrap instead of being cut; an odd last spec spans the row as one line;
+   price is one line under the name, promo + regular price one line under it; specs and footer sit at the bottom so cards in a row line up */
+.mini div{padding:4px 6px}
+.mini dd{white-space:normal;overflow-wrap:break-word;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.mini .w{grid-column:1/-1}
+.mini .w dd{white-space:normal;overflow-wrap:anywhere;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.mini .w.l{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+.mini .w.l dd{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:right}
+/* chip row: always one line; the size is worked out from the cell width and the name's length (never above the normal size, never below 8.5px) */
+.mini{--cfs:11.5px}
+.pc .mini{--cfs:10.5px}
+.mini .w.c{container-type:inline-size}
+.mini .w.c dd{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:var(--cfs);font-size:min(var(--cfs),max(8.5px,calc(100cqw / (var(--n,20) * .62))))}
+.card .mini{margin-top:auto}
+.card>.pr{flex-wrap:nowrap}
+.card>.cx{flex-wrap:nowrap;min-width:0;overflow:hidden}
+.card>.cx s.old{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.promo{max-width:100%;min-width:0;overflow:hidden;text-overflow:ellipsis;flex:0 1 auto}
+.ct .vn{margin-top:1px}
+.card h3{overflow-wrap:break-word}
+@media (min-width:761px){
+  .grid{grid-template-columns:repeat(auto-fill,minmax(224px,1fr));gap:10px}
+  .card{padding:12px 12px 10px;gap:7px}
+  .card h3{font-size:14.5px}
+  .ch{grid-template-columns:64px minmax(0,1fr);gap:10px}
+  .th.tc{width:64px;height:72px}
+  .mini dt{font-size:10px}
+  .mini dd{font-size:12px}
+  .mini{--cfs:12px}
+}
+.ldm{padding:16px 0 4px;text-align:center;font:500 11px var(--f-data);letter-spacing:.08em;color:var(--faint)}
+.ldm i{display:inline-block;width:6px;height:6px;margin-right:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent);animation:pulse 1s ease-in-out infinite;vertical-align:1px}
+
+/* news: no second MY / INTL row; red line only on today's stories; related-model picture under the date; model chips stay on one line with "+N" */
+.ni.my::before{background:var(--line2);box-shadow:none}
+.ni.today::before{background:var(--my);box-shadow:0 0 8px var(--my)}
+.ndl{display:flex;flex-direction:column;align-items:center;gap:10px;min-width:0}
+.th.nt{width:38px;height:46px}
+.ndev{flex-wrap:nowrap;overflow:hidden}
+.chipd{flex:none;max-width:100%;white-space:nowrap}
+.chipd:first-child{flex-shrink:1;min-width:0}
+.ndev.fit .chipd:first-child{flex-shrink:0}
+.chipd span{min-width:0;overflow:hidden;text-overflow:ellipsis}
+.chipd.xn{padding:0 7px;font:600 10.5px var(--f-data);color:var(--faint);cursor:inherit}
+@media (min-width:761px){.nlist{max-width:760px}}
+@media (min-width:1024px){.nlist{max-width:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}}
+
+/* compare: columns keep a readable width and the whole table swipes sideways (header follows), labels stay pinned on the left;
+   header cells share row heights so price / best line up; press and hold a header cell to drag it left or right */
+.cmp{--cw:150px}
+.cols{grid-template-columns:var(--lw) repeat(var(--n),minmax(var(--cw),1fr))}
+.xs{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+.xs::-webkit-scrollbar{display:none}
+.xh{overflow-x:hidden}
+.cmp .rl{position:sticky;left:0;z-index:2;background:var(--panel)}
+.cmp .row:hover .rl{background:color-mix(in srgb,var(--accent) 5%,var(--panel))}
+.dgrid{grid-template-rows:repeat(4,auto)}
+.dlab{grid-row:1/span 4;position:sticky;left:0;z-index:3;background:var(--bg)}
+.dcell{grid-row:1/span 4;display:grid;grid-template-rows:subgrid;row-gap:2px;align-content:start;padding:6px 8px 7px;cursor:grab;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;touch-action:pan-y}
+.dcell .dt{display:flex;align-items:center;gap:6px;min-width:0;padding-right:16px}
+.dcell .th.tk{position:static;display:grid;width:26px;height:32px}
+.dcell img{-webkit-user-drag:none;pointer-events:none}
+.dcell b{overflow-wrap:normal;word-break:normal;align-self:start}
+.dcell .dp{font:600 var(--fs) var(--f-data);white-space:nowrap}
+.dcell .lead{font:500 10px var(--f-data);white-space:nowrap}
+.dcell.drag{z-index:6;cursor:grabbing;transition:none;box-shadow:0 14px 30px -10px rgba(0,0,0,.65),0 0 0 1.5px var(--dc)}
+.dcell.shift{transition:transform .18s cubic-bezier(.2,.8,.2,1)}
+.cmp.dragging .dcell:not(.drag){opacity:.8}
+.dcell.drag,.dcell.shift{animation:none}
+.cmp .cols{min-width:calc(var(--lw) + var(--n) * var(--cw))}
+.xs>.row:first-child{border-top:0}
+.dhint{margin:-6px 0 10px;font-size:10.5px;color:var(--faint)}
+
+/* device detail: big picture on top (tap to zoom), where-to-buy buttons, zoom viewer */
+.hero{position:relative;flex:none;display:grid;place-items:center;width:220px;height:220px;padding:12px;border:1px solid var(--line);border-radius:12px;background:radial-gradient(circle at 50% 58%,color-mix(in srgb,var(--accent) 14%,transparent),transparent 68%),var(--panel2);color:inherit}
+button.hero{cursor:zoom-in}
+.hero .th{width:100%;height:100%}
+.hero .th.ph svg{width:34%;height:34%}
+.hero img{filter:drop-shadow(0 10px 18px rgba(0,0,0,.4))}
+.hero .zm{position:absolute;right:8px;bottom:8px;display:grid;place-items:center;width:26px;height:26px;border-radius:7px;border:1px solid var(--line);background:var(--panel);background:color-mix(in srgb,var(--panel) 80%,transparent);color:var(--muted);transition:color .18s,border-color .18s}
+.hero:hover .zm{color:var(--accent);border-color:var(--accent)}
+.buy{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:12px}
+.buy .vl{margin-right:2px}
+.bbtn{display:inline-flex;align-items:center;gap:5px;height:30px;padding:0 12px;border-radius:7px;border:1px solid transparent;font-size:12px;font-weight:600;text-decoration:none;color:#fff;white-space:nowrap;transition:filter .18s,transform .12s}
+.bbtn:hover{filter:brightness(1.08)}
+.bbtn:active{transform:scale(.97)}
+.bbtn.official{background:var(--accent);color:var(--accent-ink)}
+.bbtn.shopee{background:#EE4D2D}
+.bbtn.lazada{background:#0F146D}
+.bbtn.off{background:transparent;color:var(--faint);border:1px dashed var(--line2);cursor:not-allowed;filter:none;transform:none}
+.buy .bnote{font-size:10.5px;color:var(--faint)}
+.lb{position:fixed;inset:0;z-index:90;display:grid;place-items:center;padding:16px;background:rgba(2,5,10,.86);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);cursor:zoom-out;opacity:0;transition:opacity .2s}
+.lb.show{opacity:1}
+.lb img{max-width:92vw;max-height:80vh;object-fit:contain;filter:drop-shadow(0 18px 40px rgba(0,0,0,.6));transform:scale(.94);transition:transform .25s cubic-bezier(.2,.8,.2,1)}
+.lb.show img{transform:none}
+.lb .x{position:absolute;top:max(14px,env(safe-area-inset-top,0px));right:14px}
+
+@media (max-width:760px){
+  .cmp,.cmp[data-n="3"],.cmp[data-n="4"]{--lw:62px;--fs:11px;--cw:calc((100vw - 32px - var(--lw)) / 2.35)}
+  .dcell{margin:0 2px;padding:6px 6px 7px}
+  .dcell .th.tk{width:22px;height:28px}
+  .dcell .bb{letter-spacing:.04em}
+  .hero{width:100%;height:200px}
+}
+/* small phones (≤360px): a slightly smaller picture and tighter spec cells so "7,000mAh" and one-word names still fit */
+@media (max-width:360px){
+  .card{padding:9px 8px 8px}
+  .ch{grid-template-columns:44px minmax(0,1fr);gap:6px}
+  .th.tc{width:44px;height:50px}
+  .mini div{padding:4px 4px}
+  .mini dd{font-size:10.5px}
+  .mini{--cfs:10.5px}
+}
+/* ---------- share sheet and long picture (sits above pop-ups, below the picture zoom) ---------- */
+.toast{z-index:96}
+.sh{position:fixed;inset:0;z-index:86;display:flex;align-items:center;justify-content:center;padding:max(16px,env(safe-area-inset-top,0px)) 16px max(16px,env(safe-area-inset-bottom,0px));overscroll-behavior:contain}
+.sh.show .scrim{opacity:1}
+.shp{position:relative;display:flex;flex-direction:column;width:min(440px,100%);max-height:min(88vh,880px);border:1px solid var(--line2);border-radius:14px;background:var(--panel);box-shadow:var(--shadow),0 0 0 1px color-mix(in srgb,var(--accent) 10%,transparent);opacity:0;transform:translateY(12px) scale(.98);transition:opacity .22s,transform .28s cubic-bezier(.2,.8,.2,1);overflow:hidden}
+.shp.wide{width:min(560px,100%)}
+.sh.show .shp{opacity:1;transform:none}
+.shw{display:flex;align-items:center;gap:10px;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--panel2)}
+.sht{display:flex;flex:none}
+.sht .th{width:30px;height:38px}
+.sht .th+.th{margin-left:-6px}
+.shx{min-width:0;flex:1;display:flex;flex-direction:column;gap:6px}
+.shx b{font-size:13px;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere}
+.shu{width:100%;height:28px;padding:0 8px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--muted);font:500 11px var(--f-data);outline:none;text-overflow:ellipsis}
+.shu:focus{border-color:var(--accent);color:var(--ink)}
+.shg{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:12px}
+.sho{display:flex;flex-direction:column;align-items:center;gap:7px;padding:11px 2px 9px;border:1px solid var(--line);border-radius:10px;background:var(--panel2);color:var(--ink);font:500 11.5px var(--f-body);text-decoration:none;cursor:pointer;transition:border-color .18s,background .18s}
+.sho:hover{border-color:var(--line2);color:var(--ink)}
+.sho>span{white-space:nowrap}
+.sho i{width:36px;height:36px;display:grid;place-items:center;border-radius:50%;color:#fff;font-style:normal}
+.sho i svg{width:20px;height:20px}
+.sho.wa i{background:#25D366}.sho.tgm i{background:#2AABEE}.sho.fb i{background:#1877F2}
+.sho.cp i{background:var(--accent-soft);color:var(--accent)}
+.sho.nat{grid-column:1/-1;flex-direction:row;justify-content:center;gap:8px;padding:0;height:42px;background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-size:13px;font-weight:600}
+.sho.nat:hover{color:var(--accent-ink);filter:brightness(1.08)}
+.sho.nat svg{width:17px;height:17px}
+.shim{width:100%;height:40px;justify-content:center;margin-top:14px;font-size:13px}
+.shn{margin:8px 0 0;color:var(--faint);font-size:11px;line-height:1.55;text-align:center}
+.shn.warn{margin:0 0 10px;color:var(--warn);text-align:left}
+.shm{display:flex;width:100%;margin-bottom:10px}
+.shm button{flex:1;height:32px;font-size:12px}
+.shi{display:grid;place-items:center;min-height:260px;border:1px solid var(--line);border-radius:10px;background:#060A12;overflow:hidden}
+.shi img{display:block;width:100%;height:auto;-webkit-touch-callout:default}
+.shl{display:flex;align-items:center;gap:8px;color:#8C9CB8;font-size:12px}
+.shl i{width:14px;height:14px;border-radius:50%;border:2px solid rgba(60,203,244,.25);border-top-color:#3CCBF4;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.pf .btn[disabled]{opacity:.45;pointer-events:none}
+@media (max-width:760px){
+  .sh{align-items:flex-end;padding:0}
+  .shp,.shp.wide{width:100%;max-height:90vh;border-radius:16px 16px 0 0;border-bottom:0;transform:translateY(100%)}
+  .sh.show .shp{transform:none}
+}
+@media (max-width:360px){.shg{gap:6px}.sho{font-size:10.5px}.sho i{width:32px;height:32px}}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
 }
 </style>
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head><body>
 <header class="hdr">
   <div class="wrap hrow">
     <a class="logo" href="#news" aria-label="大马数码雷达">
@@ -623,6 +794,8 @@ html.lock,html.lock body{overflow:hidden;overscroll-behavior:none}
   <div class="panel" id="panel" role="dialog" aria-modal="true"></div>
 </div>
 <div class="toast" id="toast" role="status"><i></i><span id="toast-t"></span></div>
+<div class="lb" id="lb" data-action="lb-close" role="dialog" aria-modal="true" hidden><button class="x" data-action="lb-close" aria-label="关闭"><svg class="i" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button><img id="lb-img" alt=""></div>
+<div class="sh" id="sh" hidden><div class="scrim" data-action="sh-close"></div><div class="shp" id="shp" role="dialog" aria-modal="true"></div></div>
 
 <script src="data.js"></script>
 <script src="i18n-en.js"></script>
@@ -638,26 +811,26 @@ const L={
     brands:"品牌",all_brands:"全部品牌",brand_title:"选择品牌",empty_q:"没有匹配的机型",empty_q_hint:"换个关键词或品牌",empty_cat:"这个品类还没有机型",empty_cat_hint:"每天自动搜寻会把新机型加进来",
     from:"起",tbd:"价格待定",add_cmp:"加入对比",rm_cmp:"移出对比",in_cmp:"已在对比",go_cmp:"去对比",
     cmp_title:c=>`${c}对比`,add_model:"添加机型",add_short:"添加",models:"机型",options:"对比内容",clear:"清空",pick_more:(n,c)=>`再选 ${n} 款${c}开始对比`,max_per:"同品类最多 4 款",
-    leads:n=>`最优 ×${n}`,best:"优",adv:n=>`优势 ${n} 项`,best_note:"该项最优",rank_note:"超过 3 款时显示前三名",pb_title:"突出显示品牌",pb_clear:"取消突出",rows:n=>`${n} 项`,rank:"名次",hi_better:"↑ 越高越好",lo_better:"↓ 越低越好",listed:"并列展示 · 不评高低",features:"软件功能",feat_short:"软件",ai:"AI 功能",not_listed:"来源未列出",no_opts:"没有选择任何对比内容，点「对比内容」勾选",
+    leads:n=>`最优 ×${n}`,best:"优",adv:n=>`优势 ${n} 项`,best_note:"该项最优",rank_note:"超过 3 款时显示前三名",pb_title:"突出显示品牌",pb_clear:"取消突出",rows:n=>`${n} 项`,rank:"名次",hi_better:"↑ 越高越好",lo_better:"↓ 越低越好",listed:"并列展示 · 不评高低",features:"特色功能",feat_short:"特色",ai:"AI 功能",not_listed:"来源未列出",no_opts:"没有选择任何对比内容，点「对比内容」勾选",
     profile:c=>`${c} · 机型资料`,my_launch:"大马上市",specs:"配置",none_official:"官网资料暂未列出",sources:"来源",close:"关闭",
-    opt_groups:"配置分组",opt_feats:"功能",opt_display:"显示",diff_only:"只看有差异的项",show_all:"全部显示",done:"完成",opt_rows:"具体项目（点选显示 / 隐藏）",opt_cat:"品类",opt_marks:"显示最优 / 排名标记",opt_core:"仅核心",opt_card:"卡片上显示的规格",opt_card_hint:n=>`列表卡片最多显示 ${n} 项，点选添加或取消`,card_max:n=>`卡片最多 ${n} 项，请先取消一项`,card_reset:"恢复默认",opt_hint_price:"排序和「优势」只按显示的项目计算",news_empty_all:"这个品类暂时没有资讯",
+    opt_groups:"配置分组",opt_feats:"功能",opt_display:"显示",diff_only:"只看不同项",show_all:"全部显示",done:"完成",opt_rows:"具体项目（点选显示 / 隐藏）",opt_cat:"品类",opt_marks:"显示最优 / 排名标记",opt_core:"仅核心",opt_card:"卡片上显示的规格",opt_card_hint:n=>`列表卡片最多显示 ${n} 项，点选添加或取消`,card_max:n=>`卡片最多 ${n} 项，请先取消一项`,card_reset:"恢复默认",opt_hint_price:"排序和「优势」只按显示的项目计算",news_empty_all:"这个品类暂时没有资讯",
     add_cat:c=>`添加${c}`,search_cat:c=>`搜索${c}`,no_match:"没有匹配的机型",
     t_added:(c,n)=>`已加入${c}对比 · ${n}/4`,t_removed:c=>`已移出${c}对比`,t_max:"每个品类最多对比 4 款",
     price_title:"价格对比",budget:"预算",range:"范围 ±",under:"预算以内",in_range:(n,a,b)=>`<b>${n}</b> 款在 ${a} – ${b}`,promo:"限时优惠",promo_until:d=>`限时优惠 · 至 ${d}`,pv_label:"显示方式",pv_list:"列表",pv_table:"对比表",list_note:"优势多的排前面，点开看详情",swipe:"左右滑动看全部",price_empty:"这个价位没有机型，试试放宽范围",
-    health:"健康功能",imp_note:"马来西亚无官方渠道",news_detail:"资讯详情",news_more:"详情",news_devs:"相关机型",read_src:"阅读原文",back_news:"返回资讯",n_vers:n=>`${n} 个版本`,price_date:"价格更新",mem_title:"按 RAM / ROM 筛选",mem_scope:"仅适用于手机、平板",mem_na:"当前品类没有 RAM / ROM 版本，请切换到手机或平板",mem_clear:"清除筛选",versions:"版本",std_ver:"标准版",new_title:"开卖 30 天内的新机",dl_title:"下载全部内容（Excel）",dl_ok:"Excel 文件已生成",dl_fail:"下载失败，请再试一次",dl_busy:"已有下载确认窗口，请先处理",x_brand:"品牌",x_model:"型号",x_version:"版本",x_price:"现价 (RM)",x_list:"原价 (RM)",x_status:"状态",x_date:"日期",x_region:"地区",x_cat:"品类",x_kind:"类型",x_title:"标题",x_summary:"摘要",x_source:"来源",totop:"回到顶部",yes:"支持",no:"不支持",u_d:"天",u_y:"年"},
+    health:"健康功能",imp_note:"马来西亚无官方渠道",news_detail:"资讯详情",news_more:"详情",news_devs:"相关机型",read_src:"阅读原文",back_news:"返回资讯",n_vers:n=>`${n} 个版本`,price_date:"价格更新",mem_title:"按 RAM / ROM 筛选",mem_scope:"仅适用于手机、平板",mem_na:"当前品类没有 RAM / ROM 版本，请切换到手机或平板",mem_clear:"清除筛选",versions:"版本",std_ver:"标准版",new_title:"开卖 30 天内的新机",dl_title:"下载全部内容（Excel）",dl_ok:"Excel 文件已生成",dl_fail:"下载失败，请再试一次",dl_busy:"已有下载确认窗口，请先处理",x_brand:"品牌",x_model:"型号",x_version:"版本",x_price:"现价 (RM)",x_list:"原价 (RM)",x_status:"状态",x_date:"日期",x_region:"地区",x_cat:"品类",x_kind:"类型",x_title:"标题",x_summary:"摘要",x_source:"来源",totop:"回到顶部",promo_short:d=>`限时 至 ${d}`,buy:"在哪买",buy_official:"官网",buy_soon:"链接即将开放",zoom:"放大图片",loading:"加载中…",drag_hint:"长按机型可左右拖动换位置",yes:"支持",no:"不支持",u_d:"天",u_y:"年",share:"分享",share_t:"分享",sh_what_d:"这款机型",sh_what_c:"这组对比",sh_what_n:"这条资讯",sh_native:"分享到其他应用…",sh_copy:"复制链接",sh_copied:"链接已复制",sh_copy_fail:"无法自动复制，请长按链接手动复制",sh_img:"生成长图",sh_img_note:"长图带产品图、价格和规格，适合发到 WhatsApp 群",long_img:"长图",img_key:"重点规格",img_all:"全部规格",img_making:"正在生成长图…",img_hint:"手机上也可以长按图片保存",img_save:"保存图片",img_share:"分享图片",img_saved:"图片已保存",img_fail:"长图生成失败，请再试一次",img_share_fail:"这里无法直接分享图片，请先保存",img_long:"图片很长，发到 WhatsApp 可能会被压缩变糊，建议用「重点规格」",img_note:d=>`价格以 ${d} 为准，促销期间可能变动`,img_more:"最新价格和完整配置：",img_daily:"每日自动更新"},
   en:{app:"MY Gadget Radar",tab_news:"News",tab_devices:"Devices",tab_compare:"Compare",tab_price:"Prices",updated:"Updated",upd_title:"Last automatic update",
     r_all:"All",r_my:"Malaysia",r_intl:"Global",n_stories:n=>`${n} stories`,news_empty_my:"No Malaysian news in this category yet",news_empty_intl:"No global news in this category yet",
     search:"Search brand or model",sort_label:"Sort",sort_new:"Newest",sort_pa:"Price low→high",sort_pd:"Price high→low",sort_ai:"Most AI features",n_models:n=>`${n} models`,
     brands:"Brands",all_brands:"All brands",brand_title:"Filter by brand",empty_q:"No matching models",empty_q_hint:"Try another keyword or brand",empty_cat:"No models in this category yet",empty_cat_hint:"The daily search adds new models here",
     from:"from",tbd:"Price TBA",add_cmp:"Add to compare",rm_cmp:"Remove from compare",in_cmp:"In compare",go_cmp:"Go to compare",
     cmp_title:c=>`Compare ${c}`,add_model:"Add model",add_short:"Add",models:"Models",options:"Options",clear:"Clear",pick_more:(n,c)=>`Pick ${n} more ${c.toLowerCase()} to compare`,max_per:"Up to 4 per category",
-    leads:n=>`Best ×${n}`,best:"Best",adv:n=>`${n} wins`,best_note:"best in this row",rank_note:"top 3 shown when more than 3 models",pb_title:"Highlight brands",pb_clear:"No highlight",rows:n=>`${n} rows`,rank:"Rank",hi_better:"↑ higher is better",lo_better:"↓ lower is better",listed:"Side by side · not ranked",features:"Software features",feat_short:"Software",ai:"AI features",not_listed:"Not listed",no_opts:"Nothing selected. Open Options to choose what to compare.",
+    leads:n=>`Best ×${n}`,best:"Best",adv:n=>`${n} wins`,best_note:"best in this row",rank_note:"top 3 shown when more than 3 models",pb_title:"Highlight brands",pb_clear:"No highlight",rows:n=>`${n} rows`,rank:"Rank",hi_better:"↑ higher is better",lo_better:"↓ lower is better",listed:"Side by side · not ranked",features:"Features",feat_short:"Features",ai:"AI features",not_listed:"Not listed",no_opts:"Nothing selected. Open Options to choose what to compare.",
     profile:c=>`${c} · Profile`,my_launch:"MY launch",specs:"Specs",none_official:"Not listed on the official site yet",sources:"Sources",close:"Close",
     opt_groups:"Spec groups",opt_feats:"Features",opt_display:"Display",diff_only:"Differences only",show_all:"Show all",done:"Done",opt_rows:"Items (tap to show or hide)",opt_cat:"Category",opt_marks:"Best / rank marks",opt_core:"Essentials",opt_card:"Specs on each card",opt_card_hint:n=>`Up to ${n} specs on each list card; tap to add or remove`,card_max:n=>`Up to ${n} specs per card; remove one first`,card_reset:"Reset",opt_hint_price:"Order and “wins” count only the items shown",news_empty_all:"No news in this category yet",
     add_cat:c=>`Add ${c.toLowerCase()}`,search_cat:c=>`Search ${c.toLowerCase()}`,no_match:"No matching models",
     t_added:(c,n)=>`Added to ${c.toLowerCase()} compare · ${n}/4`,t_removed:c=>`Removed from ${c.toLowerCase()} compare`,t_max:"Up to 4 models per category",
     price_title:"Price finder",budget:"Budget",range:"Range ±",under:"Under budget",in_range:(n,a,b)=>`<b>${n}</b> models between ${a} – ${b}`,promo:"Limited-time price",promo_until:d=>`Promo until ${d}`,pv_label:"View",pv_list:"List",pv_table:"Table",list_note:"Most wins first · tap for details",swipe:"swipe sideways for all",price_empty:"No models at this price. Try a wider range.",
-    health:"Health features",imp_note:"Not officially sold in Malaysia",news_detail:"Story",news_more:"Details",news_devs:"Related models",read_src:"Read the source",back_news:"Back to story",n_vers:n=>`${n} versions`,price_date:"Price checked",mem_title:"Filter by RAM / ROM",mem_scope:"Phones and tablets only",mem_na:"No RAM / ROM versions here. Switch to phones or tablets.",mem_clear:"Clear filter",versions:"Versions",std_ver:"Standard",new_title:"On sale within the last 30 days",dl_title:"Download everything (Excel)",dl_ok:"Excel file ready",dl_fail:"Download failed, please try again",dl_busy:"A download prompt is already open",x_brand:"Brand",x_model:"Model",x_version:"Version",x_price:"Price (RM)",x_list:"List price (RM)",x_status:"Status",x_date:"Date",x_region:"Region",x_cat:"Category",x_kind:"Type",x_title:"Title",x_summary:"Summary",x_source:"Source",totop:"Back to top",yes:"Yes",no:"No",u_d:"days",u_y:"yrs"}
+    health:"Health features",imp_note:"Not officially sold in Malaysia",news_detail:"Story",news_more:"Details",news_devs:"Related models",read_src:"Read the source",back_news:"Back to story",n_vers:n=>`${n} versions`,price_date:"Price checked",mem_title:"Filter by RAM / ROM",mem_scope:"Phones and tablets only",mem_na:"No RAM / ROM versions here. Switch to phones or tablets.",mem_clear:"Clear filter",versions:"Versions",std_ver:"Standard",new_title:"On sale within the last 30 days",dl_title:"Download everything (Excel)",dl_ok:"Excel file ready",dl_fail:"Download failed, please try again",dl_busy:"A download prompt is already open",x_brand:"Brand",x_model:"Model",x_version:"Version",x_price:"Price (RM)",x_list:"List price (RM)",x_status:"Status",x_date:"Date",x_region:"Region",x_cat:"Category",x_kind:"Type",x_title:"Title",x_summary:"Summary",x_source:"Source",totop:"Back to top",promo_short:d=>`Until ${d}`,buy:"Where to buy",buy_official:"Official store",buy_soon:"Links coming soon",zoom:"Zoom image",loading:"Loading…",drag_hint:"Press and hold a model to drag it left or right",yes:"Yes",no:"No",u_d:"days",u_y:"yrs",share:"Share",share_t:"Share",sh_what_d:"this model",sh_what_c:"this comparison",sh_what_n:"this story",sh_native:"Share to another app…",sh_copy:"Copy link",sh_copied:"Link copied",sh_copy_fail:"Couldn’t copy automatically. Press and hold the link to copy it",sh_img:"Create image",sh_img_note:"One picture with photos, prices and specs, easy to post in a WhatsApp group",long_img:"Image",img_key:"Key specs",img_all:"All specs",img_making:"Creating the image…",img_hint:"On a phone you can also press and hold the picture to save it",img_save:"Save image",img_share:"Share image",img_saved:"Image saved",img_fail:"Couldn’t create the image. Please try again",img_share_fail:"Sharing images isn’t available here. Save it first",img_long:"This picture is very tall, and WhatsApp may shrink it until it’s blurry. Key specs works better",img_note:d=>`Prices as of ${d}; promotions may change them`,img_more:"Latest prices and full specs: ",img_daily:"Updated daily"}
 };
 const KIND={"上市":["launch","Launch"],"价格":["price","Price"],"优惠":["deal","Deal"],"传闻":["rumor","Rumour"],"行业":["","Industry"],"评测":["","Review"],"系统":["","Software"]};
 const STATUS={"在售":["","On sale"],"预购":["pre","Pre-order"],"即将上市":["soon","Coming soon"],"水货":["imp","Grey import"]};
@@ -677,7 +850,19 @@ const IC={
   filter:SVG('<path d="M4 5h16l-6 7.5V19l-4 1.5v-8z"/>'),
   tag:SVG('<path d="M3.5 12.2V4.5a1 1 0 0 1 1-1h7.7l8.3 8.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0z"/><circle cx="8" cy="8" r="1.4"/>'),
   open:SVG('<path d="M9 6l6 6-6 6"/>'),
-  back:SVG('<path d="M15 6l-6 6 6 6"/>')
+  back:SVG('<path d="M15 6l-6 6 6 6"/>'),
+  neq:SVG('<path d="M5 9.5h14M5 14.5h14M15.5 5 8.5 19"/>'),
+  zoom:SVG('<circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2M11 8.5v5M8.5 11h5"/>'),
+  share:SVG('<path d="M12 14.5V3.5M8 7.5l4-4 4 4"/><path d="M8.5 10.5H6.5a1.5 1.5 0 0 0-1.5 1.5v7a1.5 1.5 0 0 0 1.5 1.5h11a1.5 1.5 0 0 0 1.5-1.5v-7a1.5 1.5 0 0 0-1.5-1.5h-2"/>'),
+  image:SVG('<rect x="5" y="2.5" width="14" height="19" rx="2"/><path d="M8.5 7h7M8.5 11h7M8.5 15h4.5"/>'),
+  link:SVG('<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/>'),
+  down:SVG('<path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 19.5h14"/>')
+};
+/* chat-app marks for the share sheet (filled, drawn in white on the brand colour) */
+const SOC={
+  wa:'<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6a9.3 9.3 0 0 0-8 14l-1.3 4.8 4.9-1.3A9.3 9.3 0 1 0 12 2.6zm0 1.7a7.6 7.6 0 1 1-3.9 14.1l-.3-.2-2.9.8.8-2.8-.2-.3A7.6 7.6 0 0 1 12 4.3zm-3.1 3.6c-.2 0-.5 0-.7.3-.3.3-1 1-1 2.3s1 2.7 1.1 2.9c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5 0 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4l-.5-.3-1.8-.9c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.6.1-.3-.1-1.1-.4-2.1-1.3-.8-.7-1.3-1.5-1.5-1.8-.2-.3 0-.4.1-.5l.4-.5.3-.5v-.5l-.8-2c-.2-.5-.4-.5-.6-.5h-.4z"/></svg>',
+  tg:'<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.6 4.2 3.4 10.9c-1.2.5-1.2 1.1-.2 1.4l4.4 1.4 1.7 5.2c.2.6.5.7.9.7.3 0 .5-.1.8-.4l2.1-2 4.4 3.2c.8.4 1.4.2 1.6-.8l2.9-13.7c.3-1.2-.5-1.7-1.4-1.3zm-2.4 3.4-8.4 7.6-.3 3.2-1.4-4.4 9.6-6.1c.4-.3.8-.1.5.2z"/></svg>',
+  fb:'<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-7.6h2.6l.4-3h-3V8.5c0-.9.3-1.5 1.5-1.5h1.6V4.3c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21z"/></svg>'
 };
 // rows: [key, zh, en, unit, better]   better: "high" | "low" | "bool" | null (listed only, never ranked)
 const SPEC={
@@ -720,7 +905,8 @@ const SPEC={
     {g:"price",zh:"价格",en:"Price",rows:[["price_myr","起售价","From","RM",null]]}
   ]
 };
-const HEAD={phone:[["chipset","芯片","Chip"],["main_cam_mp","主摄","Main cam"],["battery_mah","电池","Battery"],["refresh_hz","刷新率","Refresh"]],tablet:[["display_size_in","屏幕","Screen"],["chipset","芯片","Chip"],["battery_mah","电池","Battery"],["weight_g","重量","Weight"]],earbuds:[["anc","降噪","ANC"],["battery_total_h","总续航","Total"],["bt_version","蓝牙","BT"],["ip","防护","Rating"]],watch:[["battery_days","续航","Battery"],["brightness_nits","亮度","Brightness"],["case_mm","表壳","Case"],["lte","LTE","LTE"]]};
+/* card specs: the chip has its own row, the others pair up two per row (phone: camera | battery, refresh | charging) */
+const HEAD={phone:[["chipset","芯片","Chip"],["main_cam_mp","主摄","Main cam"],["battery_mah","电池","Battery"],["refresh_hz","刷新率","Refresh"],["wired_w","快充","Charging"]],tablet:[["chipset","芯片","Chip"],["display_size_in","屏幕","Screen"],["refresh_hz","刷新率","Refresh"],["battery_mah","电池","Battery"],["weight_g","重量","Weight"]],earbuds:[["anc","降噪","ANC"],["battery_total_h","总续航","Total"],["bt_version","蓝牙","BT"],["ip","防护","Rating"]],watch:[["battery_days","续航","Battery"],["brightness_nits","亮度","Brightness"],["case_mm","表壳","Case"],["lte","LTE","LTE"]]};
 
 const DATA=window.RADAR_DATA||{devices:[],news:[]};
 const EN=window.RADAR_EN||{devices:{},news:{}};
@@ -768,7 +954,10 @@ const host=u=>{try{return new URL(String(u)).hostname.replace(/^www\./,"")}catch
 const T=(k,...a)=>{const d=L[S.lang]||L.zh;const v=d[k]!==undefined?d[k]:L.zh[k];return typeof v==="function"?v(...a):(v==null?k:v)};
 const cn=k=>(CATN[S.lang]||CATN.zh)[k]||k;
 const lab=o=>S.lang==="en"?o.en:o.zh;
-const rm=n=>"RM "+Number(n).toLocaleString("en-MY");
+/* one shared formatter: toLocaleString() with a locale builds a new formatter on every call, which made the full catalogue take seconds on phones */
+const NF=(()=>{try{return new Intl.NumberFormat("en-MY")}catch(e){return{format:n=>String(n)}}})();
+const nfmt=n=>NF.format(n);
+const rm=n=>"RM "+nfmt(Number(n));
 
 function loadPrefs(){
   try{
@@ -813,15 +1002,17 @@ function fmt(v,u){
     if(u==="″")return v+"″";
     if(u==="d")return v+" "+T("u_d");
     if(u==="y")return v+" "+T("u_y");
-    return v.toLocaleString("en-MY")+(u?" "+u:"");
+    return nfmt(v)+(u?" "+u:"");
   }
   return String(v);
 }
+/* card cells: spec-sheet style, number and unit together and no thousands comma ("8800mAh", "3500nits"), so values fit a narrow card */
+const fmtc=(v,u)=>{const s=fmt(v,u);return typeof v==="number"&&u!=="RM"?s.replace(/(\d),(?=\d{3})/g,"$1").replace(/(\d) (?=[A-Za-z]+$)/,"$1"):s};
 function dname(d){const b=d.brand||"",m=d.model||"";return b&&!m.toLowerCase().startsWith(b.toLowerCase())?b+" "+m:m}
 /* regular price (struck through) and a live promo, read from the object that carries the price: a version, or the model itself */
 const oldOf=o=>o&&typeof o.price_old==="number"&&typeof o.price_myr==="number"&&o.price_old>o.price_myr?o.price_old:null;
 const mmdd=x=>{const m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(String(x||""));if(!m)return String(x||"");return S.lang==="en"?`${+m[3]} ${["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][+m[2]-1]}`:`${+m[2]}/${+m[3]}`};
-const promoTag=o=>o&&oldOf(o)&&promoOn(o)?`<span class="promo">${o.promo_until?T("promo_until",esc(mmdd(o.promo_until))):T("promo")}</span>`:"";
+const promoTag=(o,short)=>o&&oldOf(o)&&promoOn(o)?`<span class="promo">${o.promo_until?T(short?"promo_short":"promo_until",esc(mmdd(o.promo_until))):T("promo")}</span>`:"";
 /* the cheapest version drives the card's yellow tag */
 function leadOf(d){const vs=(Array.isArray(d.variants)?d.variants:[]).filter(v=>v&&typeof v.price_myr==="number");return vs.length?vs.reduce((a,b)=>b.price_myr<a.price_myr?b:a):d}
 function price(d){return d.price_myr!=null?`<span class="tag">${esc(rm(d.price_myr))}</span>`:`<span class="tag none">${T("tbd")}</span>`}
@@ -835,14 +1026,15 @@ function thumb(d,cls){const src=d.image&&/^img\/[\w-]+\/[\w-]+\.png$/.test(d.ima
 function opts(cat,sc){const o=((sc==="price"?S.popts:S.opts)||{})[cat]||{};return{off:arr(o.off),hide:arr(o.hide),feat:o.feat!==false,ai:o.ai!==false,health:o.health!==false,diff:!!o.diff,marks:o.marks!==false,card:Array.isArray(o.card)?o.card:null}}
 function setOpts(cat,p,sc){const st=sc==="price"?S.popts:S.opts;st[cat]=Object.assign(opts(cat,sc),p);savePrefs()}
 const rowOn=(o,g,k)=>!o.off.includes(g.g)&&!o.hide.includes(k);
-const popGroups=(cat,sc)=>(SPEC[cat]||[]).filter(g=>sc==="price"?g.g!=="price":true);
+/* the price group is never a table row: the compare header and the price cards already show the price */
+const popGroups=(cat,sc)=>(SPEC[cat]||[]).filter(g=>g.g!=="price");
 function gstate(o,g){const n=g.rows.filter(r=>rowOn(o,g,r[0])).length;return n===g.rows.length?"on":n?"part":"off"}
 /* how many things the user switched off (badge on the price page button) */
 function ocustom(c,sc){const o=opts(c,sc);let n=0;for(const g of popGroups(c,sc))for(const r of g.rows)if(!rowOn(o,g,r[0]))n++;return n+(!o.feat?1:0)+(!o.ai?1:0)+(c==="watch"&&!o.health?1:0)+(o.diff?1:0)+(!o.marks?1:0)+(sc==="price"&&o.card?1:0)}
 const KEYROWS={phone:["display_size_in","refresh_hz","brightness_nits","chipset","ram_gb","storage_gb","main_cam_mp","battery_mah","wired_w","weight_g"],tablet:["display_size_in","refresh_hz","chipset","ram_gb","storage_gb","battery_mah","weight_g","cellular"],earbuds:["anc","anc_db","battery_total_h","bt_version","ip"],watch:["display_size_in","battery_days","water","gps","lte"]};
 const CARDMAX=6;
 /* on a card the label stands without its group heading, so a few generic row names get a clearer one */
-const CLAB={battery_mah:["电池","Battery"],display_size_in:["屏幕","Screen"],display_type:["面板","Panel"]};
+const CLAB={battery_mah:["电池","Battery"],display_size_in:["屏幕","Screen"],display_type:["面板","Panel"],wired_w:["快充","Charging"]};
 const clab=r=>{const o=CLAB[r[0]];return o?(S.lang==="en"?o[1]:o[0]):(S.lang==="en"?r[2]:r[1])};
 const oscope=()=>S.oscope==="price"?"price":"cmp";
 const ocat=()=>oscope()==="price"?(CAT_KEYS.includes(S.ocat)?S.ocat:"phone"):cmpCat();
@@ -887,7 +1079,7 @@ function renderHeader(){
   const cc=$("#cmp-count");cc.hidden=!total;cc.textContent=String(total);
   const keys=S.view==="compare"?CAT_KEYS:["all",...CAT_KEYS];
   $("#cats").innerHTML=keys.map(k=>{
-    const n=S.view==="compare"?S.cmp[k].length+"/"+MAX:(k==="all"?DEV.length:DEV.filter(d=>d.category===k).length);
+    const n=S.view==="compare"?S.cmp[k].length+"/"+MAX:S.view==="news"?newsIn(k).length:(k==="all"?DEV.length:DEV.filter(d=>d.category===k).length);
     return`<button class="cat" data-action="cat" data-c="${k}" aria-pressed="${S.cat===k}">${IC[k]}<span>${cn(k)}</span><span class="n">${n}</span></button>`;
   }).join("");
   $("#upd-t").textContent=updText();
@@ -908,11 +1100,14 @@ function measure(){
   const p=$(".ptb");if(p&&p.offsetHeight)st.setProperty("--pth",p.offsetHeight+"px");
 }
 /* keep each pinned header row lined up with its table's sideways scroll */
-function syncX(e){const t=e.target;if(!t||!t.classList||!t.classList.contains("mxw"))return;const h=t.previousElementSibling;if(h&&h.classList&&h.classList.contains("mxh")&&h.scrollLeft!==t.scrollLeft)h.scrollLeft=t.scrollLeft}
-function headWheel(e){const h=e.target&&e.target.closest&&e.target.closest(".mxh");if(!h)return;const w=h.nextElementSibling;const dx=e.deltaX||(e.shiftKey?e.deltaY:0);if(w&&dx){w.scrollLeft+=dx;e.preventDefault()}}
+function syncX(e){const t=e.target;if(!t||!t.classList)return;if(t.dataset&&t.dataset.xs){xsSync(t);return}if(!t.classList.contains("mxw"))return;const h=t.previousElementSibling;if(h&&h.classList&&h.classList.contains("mxh")&&h.scrollLeft!==t.scrollLeft)h.scrollLeft=t.scrollLeft}
+/* a pinned header row (price table .mxh, compare .xh) cannot scroll by itself: swipes and sideways wheel on it move the table below */
+function headBody(h){return h.classList.contains("xh")?xsBody():h.nextElementSibling}
+function xsGrab(t){const xs=t&&t.closest&&t.closest("[data-xs]");if(xs)xsLead=xs.classList.contains("xh")?xsBody():xs}
+function headWheel(e){xsGrab(e.target);const h=e.target&&e.target.closest&&(e.target.closest(".mxh")||e.target.closest(".xh"));if(!h)return;const w=headBody(h);const dx=e.deltaX||(e.shiftKey?e.deltaY:0);if(w&&dx){w.scrollLeft+=dx;e.preventDefault()}}
 let hdrTouch=null;
-function headTouchStart(e){const h=e.target&&e.target.closest&&e.target.closest(".mxh");hdrTouch=h&&h.nextElementSibling&&e.touches&&e.touches.length===1?{w:h.nextElementSibling,x:e.touches[0].clientX,y:e.touches[0].clientY,l:h.nextElementSibling.scrollLeft,ax:null}:null}
-function headTouchMove(e){if(!hdrTouch||!e.touches||!e.touches.length)return;const dx=e.touches[0].clientX-hdrTouch.x,dy=e.touches[0].clientY-hdrTouch.y;if(hdrTouch.ax===null&&(Math.abs(dx)>6||Math.abs(dy)>6))hdrTouch.ax=Math.abs(dx)>Math.abs(dy)?"x":"y";if(hdrTouch.ax==="x")hdrTouch.w.scrollLeft=hdrTouch.l-dx}
+function headTouchStart(e){xsGrab(e.target);const h=e.target&&e.target.closest&&(e.target.closest(".mxh")||e.target.closest(".xh"));const w=h?headBody(h):null;hdrTouch=w&&e.touches&&e.touches.length===1?{w,x:e.touches[0].clientX,y:e.touches[0].clientY,l:w.scrollLeft,ax:null}:null}
+function headTouchMove(e){if(drag&&drag.on)return;if(!hdrTouch||!e.touches||!e.touches.length)return;const dx=e.touches[0].clientX-hdrTouch.x,dy=e.touches[0].clientY-hdrTouch.y;if(hdrTouch.ax===null&&(Math.abs(dx)>6||Math.abs(dy)>6))hdrTouch.ax=Math.abs(dx)>Math.abs(dy)?"x":"y";if(hdrTouch.ax==="x")hdrTouch.w.scrollLeft=hdrTouch.l-dx}
 
 /* ---------- news ---------- */
 function ndate(s){
@@ -925,13 +1120,14 @@ function newsItem(n,i,flag){
   const devs=arr(n.device_ids).map(id=>BYID.get(id)).filter(Boolean);
   const title=esc(ntxt(n,"title"));
   const k=KIND[n.kind]||["",n.kind||""];
-  return`<article class="ni ${n.region==="MY"?"my":""}" style="--i:${Math.min(i,14)}" data-action="news" data-id="${esc(n.id)}" tabindex="0" role="button" aria-haspopup="dialog" aria-label="${title}">
-    ${ndate(n.date)}
+  const pic=devs.find(d=>d.image);
+  return`<article class="ni${String(n.date||"").slice(0,10)===MY_TODAY?" today":""}" style="--i:${Math.min(i,14)}" data-action="news" data-id="${esc(n.id)}" tabindex="0" role="button" aria-haspopup="dialog" aria-label="${title}">
+    <div class="ndl">${ndate(n.date)}${pic?thumb(pic,"nt"):""}</div>
     <div style="min-width:0">
       <div class="nm">${flag?`<span class="flag ${n.region==="MY"?"":"intl"}">${n.region==="MY"?"MY":"INTL"}</span>`:""}<span class="kind ${k[0]}">${esc(S.lang==="en"?k[1]:(n.kind||"资讯"))}</span><span>${esc(n.source||host(n.url))}</span>${CAT_KEYS.includes(n.category)?`<span>${cn(n.category)}</span>`:""}<span class="more">${T("news_more")}${IC.open}</span></div>
       <h3>${title}</h3>
       ${ntxt(n,"summary")?`<p>${esc(ntxt(n,"summary"))}</p>`:""}
-      ${devs.length?`<div class="ndev">${devs.map(d=>`<button class="chipd" data-action="open" data-id="${esc(d.id)}">${IC[d.category]}${esc(dname(d))}</button>`).join("")}</div>`:""}
+      ${devs.length?`<div class="ndev">${devs.map(d=>`<button class="chipd" data-action="open" data-id="${esc(d.id)}">${IC[d.category]}<span>${esc(dname(d))}</span></button>`).join("")}<span class="chipd xn" hidden></span></div>`:""}
     </div>
   </article>`;
 }
@@ -949,37 +1145,63 @@ function newsHTML(n){
     ${ntxt(n,"summary")?`<p class="nsum2">${esc(ntxt(n,"summary"))}</p>`:""}
     ${devs.length?`<div class="sec"><div class="sec-h">${T("news_devs")}<span class="n">${devs.length}</span></div><div class="nrel">${devs.map(d=>`<button class="nrd" data-action="open" data-id="${esc(d.id)}">${thumb(d,"tn")}<span class="nrt"><small>${esc(d.brand||"")}</small><b>${esc(d.model||"")}</b><span class="nrp">${price(d)}${status(d)}</span></span>${IC.open}</button>`).join("")}</div></div>`:""}
   </div>
-  <div class="pf">${url?`<a class="btn pri" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${T("read_src")} ↗</a>`:""}<button class="btn ghost" data-action="close">${T("close")}</button></div>`;
+  <div class="pf"><button class="btn" data-action="share" data-k="n" data-id="${esc(n.id)}" style="margin-right:auto">${IC.share}${T("share")}</button>${url?`<a class="btn pri" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${T("read_src")} ↗</a>`:""}<button class="btn ghost" data-action="close">${T("close")}</button></div>`;
 }
+/* stories for a category under the chosen region (also feeds the category counts while on the news page) */
+function newsIn(cat){return NEWS.filter(n=>(cat==="all"||n.category===cat)&&(S.region==="all"||(S.region==="MY")===(n.region==="MY")))}
 function renderNews(){
-  const list=NEWS.filter(n=>S.cat==="all"||n.category===S.cat);
-  const my=list.filter(n=>n.region==="MY"),intl=list.filter(n=>n.region!=="MY");
-  const col=(items,isMy)=>`<div style="min-width:0">
-    <h2 class="nhead"><span class="flag ${isMy?"":"intl"}">${isMy?"MY":"INTL"}</span>${isMy?T("r_my"):T("r_intl")}<span class="n">${items.length}</span></h2>
-    ${items.length?`<div class="nlist">${items.map((n,i)=>newsItem(n,i)).join("")}</div>`:`<div class="empty"><p>${isMy?T("news_empty_my"):T("news_empty_intl")}</p></div>`}
-  </div>`;
+  const list=newsIn(S.cat);
   const seg=`<div class="seg" role="group">${[["all","r_all"],["MY","r_my"],["INTL","r_intl"]].map(([k,l])=>`<button data-action="region" data-r="${k}" aria-pressed="${S.region===k}">${T(l)}</button>`).join("")}</div>`;
-  let body;
-  if(S.region==="MY")body=`<div class="ncols">${col(my,true)}</div>`;
-  else if(S.region==="INTL")body=`<div class="ncols">${col(intl,false)}</div>`;
-  else body=`<div class="ncols one"><div style="min-width:0"><h2 class="nhead"><span class="flag">MY</span><span class="flag intl">INTL</span>${T("r_all")}<span class="n">${list.length}</span></h2>${list.length?`<div class="nlist">${list.map((n,i)=>newsItem(n,i,true)).join("")}</div>`:`<div class="empty"><p>${T("news_empty_all")}</p></div>`}</div></div>`;
-  $("#v-news").innerHTML=`<div class="tb">${seg}<span class="sp"></span><span class="cnt">${T("n_stories",list.length)}</span></div>${body}`;
+  const empty=S.region==="MY"?"news_empty_my":S.region==="INTL"?"news_empty_intl":"news_empty_all";
+  $("#v-news").innerHTML=`<div class="tb">${seg}<span class="sp"></span><span class="cnt">${T("n_stories",list.length)}</span></div>${list.length?`<div class="nlist">${list.map((n,i)=>newsItem(n,i,S.region==="all")).join("")}</div>`:`<div class="empty"><p>${T(empty)}</p></div>`}`;
+  fitChips();
+}
+/* related-model chips stay on one line: chips that do not fit are folded into a "+N" chip (the story pop-up lists them all) */
+function fitChips(){
+  $$("#v-news .ndev").forEach(row=>{
+    const chips=Array.from(row.querySelectorAll("button.chipd")),more=row.querySelector(".chipd.xn");
+    chips.forEach(c=>{c.hidden=false});if(more)more.hidden=true;
+    row.classList.add("fit");
+    if(!row.clientWidth||row.scrollWidth<=row.clientWidth+1||!more)return;
+    for(let k=chips.length-1;k>=1;k--){
+      chips[k].hidden=true;more.hidden=false;more.textContent="+"+(chips.length-k);
+      if(row.scrollWidth<=row.clientWidth+1)break;
+    }
+    /* only when a single chip is left and still too long does its name get shortened */
+    if(row.scrollWidth>row.clientWidth+1)row.classList.remove("fit");
+  });
 }
 
 /* ---------- devices ---------- */
+/* chip name for a card: no vendor prefix, no core-speed brackets, and in Chinese the official Chinese series names (骁龙 / 天玑 / 麒麟);
+   the detail panel keeps the full name */
+function shortChip(s){
+  let v=String(s).replace(/\s*[（(].*$/,"").replace(/^(Qualcomm|MediaTek|Mediatek|HiSilicon|Samsung|Google|Apple|UNISOC|Unisoc)\s+/i,"").replace(/\s+Wearable Platform$/i,"").trim();
+  if(S.lang==="en")return v.replace(/[\s-]+leading version$/i," Leading")||String(s);
+  return v.replace(/^Snapdragon\s*/i,"骁龙 ").replace(/^Dimensity\s*/i,"天玑 ").replace(/^Kirin\s*/i,"麒麟 ").replace(/[\s-]+leading version$/i," 领先版")||String(s);
+}
+/* width of a text in monospace cells (Chinese characters are about 1.67 times as wide) */
+const cellLen=s=>Array.from(String(s)).reduce((n,ch)=>n+(/[⺀-鿿＀-￯]/.test(ch)?1.67:1),0);
+/* spec box on cards: the chip takes a full row on one line (its text shrinks a little when the name is long), the rest go two per row */
+function miniHTML(cat,rows,d){
+  const cells=rows.map(([k,zh,en])=>{const r=rowOf(cat,k);let v=fmtc(val(d,k),r?r[3]:"");if(k==="chipset"&&v!=="—")v=shortChip(v);return{k,l:S.lang==="en"?en:zh,v}});
+  const one=(c,cls)=>`<div${cls?` class="${cls}"`:""}><dt>${esc(c.l)}</dt><dd title="${esc(c.v)}"${cls==="w c"?` style="--n:${Math.max(1,cellLen(c.v)).toFixed(1)}"`:""}>${esc(c.v)}</dd></div>`;
+  const wide=cells.filter(c=>c.k==="chipset"),rest=cells.filter(c=>c.k!=="chipset");
+  return wide.map(c=>one(c,"w c")).join("")+rest.map((c,i)=>one(c,rest.length%2&&i===rest.length-1?"w l":"")).join("");
+}
 function card(d,i){
   const on=S.cmp[d.category].includes(d.id);
-  const mini=(HEAD[d.category]||[]).map(([k,zh,en])=>{const r=rowOf(d.category,k);const v=fmt(val(d,k),r?r[3]:"");return`<div><dt>${S.lang==="en"?en:zh}</dt><dd title="${esc(v)}">${esc(v)}</dd></div>`}).join("");
-  const ai=arr(dtxt(d,"ai_features")).length,vn=vlist(d).length,lead=leadOf(d);
+  const ai=arr(dtxt(d,"ai_features")).length,vn=vlist(d).length,lead=leadOf(d),old=oldOf(lead),pt=promoTag(lead,true);
   return`<article class="card ${on?"sel":""}" data-action="open" data-id="${esc(d.id)}" data-card="${esc(d.id)}" tabindex="0" role="button" aria-label="${esc(dname(d))}" style="--i:${Math.min(i,24)}">
     <button class="add ${on?"on":""}" data-action="toggle-cmp" data-id="${esc(d.id)}" aria-pressed="${on}" aria-label="${on?T("rm_cmp"):T("add_cmp")}">${on?IC.check:IC.plus}</button>
     <div class="ch">${thumb(d,"tc")}<div class="ct">
       <div class="cb">${esc(d.brand||"")}</div>
       <h3>${esc(d.model||"")}</h3>
-      <div class="pr">${price(d)}<span>${T("from")}</span></div>
-      ${vn>1||oldOf(lead)?`<div class="cx">${oldOf(lead)?`<s class="old">${esc(rm(oldOf(lead)))}</s>`:""}${promoTag(lead)}${vn>1?`<span class="vn">${T("n_vers",vn)}</span>`:""}</div>`:""}
+      ${vn>1?`<span class="vn">${T("n_vers",vn)}</span>`:""}
     </div></div>
-    <dl class="mini">${mini}</dl>
+    <div class="pr">${price(d)}${d.price_myr!=null?`<span>${T("from")}</span>`:""}</div>
+    ${pt||old?`<div class="cx">${pt}${old?`<s class="old">${esc(rm(old))}</s>`:""}</div>`:""}
+    <dl class="mini">${miniHTML(d.category,HEAD[d.category]||[],d)}</dl>
     <div class="cf"><span class="aic ${ai?"":"zero"}">AI ×${ai}</span>${status(d)}</div>
   </article>`;
 }
@@ -1002,15 +1224,33 @@ function renderDevices(){
   const list=DEV.filter(d=>(S.cat==="all"||d.category===S.cat)&&(!S.brands.length||S.brands.includes(d.brand))&&(!q||dname(d).toLowerCase().includes(q)));
   $("#dev-count").textContent=T("n_models",list.length);
   const body=$("#dev-body");
-  if(!list.length){const f=q||S.brands.length;body.innerHTML=`<div class="empty"><h3>${f?T("empty_q"):T("empty_cat")}</h3><p>${f?T("empty_q_hint"):T("empty_cat_hint")}</p></div>`;return}
+  if(!list.length){devJob++;const f=q||S.brands.length;body.innerHTML=`<div class="empty"><h3>${f?T("empty_q"):T("empty_cat")}</h3><p>${f?T("empty_q_hint"):T("empty_cat_hint")}</p></div>`;return}
   const cats=S.cat==="all"?CAT_KEYS:[S.cat];
-  let i=0;
-  body.innerHTML=cats.map(c=>{
+  /* the first screenful is drawn at once and the rest is added in small batches, so switching here never leaves a blank page */
+  const job=++devJob,FIRST=30,STEP=60,queue=[];
+  let i=0,html="";
+  for(const c of cats){
     const items=sorted(list.filter(d=>d.category===c));
-    if(!items.length)return"";
-    return`${S.cat==="all"?`<h2 class="ghead">${IC[c]}${cn(c)}<span class="n">${items.length}</span></h2>`:""}<div class="grid">${items.map(d=>card(d,i++)).join("")}</div>`;
-  }).join("");
+    if(!items.length)continue;
+    const now=items.slice(0,Math.max(0,FIRST-i));
+    html+=`${S.cat==="all"?`<h2 class="ghead">${IC[c]}${cn(c)}<span class="n">${items.length}</span></h2>`:""}<div class="grid" data-g="${c}">${now.map(d=>card(d,i++)).join("")}</div>`;
+    if(items.length>now.length)queue.push({c,items:items.slice(now.length)});
+  }
+  body.innerHTML=html+(queue.length?`<div class="ldm" id="dev-more"><i></i>${T("loading")}</div>`:"");
+  const pump=()=>{
+    if(job!==devJob)return;
+    let n=STEP;
+    while(n>0&&queue.length){
+      const q=queue[0],take=q.items.splice(0,n);n-=take.length;
+      const g=body.querySelector(`.grid[data-g="${q.c}"]`);
+      if(g)g.insertAdjacentHTML("beforeend",take.map(d=>card(d,0)).join(""));
+      if(!q.items.length)queue.shift();
+    }
+    if(queue.length)setTimeout(pump,30);else{const m=document.getElementById("dev-more");if(m)m.remove()}
+  };
+  if(queue.length)setTimeout(pump,30);
 }
+let devJob=0;
 function syncCards(){
   $$("[data-card]").forEach(el=>{
     const d=BYID.get(el.dataset.card);if(!d)return;
@@ -1032,6 +1272,8 @@ function renderCompare(){
     <span class="sp"></span>
     <button class="btn" data-action="picker">${IC.plus}${T("add_model")}</button>
     <button class="btn" data-action="opts">${IC.sliders}${T("options")}<span class="badge">${nOn}</span></button>
+    ${devs.length>=2?`<button class="btn${o.diff?" act":""}" data-action="cmp-diff" aria-pressed="${o.diff}">${IC.neq}${T("diff_only")}</button>`:""}
+    ${devs.length>=2?`<button class="btn" data-action="share" data-k="c">${IC.share}${T("share")}</button><button class="btn" data-action="longimg" data-k="c">${IC.image}${T("long_img")}</button>`:""}
     ${devs.length?`<button class="btn ghost" data-action="clear-cmp">${T("clear")}</button>`:""}
   </div>`;
   if(devs.length<2){
@@ -1044,7 +1286,7 @@ function renderCompare(){
   const firsts=devs.map(()=>0);
   const groups=[];
   for(const g of SPEC[cat]){
-    if(o.off.includes(g.g))continue;
+    if(o.off.includes(g.g)||g.g==="price")continue;
     let rows="",cnt=0;
     for(const [k,zh,en,u,better] of g.rows){
       if(o.hide.includes(k))continue;
@@ -1058,26 +1300,110 @@ function renderCompare(){
       rows+=`<div class="row cols"><div class="rl">${rowLab(devs.every(isFold)?devs[0]:null,k,zh,en)}${dir?`<span class="dir">${dir}</span>`:""}</div>${shown.map((s,i)=>{const r=rk?rk[i]:0;return`<div class="rv c${i}${r===1&&o.marks?" k1":""}${s==="—"?" nil":""}">${esc(s)}${r===1&&o.marks?bestB():""}</div>`}).join("")}</div>`;
       cnt++;
     }
-    if(cnt)groups.push(`<section class="box" style="--i:${groups.length}"><div class="bh"><span class="k"></span><b>${lab(g)}</b><span class="r">${T("rows",cnt)}</span></div>${rows}</section>`);
+    if(cnt)groups.push(`<section class="box" style="--i:${groups.length}"><div class="bh"><span class="k"></span><b>${lab(g)}</b><span class="r">${T("rows",cnt)}</span></div><div class="xs" data-xs="cmp">${rows}</div></section>`);
   }
   const listBox=(title,key)=>`<section class="box" style="--i:${groups.length}"><div class="bh"><span class="k"></span><b>${title}</b><span class="r">${T("listed")}</span></div>
-    <div class="row cols"><div class="rl">${title}</div>${devs.map((d,i)=>{const l=arr(dtxt(d,key));return`<div class="rv c${i}${l.length?"":" nil"}">${l.length?`<ul>${l.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:T("not_listed")}</div>`}).join("")}</div></section>`;
+    <div class="xs" data-xs="cmp"><div class="row cols"><div class="rl">${title}</div>${devs.map((d,i)=>{const l=arr(dtxt(d,key));return`<div class="rv c${i}${l.length?"":" nil"}">${l.length?`<ul>${l.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:T("not_listed")}</div>`}).join("")}</div></div></section>`;
   if(cat==="watch"&&o.health)groups.push(listBox(T("health"),"health"));
   if(o.feat)groups.push(listBox(T("features"),"features"));
   if(o.ai)groups.push(listBox(T("ai"),"ai_features"));
-  const bar=`<div class="dbar cols">
+  const bar=`<div class="dbar"><div class="xs xh" data-xs="cmp"><div class="cols dgrid">
     <div class="dlab">${n<MAX?`<button class="btn" data-action="picker">${IC.plus}<span>${T("add_short")}</span></button>`:`<small>${T("models").toUpperCase()}</small>`}</div>
-    ${devs.map((d,i)=>`<div class="dcell c${i}">
-      ${thumb(d,"tk")}<span class="bb"><span class="dot"></span>${esc(d.brand||"")}</span>
+    ${devs.map((d,i)=>`<div class="dcell c${i}" data-di="${i}" data-id="${esc(d.id)}">
+      <span class="dt">${thumb(d,"tk")}<span class="bb"><span class="dot"></span>${esc(d.brand||"")}</span></span>
       <b>${esc(d.model||"")}</b>
-      <span class="meta"><span>${d.price_myr!=null?esc(rm(d.price_myr)):"—"}</span><span class="lead">${T("leads",firsts[i])}</span></span>
+      <span class="dp">${d.price_myr!=null?esc(rm(d.price_myr)):"—"}</span>
+      <span class="lead">${T("leads",firsts[i])}</span>
       <button class="rm" data-action="toggle-cmp" data-id="${esc(d.id)}" aria-label="${T("rm_cmp")}">${IC.x}</button>
     </div>`).join("")}
-  </div>`;
+  </div></div></div>`;
   if(o.marks)h+=legendHTML().replace('class="legend"','class="legend" style="display:flex"');
+  h+=`<p class="dhint">${T("drag_hint")}</p>`;
+  /* keep the sideways position when the table is redrawn (removing a model, switching options, reordering) */
+  const prev=document.querySelector('#v-compare [data-xs="cmp"]:not(.xh)'),x=prev?prev.scrollLeft:0;
   h+=`<div class="cmp" data-n="${n}" style="--n:${n}">${bar}${groups.length?`<div class="groups">${groups.join("")}</div>`:`<div class="empty"><p>${T("no_opts")}</p></div>`}</div>`;
   $("#v-compare").innerHTML=h;
+  if(x)$$('#v-compare [data-xs="cmp"]').forEach(el=>{el.scrollLeft=x});
 }
+/* ---------- compare: sideways scrolling kept in step, and press-and-hold to reorder ---------- */
+let xsLead=null;
+function xsSync(t){
+  if(!t||!t.dataset||!t.dataset.xs)return false;
+  if(xsLead&&xsLead!==t&&document.contains(xsLead))return true;
+  const x=t.scrollLeft;
+  $$(`[data-xs="${t.dataset.xs}"]`).forEach(el=>{if(el!==t&&Math.abs(el.scrollLeft-x)>.5)el.scrollLeft=x});
+  return true;
+}
+const xsBody=()=>document.querySelector('#v-compare .groups [data-xs="cmp"]');
+let drag=null;
+function dragStart(e){
+  const cell=e.target&&e.target.closest&&e.target.closest(".dcell");
+  if(!cell||S.view!=="compare"||e.target.closest(".rm")||(e.pointerType==="mouse"&&e.button!==0))return;
+  drag={cell,id:cell.dataset.id,from:+cell.dataset.di,pid:e.pointerId,type:e.pointerType,x0:e.clientX,y0:e.clientY,x:e.clientX,on:false,timer:null,raf:0};
+  if(e.pointerType!=="mouse")drag.timer=setTimeout(dragOn,320);
+}
+function dragOn(){
+  if(!drag||drag.on)return;
+  const cells=$$("#v-compare .dcell");
+  if(cells.length<2){drag=null;return}
+  const sc=document.querySelector("#v-compare .xh");
+  drag.on=true;drag.cells=cells;drag.sc=sc;drag.sl0=sc?sc.scrollLeft:0;
+  drag.mid=cells.map(c=>{const r=c.getBoundingClientRect();return r.left+r.width/2});
+  drag.step=cells.length>1?drag.mid[1]-drag.mid[0]:0;
+  drag.to=drag.from;
+  drag.cell.classList.add("drag");
+  cells.forEach(c=>{if(c!==drag.cell)c.classList.add("shift")});
+  const cm=document.querySelector("#v-compare .cmp");if(cm)cm.classList.add("dragging");
+  xsLead=xsBody();
+  try{if(navigator.vibrate)navigator.vibrate(12)}catch(err){}
+  dragPaint();
+  const tick=()=>{if(!drag||!drag.on)return;dragEdge();drag.raf=requestAnimationFrame(tick)};
+  drag.raf=requestAnimationFrame(tick);
+}
+/* near the left / right edge the table scrolls by itself so a model can be carried to any position */
+function dragEdge(){
+  const sc=drag.sc,b=xsBody();if(!sc||!b||Math.abs(drag.x-drag.x0)<12)return;
+  const r=sc.getBoundingClientRect(),lab=sc.querySelector(".dlab"),lw=lab?lab.getBoundingClientRect().width:0;
+  let v=0;
+  if(drag.x<r.left+lw+28)v=-8;else if(drag.x>r.right-28)v=8;
+  if(!v)return;
+  const before=b.scrollLeft;b.scrollLeft=before+v;
+  if(b.scrollLeft!==before){xsSync(b);dragPaint()}
+}
+function dragPaint(){
+  const sc=drag.sc,ds=sc?sc.scrollLeft-drag.sl0:0;
+  const dx=drag.x-drag.x0+ds,cx=drag.mid[drag.from]+dx;
+  /* new position = how many of the other models sit left of the dragged one's centre */
+  const to=drag.mid.reduce((k,m,j)=>j!==drag.from&&m<cx?k+1:k,0);
+  drag.to=to;
+  drag.cells.forEach((c,j)=>{
+    if(c===drag.cell){c.style.transform=`translateX(${dx}px) scale(1.03)`;return}
+    let s=0;if(drag.from<to&&j>drag.from&&j<=to)s=-drag.step;else if(to<drag.from&&j>=to&&j<drag.from)s=drag.step;
+    c.style.transform=s?`translateX(${s}px)`:"";
+  });
+}
+function dragMove(e){
+  if(!drag||e.pointerId!==drag.pid)return;
+  drag.x=e.clientX;
+  if(!drag.on){
+    const dx=e.clientX-drag.x0,dy=e.clientY-drag.y0;
+    if(drag.type==="mouse"){if(Math.abs(dx)>6)dragOn();return}
+    if(Math.hypot(dx,dy)>8){clearTimeout(drag.timer);drag=null}
+    return;
+  }
+  dragPaint();
+}
+function dragEnd(e){
+  if(!drag||(e&&e.pointerId!=null&&e.pointerId!==drag.pid))return;
+  const d=drag;drag=null;clearTimeout(d.timer);cancelAnimationFrame(d.raf);
+  if(!d.on)return;
+  xsLead=null;
+  const cat=cmpCat(),l=S.cmp[cat],i=l.indexOf(d.id);
+  if(e&&e.type!=="pointercancel"&&i>=0&&d.to!==d.from){l.splice(i,1);l.splice(d.to,0,d.id);savePrefs()}
+  dragJustEnded=Date.now();
+  renderCompare();
+}
+let dragJustEnded=0;
 
 /* ---------- prices ---------- */
 function bounds(){const b=S.budget;return S.under?[0,b]:[Math.max(0,b-S.range),b+S.range]}
@@ -1132,7 +1458,7 @@ function plistHTML(c,items){
 }
 function pcard(d,adv,cls){
   const on=S.cmp[d.category].includes(d.id),diff=d.price_myr-S.budget,vl=d._v?vlabel(d._v):"";
-  const mini=cardRows(d.category).map(([k,zh,en])=>{const r=rowOf(d.category,k);const v=fmt(val(d,k),r?r[3]:"");return`<div><dt>${S.lang==="en"?en:zh}</dt><dd title="${esc(v)}">${esc(v)}</dd></div>`}).join("");
+  const mini=miniHTML(d.category,cardRows(d.category),d);
   return`<article class="card pc${on?" sel":""}${cls}" data-action="open" data-id="${esc(d.id)}" data-v="${d._vi!=null?d._vi:""}" data-pc="1" tabindex="0" role="button" aria-label="${esc(dname(d)+(vl?" "+vl:""))}">
     <button class="add ${on?"on":""}" data-action="toggle-cmp" data-id="${esc(d.id)}" aria-pressed="${on}" aria-label="${on?T("rm_cmp"):T("add_cmp")}">${on?IC.check:IC.plus}</button>
     <div class="ch">${thumb(d,"tc")}<div class="ct">
@@ -1220,21 +1546,31 @@ function deviceHTML(d){
   }).join("");
   const vers=vs.length?`<div class="vars" role="radiogroup" aria-label="${T("versions")}"><span class="vl">${T("versions")}</span>${vs.map((v,i)=>`<button class="var${i===vi?" on":""}" data-action="variant" data-id="${esc(d.id)}" data-i="${i}" role="radio" aria-checked="${i===vi}"><b>${esc(vlabel(v)||T("std_ver"))}</b><span>${v.price_myr!=null?esc(rm(v.price_myr)):T("tbd")}</span>${v.price_old?`<s>${esc(rm(v.price_old))}</s>`:""}</button>`).join("")}</div>`:"";
   const feats=arr(dtxt(d,"features")),ai=arr(dtxt(d,"ai_features")),hp=arr(dtxt(d,"health"));
-  const srcs=arr(d.sources).map(safeUrl).filter(Boolean);
+  /* one link per website: several pages from the same site show as a single source */
+  const seen=new Set(),srcs=arr(d.sources).map(safeUrl).filter(u=>{if(!u)return false;const h=host(u);if(seen.has(h))return false;seen.add(h);return true});
   const pn=dtxt(d,"price_note");
+  const img=d.image&&/^img\/[\w-]+\/[\w-]+\.png$/.test(d.image)?d.image:"";
+  const hero=img?`<button class="hero" data-action="zoom" data-src="${esc(img)}" aria-label="${T("zoom")}" title="${T("zoom")}">${thumb(d,"")}<span class="zm">${IC.zoom}</span></button>`:`<div class="hero">${thumb(d,"")}</div>`;
+  /* where to buy: links are added by hand in data.js as buy:{official,shopee,lazada}; without a link the button shows but cannot be opened */
+  const buy=d.buy&&typeof d.buy==="object"?d.buy:{};
+  const shops=[["official",T("buy_official")],["shopee","Shopee"],["lazada","Lazada"]].map(([k,l])=>{const u=safeUrl(buy[k]);return u?`<a class="bbtn ${k}" href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(l)} ↗</a>`:`<span class="bbtn ${k} off" aria-disabled="true" title="${T("buy_soon")}">${esc(l)}</span>`});
+  const anyShop=["official","shopee","lazada"].some(k=>safeUrl(buy[k]));
+  const buyRow=`<div class="buy"><span class="vl">${T("buy")}</span>${shops.join("")}${anyShop?"":`<span class="bnote">${T("buy_soon")}</span>`}</div>`;
   return`<div class="ph">${S.back?`<button class="back" data-action="pop-back" aria-label="${T("back_news")}" title="${T("back_news")}">${IC.back}</button>`:""}<span class="s">${IC[d.category]}</span><span class="t">${T("profile",cn(d.category))}</span><button class="x" data-action="close" aria-label="${T("close")}">${IC.x}</button></div>
   <div class="pb">
     <div class="dh">
-      ${thumb(d,"td")}
+      ${hero}
       <div style="min-width:0;flex:1">
         <div class="bb">${esc(d.brand||"")}</div>
         <h2>${esc(d.model||"")}</h2>
         <div class="dmeta"><span class="dprice${chg("price_myr")}">${price(cur)}</span>${oldOf(cur._v||(vs.length?null:d))?`<s class="old">${esc(rm(oldOf(cur._v||d)))}</s>`:""}${vs.length?"":`<span>${T("from")}</span>`}${promoTag(cur._v||(vs.length?null:d))}${status(cur)}<span class="dlaunch${chg("launch_my")}">${T("my_launch")} ${esc(cur.launch_my||"—")}</span>${cur._v&&cur._v.price_date?`<span class="pdate">${T("price_date")} ${esc(cur._v.price_date)}</span>`:""}</div>
         ${pn?`<p class="pv">${esc(pn)}</p>`:""}
+        ${buyRow}
       </div>
       <div class="acts">
         <button class="btn ${on?"":"pri"}" data-action="toggle-cmp" data-id="${esc(d.id)}">${on?IC.check+T("in_cmp"):IC.plus+T("add_cmp")}</button>
         ${on?`<button class="btn" data-action="go-cmp" data-c="${esc(d.category)}">${T("go_cmp")}${IC.open}</button>`:""}
+        <button class="btn" data-action="share" data-k="d" data-id="${esc(d.id)}">${IC.share}${T("share")}</button>
       </div>
     </div>
     ${vers}
@@ -1355,7 +1691,7 @@ function closePop(keepHist){
   clearTimeout(closeT);closeT=setTimeout(()=>{if(!S.pop)ov.hidden=true},300);
   if(popHist){popHist=false;if(!keepHist){try{history.back()}catch(e){}}}
 }
-window.addEventListener("popstate",()=>{if(S.pop){popHist=false;closePop(true)}else popHist=false});
+window.addEventListener("popstate",()=>{shClose();if(S.pop){popHist=false;closePop(true)}else popHist=false});
 
 /* ---------- Excel export: a real .xlsx written in the browser (stored zip + inline strings), one sheet per category, one row per version ---------- */
 const CRC=(()=>{const t=new Uint32Array(256);for(let n=0;n<256;n++){let c=n;for(let k=0;k<8;k++)c=c&1?0xEDB88320^(c>>>1):c>>>1;t[n]=c>>>0}return t})();
@@ -1440,6 +1776,346 @@ async function exportXlsx(){
   finally{dlBusy=false;if(b)b.classList.remove("busy")}
 }
 
+/* ---------- share: a link that opens the same model / comparison / story on the public site, plus a long picture for chats ---------- */
+const SITE="https://my-gadget-radar.pages.dev/";
+let SH=null,shFiles=null;
+function canShareFiles(){
+  if(shFiles!==null)return shFiles;
+  try{shFiles=!!(navigator.canShare&&typeof File==="function"&&navigator.canShare({files:[new File([""],"a.jpg",{type:"image/jpeg"})]}))}catch(e){shFiles=false}
+  return shFiles;
+}
+/* what is being shared: title, the message text and the deep link (#d/<id>[/<version>], #c/<category>/<id,id>, #n/<story id>) */
+function shareCtx(k,id){
+  const app=T("app");
+  if(k==="d"){
+    const d=BYID.get(id);if(!d)return null;
+    const vi=vIndex(d),cur=curDev(d),vl=cur._v?vlabel(cur._v):"";
+    const title=dname(d)+(vl?" "+vl:"");
+    return{kind:"d",cat:d.category,dev:d,cur,devs:[d],title,url:SITE+"#d/"+d.id+(vi>0?"/"+vi:""),text:`${title}｜${cur.price_myr!=null?rm(cur.price_myr):T("tbd")}｜${app}`};
+  }
+  if(k==="c"){
+    const cat=cmpCat(),devs=S.cmp[cat].map(x=>BYID.get(x)).filter(Boolean);if(devs.length<2)return null;
+    const title=devs.map(dname).join(" vs ");
+    return{kind:"c",cat,devs,title,url:SITE+"#c/"+cat+"/"+devs.map(d=>d.id).join(","),text:`${title}｜${T("cmp_title",cn(cat))}｜${app}`};
+  }
+  if(k==="n"){
+    const n=NEWS.find(x=>x.id===id);if(!n)return null;
+    const devs=arr(n.device_ids).map(x=>BYID.get(x)).filter(Boolean),title=ntxt(n,"title")||"";
+    return{kind:"n",devs,title,url:SITE+"#n/"+n.id,text:`${title}｜${app}`};
+  }
+  return null;
+}
+function shMenuHTML(){
+  const c=SH,enc=encodeURIComponent,msg=c.text+"\n"+c.url;
+  const pics=c.devs.slice(0,4).map(d=>thumb(d,"")).join("");
+  return`<div class="ph"><span class="t">${T("share_t")}</span><span class="s">${T("sh_what_"+c.kind)}</span><button class="x" data-action="sh-close" aria-label="${T("close")}">${IC.x}</button></div>
+  <div class="pb shb">
+    <div class="shw">${pics?`<span class="sht">${pics}</span>`:""}<span class="shx"><b>${esc(c.title)}</b><input class="shu" id="sh-url" value="${esc(c.url)}" readonly aria-label="${T("sh_copy")}"></span></div>
+    <div class="shg">
+      ${navigator.share?`<button class="sho nat" data-action="sh-native">${IC.share}<span>${T("sh_native")}</span></button>`:""}
+      <a class="sho wa" href="https://wa.me/?text=${enc(msg)}" target="_blank" rel="noopener noreferrer"><i>${SOC.wa}</i><span>WhatsApp</span></a>
+      <a class="sho tgm" href="https://t.me/share/url?url=${enc(c.url)}&text=${enc(c.text)}" target="_blank" rel="noopener noreferrer"><i>${SOC.tg}</i><span>Telegram</span></a>
+      <a class="sho fb" href="https://www.facebook.com/sharer/sharer.php?u=${enc(c.url)}" target="_blank" rel="noopener noreferrer"><i>${SOC.fb}</i><span>Facebook</span></a>
+      <button class="sho cp" data-action="sh-copy"><i>${IC.link}</i><span>${T("sh_copy")}</span></button>
+    </div>
+    ${c.kind!=="n"?`<button class="btn pri shim" data-action="sh-img">${IC.image}${T("sh_img")}</button><p class="shn">${T("sh_img_note")}</p>`:""}
+  </div>`;
+}
+function shImgHTML(){
+  const c=SH,tall=c.blob&&c.h>2.4*c.w;
+  return`<div class="ph"><button class="back" data-action="sh-menu" aria-label="${T("share")}" title="${T("share")}">${IC.back}</button><span class="t">${T("long_img")}</span><span class="s">${c.blob?c.w+" × "+c.h:""}</span><button class="x" data-action="sh-close" aria-label="${T("close")}">${IC.x}</button></div>
+  <div class="pb shb">
+    <div class="seg shm">${["key","all"].map(m=>`<button data-action="sh-mode" data-m="${m}" aria-pressed="${c.mode===m}">${T("img_"+m)}</button>`).join("")}</div>
+    ${tall?`<p class="shn warn">${T("img_long")}</p>`:""}
+    <div class="shi">${c.src?`<img src="${c.src}" alt="${esc(c.title)}">`:`<span class="shl"><i></i>${T("img_making")}</span>`}</div>
+    <p class="shn">${T("img_hint")}</p>
+  </div>
+  <div class="pf">${canShareFiles()?`<button class="btn" data-action="sh-ishare"${c.blob?"":" disabled"}>${IC.share}${T("img_share")}</button>`:""}<button class="btn pri" data-action="sh-save"${c.blob?"":" disabled"}>${IC.down}${T("img_save")}</button></div>`;
+}
+function shPaint(){
+  const p=$("#shp");if(!p||!SH)return;
+  const pb=p.querySelector&&p.querySelector(".pb"),st=pb?pb.scrollTop:0;
+  p.className="shp"+(SH.view==="img"?" wide":"");
+  p.innerHTML=SH.view==="img"?shImgHTML():shMenuHTML();
+  const pb2=p.querySelector&&p.querySelector(".pb");if(pb2&&st)pb2.scrollTop=st;
+}
+function shOpen(c,view){
+  if(!c)return;
+  if(SH&&SH.src)URL.revokeObjectURL(SH.src);
+  c.view=view||"menu";c.mode="key";SH=c;
+  const sh=$("#sh");shPaint();sh.hidden=false;if(!S.pop)lockScroll(true);
+  requestAnimationFrame(()=>requestAnimationFrame(()=>sh.classList.add("show")));
+  const x=sh.querySelector(".x");if(x&&x.focus)setTimeout(()=>x.focus({preventScroll:true}),40);
+  if(c.view==="img")makeImg();
+}
+function shClose(){
+  const sh=$("#sh");if(!sh||sh.hidden||!SH)return false;
+  sh.classList.remove("show");if(!S.pop)lockScroll(false);
+  const old=SH;SH=null;imgJob++;
+  setTimeout(()=>{if(!SH){sh.hidden=true;if(old.src)URL.revokeObjectURL(old.src)}},240);
+  return true;
+}
+async function shNative(){
+  const c=SH;if(!c)return;
+  try{await navigator.share({title:c.title,text:c.text,url:c.url})}
+  catch(e){if(e&&e.name==="AbortError")return;shCopy()}
+}
+async function shCopy(){
+  const c=SH;if(!c)return;let ok=false;
+  try{if(navigator.clipboard&&navigator.clipboard.writeText){await navigator.clipboard.writeText(c.url);ok=true}}catch(e){}
+  if(!ok){const inp=document.getElementById("sh-url");if(inp)try{inp.focus();inp.select();inp.setSelectionRange(0,c.url.length);ok=!!(document.execCommand&&document.execCommand("copy"))}catch(e){}}
+  toast(T(ok?"sh_copied":"sh_copy_fail"));
+}
+const imgName=c=>`MY-Gadget-Radar-${c.kind==="c"?c.cat+"-compare":c.dev.id}-${MY_TODAY}.jpg`;
+async function shSave(){
+  const c=SH;if(!c||!c.blob)return;
+  const dl=await dlCap();
+  if(dl&&typeof dl.save==="function"){
+    try{await dl.save({filename:imgName(c),data:c.blob});toast(T("img_saved"))}
+    catch(e){const cd=e&&e.code;if(cd==="declined")return;toast(cd==="rate_limited"?T("dl_busy"):T("dl_fail"))}
+  }else{saveBlob(imgName(c),c.blob);toast(T("img_saved"))}
+}
+async function shImgShare(){
+  const c=SH;if(!c||!c.blob)return;
+  try{await navigator.share({files:[new File([c.blob],imgName(c),{type:"image/jpeg"})],title:c.title})}
+  catch(e){if(e&&e.name==="AbortError")return;toast(T("img_share_fail"))}
+}
+let imgJob=0;
+async function makeImg(){
+  const c=SH;if(!c)return;const job=++imgJob;
+  if(c.src)URL.revokeObjectURL(c.src);c.src=null;c.blob=null;shPaint();
+  try{
+    const cv=await drawLong(c);
+    const blob=await new Promise((res,rej)=>cv.toBlob(b=>b?res(b):rej(new Error("toBlob")),"image/jpeg",.92));
+    if(job!==imgJob||SH!==c)return;
+    c.blob=blob;c.w=cv.width;c.h=cv.height;c.src=URL.createObjectURL(blob);shPaint();
+  }catch(e){if(job===imgJob&&SH===c){toast(T("img_fail"));c.view="menu";shPaint()}}
+}
+/* opening a shared link: #d/<id>[/<version>] opens the model, #c/<cat>/<ids> loads the comparison, #n/<id> opens the story */
+function route(h){
+  let s=String(h||"");try{s=decodeURIComponent(s)}catch(e){}
+  let m;
+  if((m=/^d\/([\w-]+)(?:\/(\d+))?$/.exec(s))&&BYID.get(m[1])){
+    const d=BYID.get(m[1]);if(m[2]!=null&&+m[2]<vlist(d).length)S.vsel[d.id]=+m[2];
+    try{history.replaceState(null,"","#devices")}catch(e){}
+    setView("devices");openPop("device",d.id);return;
+  }
+  if((m=/^c\/(\w+)\/([\w,-]+)$/.exec(s))&&CAT_KEYS.includes(m[1])){
+    const ids=[...new Set(m[2].split(","))].filter(id=>{const d=BYID.get(id);return d&&d.category===m[1]}).slice(0,MAX);
+    if(ids.length){S.cmp[m[1]]=ids;S.cat=m[1];savePrefs()}
+    try{history.replaceState(null,"","#compare")}catch(e){}
+    setView("compare");return;
+  }
+  if((m=/^n\/([\w-]+)$/.exec(s))&&NEWS.some(x=>x.id===m[1])){
+    try{history.replaceState(null,"","#news")}catch(e){}
+    setView("news");openPop("news",m[1]);return;
+  }
+  setView(s);
+}
+
+/* ---------- long picture: drawn on a canvas, 1080 px wide in the site's dark look, so it reads well when sent in a chat ---------- */
+const CV={bg:"#060A12",panel:"#0D1422",panel2:"#111A2B",line:"#1C2840",line2:"#2A3B5E",ink:"#E7EEF9",muted:"#8C9CB8",faint:"#5A6A86",accent:"#3CCBF4",win:"#3DDC97",my:"#FF4D6D",d:["#3CCBF4","#FFB547","#B794FF","#FF6B8B"]};
+const CF={b:'"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif',d:'"Chakra Petch","Noto Sans SC",system-ui,sans-serif',m:'"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace'};
+const cfont=(w,px,f)=>`${w} ${px}px ${CF[f||"b"]}`;
+const okImg=d=>d&&d.image&&/^img\/[\w-]+\/[\w-]+\.png$/.test(d.image)?d.image:"";
+function cimg(src){return new Promise(r=>{if(!src)return r(null);const im=new Image();im.onload=()=>r(im);im.onerror=()=>r(null);im.src=src})}
+async function cfonts(txt){
+  try{
+    if(!document.fonts||!document.fonts.load)return;
+    const t=Array.from(new Set(Array.from(txt))).join("");
+    const ps=[cfont(400,24),cfont(500,24),cfont(700,24),cfont(600,24,"d"),cfont(500,24,"m"),cfont(700,24,"m")].map(f=>document.fonts.load(f,t).catch(()=>null));
+    await Promise.race([Promise.all(ps),new Promise(r=>setTimeout(r,3000))]);
+  }catch(e){}
+}
+/* split text into lines that fit maxW (Latin words stay whole, Chinese breaks between characters); the last kept line ends in … */
+function cwrap(x,s,maxW,maxL){
+  const toks=String(s==null?"":s).match(/[\x21-\x7EÀ-ɏ″×·–—]+\s*|\s+|[^\s]/gu)||[];
+  const L=[],W=t=>x.measureText(t).width;let cur="";
+  for(let t of toks){
+    if(!cur&&!t.trim())continue;
+    if(W((cur+t).trimEnd())<=maxW){cur+=t;continue}
+    if(cur.trim()){L.push(cur.trimEnd());cur=""}
+    t=t.trimStart();
+    if(W(t.trimEnd())<=maxW){cur=t;continue}
+    for(const ch of t){if(cur&&W(cur+ch)>maxW){L.push(cur);cur=ch}else cur+=ch}
+  }
+  if(cur.trim())L.push(cur.trimEnd());
+  if(maxL&&L.length>maxL){const k=L.slice(0,maxL);let l=k[maxL-1];while(l.length&&W(l+"…")>maxW)l=l.slice(0,-1);k[maxL-1]=l.trimEnd()+"…";return k}
+  return L.length?L:[""];
+}
+function ctx2(x,s,X,Y,font,color,align){x.font=font;x.fillStyle=color;x.textAlign=align||"left";x.fillText(s,X,Y)}
+function cls(x,v){if("letterSpacing"in x)x.letterSpacing=v+"px"}
+function crr(x,X,Y,w,h,r){x.beginPath();if(x.roundRect)x.roundRect(X,Y,w,h,r);else{x.moveTo(X+r,Y);x.arcTo(X+w,Y,X+w,Y+h,r);x.arcTo(X+w,Y+h,X,Y+h,r);x.arcTo(X,Y+h,X,Y,r);x.arcTo(X,Y,X+w,Y,r);x.closePath()}}
+function cpill(x,s,X,Y,px,bg,fg){x.font=cfont(700,px);const w=x.measureText(s).width+px*.9,h=px*1.55;crr(x,X,Y,w,h,px*.35);x.fillStyle=bg;x.fill();ctx2(x,s,X+px*.45,Y+(h-px)/2-px*.06,cfont(700,px),fg);return w}
+function cradar(x,cx,cy,r){
+  x.save();x.lineWidth=Math.max(1.5,r/15);
+  [1,.64,.3].forEach((k,i)=>{x.strokeStyle=i?"rgba(60,203,244,.45)":"rgba(60,203,244,.9)";x.beginPath();x.arc(cx,cy,r*k,0,Math.PI*2);x.stroke()});
+  x.strokeStyle="rgba(60,203,244,.25)";x.beginPath();x.moveTo(cx-r,cy);x.lineTo(cx+r,cy);x.moveTo(cx,cy-r);x.lineTo(cx,cy+r);x.stroke();
+  x.beginPath();x.moveTo(cx,cy);x.arc(cx,cy,r,-Math.PI/2-1,-Math.PI/2);x.closePath();x.fillStyle="rgba(60,203,244,.26)";x.fill();
+  x.strokeStyle=CV.accent;x.lineWidth=Math.max(2,r/11);x.beginPath();x.moveTo(cx,cy);x.lineTo(cx,cy-r);x.stroke();
+  x.fillStyle=CV.my;x.beginPath();x.arc(cx+r*.44,cy-r*.28,Math.max(2.5,r/9),0,Math.PI*2);x.fill();
+  x.restore();
+}
+function cpic(x,im,X,Y,w,h){if(!im)return;const s=Math.min(w/im.naturalWidth,h/im.naturalHeight),dw=im.naturalWidth*s,dh=im.naturalHeight*s;x.drawImage(im,X+(w-dw)/2,Y+(h-dh)/2,dw,dh)}
+/* in the key-spec list rows stand without their group heading, so a few get a fuller name */
+const IMGLAB={main_cam_mp:["主摄","Main camera"],refresh_hz:["刷新率","Refresh rate"],ram_gb:["运行内存","RAM"],storage_gb:["存储","Storage"]};
+/* spec rows for the picture: key specs (the category's essentials) or everything the compare page / profile shows */
+function imgRows(c){
+  const key=c.mode==="key",keys=new Set(KEYROWS[c.cat]||[]),o=opts(c.cat);
+  const devs=c.kind==="d"?[c.cur]:c.devs,ref=c.kind==="d"?c.dev:(devs.every(isFold)?devs[0]:null),out=[];
+  for(const g of SPEC[c.cat]||[]){
+    if(g.g==="price")continue;
+    if(!key&&c.kind==="c"&&o.off.includes(g.g))continue;
+    const rows=[];
+    for(const [k,zh,en,u,better] of g.rows){
+      if(key?!keys.has(k):(c.kind==="c"&&o.hide.includes(k)))continue;
+      const vals=devs.map(d=>val(d,k)),shown=vals.map(v=>fmt(v,u));
+      if(shown.every(s=>s==="—"))continue;
+      if(!key&&c.kind==="c"&&o.diff&&shown.every(s=>s===shown[0]))continue;
+      const rk=devs.length>1?ranks(better,vals):null;
+      const il=key&&!(ref&&isFold(ref)&&FOLD_LAB[k])?(IMGLAB[k]||CLAB[k]):null;
+      rows.push({label:il?(S.lang==="en"?il[1]:il[0]):rowLab(ref,k,zh,en),vals:shown,best:shown.map((s,i)=>!!(rk&&rk[i]===1))});
+    }
+    if(rows.length)out.push({g:lab(g),rows});
+  }
+  return out;
+}
+async function drawLong(c){
+  const W=1080,P=44,one=c.kind==="d";
+  const devs=one?[c.cur]:c.devs,n=devs.length,base=one?[c.dev]:c.devs;
+  const pics=await Promise.all(base.map(d=>cimg(okImg(d))));
+  const groups=imgRows(c),flat=c.mode==="key";
+  const extra=[];
+  if(one&&!flat){const d=c.dev;if(d.category==="watch"&&arr(dtxt(d,"health")).length)extra.push([T("health"),arr(dtxt(d,"health"))]);[["features","features"],["ai","ai_features"]].forEach(([t,f])=>{const l=arr(dtxt(d,f));if(l.length)extra.push([T(t),l])})}
+  const kindL=one?T("profile",cn(c.cat)):T("cmp_title",cn(c.cat));
+  let all=T("app")+"MY GADGET RADAR"+kindL+MY_TODAY+SITE+T("img_note",MY_TODAY)+T("img_more")+T("img_daily")+T("from")+T("best")+T("leads",0)+T("promo")+T("tbd")+T("my_launch")+"0123456789RM,.×";
+  groups.forEach(g=>{all+=g.g;g.rows.forEach(r=>{all+=r.label+r.vals.join("")})});
+  extra.forEach(e=>{all+=e[0]+e[1].join("、")});
+  base.forEach(d=>{all+=(d.brand||"").toUpperCase()+(d.model||"")});
+  if(one&&c.cur._v)all+=vlabel(c.cur._v);
+  await cfonts(all);
+  const cv=document.createElement("canvas");cv.width=W;cv.height=8;
+  let x=cv.getContext("2d");x.textBaseline="top";
+  const B=[];
+  /* header: radar mark, site name, what this is and the date */
+  B.push({h:150,draw(x,y){
+    const g=x.createLinearGradient(0,y,0,y+150);g.addColorStop(0,"#0C1828");g.addColorStop(1,CV.bg);x.fillStyle=g;x.fillRect(0,y,W,150);
+    cradar(x,P+32,y+74,31);
+    ctx2(x,T("app"),P+82,y+38,cfont(700,36),CV.ink);
+    cls(x,4);ctx2(x,S.lang==="en"?"大马数码雷达":"MY GADGET RADAR",P+84,y+88,cfont(600,17,"d"),CV.accent);cls(x,0);
+    ctx2(x,kindL,W-P,y+42,cfont(600,25),CV.ink,"right");
+    ctx2(x,MY_TODAY,W-P,y+84,cfont(500,20,"m"),CV.muted,"right");
+    x.fillStyle=CV.line;x.fillRect(P,y+149,W-2*P,1);
+  }});
+  const promoOf=o=>{const old=oldOf(o);return{old:old?rm(old):"",tag:old&&promoOn(o)?(o.promo_until?T("promo_short",mmdd(o.promo_until)):T("promo")):""}};
+  if(one){
+    /* one model: picture on the left, name / version / price / launch on the right */
+    const d=c.dev,cur=c.cur,vs=vlist(d),tx=P+372,tw=W-P-tx,ih=320;
+    x.font=cfont(700,44);const nl=cwrap(x,d.model||"",tw,3);
+    const vl=cur._v?vlabel(cur._v):"";
+    const po=promoOf(cur._v||(vs.length?null:d)),st=S.lang==="en"?(STATUS[d.status||"在售"]||["",d.status||""])[1]:(d.status||"在售");
+    const meta=`${st} · ${T("my_launch")} ${cur.launch_my||"—"}`;
+    const th=30+nl.length*44*1.25+(vl?40:0)+16+58+(po.old||po.tag?44:0)+40;
+    const h=Math.max(ih,th)+56;
+    B.push({h,draw(x,y){
+      crr(x,P,y+28,340,ih,22);x.fillStyle=CV.panel;x.fill();x.strokeStyle=CV.line;x.lineWidth=1;x.stroke();
+      cpic(x,pics[0],P+20,y+48,300,ih-40);
+      let ty=y+28+Math.max(0,(ih-th)/2);
+      cls(x,2);ctx2(x,(d.brand||"").toUpperCase(),tx,ty,cfont(600,20),CV.muted);cls(x,0);ty+=32;
+      nl.forEach(l=>{ctx2(x,l,tx,ty,cfont(700,44),CV.ink);ty+=44*1.25});
+      if(vl){ctx2(x,vl,tx,ty+4,cfont(500,24),CV.muted);ty+=40}
+      ty+=16;
+      x.font=cfont(700,46,"m");const pr=cur.price_myr!=null?rm(cur.price_myr):T("tbd");ctx2(x,pr,tx,ty,cfont(700,46,"m"),cur.price_myr!=null?CV.accent:CV.muted);
+      if(cur.price_myr!=null&&!vs.length){const pw=x.measureText(pr).width;ctx2(x,T("from"),tx+pw+10,ty+20,cfont(500,22),CV.muted)}
+      ty+=58;
+      if(po.old||po.tag){let px=tx;if(po.tag)px+=cpill(x,po.tag,px,ty,20,CV.my,"#fff")+14;if(po.old){x.font=cfont(500,22,"m");const ow=x.measureText(po.old).width;ctx2(x,po.old,px,ty+5,cfont(500,22,"m"),CV.faint);x.fillStyle=CV.faint;x.fillRect(px,ty+17,ow,2)}ty+=44}
+      ctx2(x,meta,tx,ty+6,cfont(500,20),CV.muted);
+    }});
+  }else{
+    /* side-by-side cards: picture, brand, model, price (+ promotion) and how many rows each one wins */
+    const G=16,cw=(W-2*P-(n-1)*G)/n,ip=n<=2?22:16;
+    const nf=n<=2?30:n===3?27:24,pf=n<=2?34:n===3?30:26,ih=n<=2?280:n===3?236:200;
+    const wins=devs.map(()=>0);groups.forEach(g=>g.rows.forEach(r=>r.best.forEach((b,i)=>{if(b)wins[i]++})));
+    const cards=devs.map((d,i)=>{x.font=cfont(700,nf);const nl=cwrap(x,d.model||"",cw-2*ip,3);const lead=leadOf(d);return{d,nl,po:promoOf(lead)}});
+    const ch=Math.max(...cards.map(k=>6+ih+22+28+k.nl.length*nf*1.28+14+pf*1.2+(k.po.old||k.po.tag?40:0)+14+30+ip));
+    B.push({h:ch+52,draw(x,y){
+      cards.forEach((k,i)=>{
+        const cx=P+i*(cw+G),cy=y+30,col=CV.d[i%4];
+        crr(x,cx,cy,cw,ch,18);x.fillStyle=CV.panel;x.fill();x.strokeStyle=CV.line;x.lineWidth=1;x.stroke();
+        x.save();crr(x,cx,cy,cw,ch,18);x.clip();x.fillStyle=col;x.fillRect(cx,cy,cw,6);x.restore();
+        cpic(x,pics[i],cx+ip,cy+18,cw-2*ip,ih-10);
+        let ty=cy+6+ih+22;
+        x.font=cfont(600,18);const bl=cwrap(x,(k.d.brand||"").toUpperCase(),cw-2*ip-20,1)[0];
+        x.fillStyle=col;x.beginPath();x.arc(cx+ip+6,ty+10,6,0,Math.PI*2);x.fill();
+        cls(x,1.5);ctx2(x,bl,cx+ip+20,ty,cfont(600,18),CV.muted);cls(x,0);ty+=28;
+        k.nl.forEach(l=>{ctx2(x,l,cx+ip,ty,cfont(700,nf),CV.ink);ty+=nf*1.28});
+        ty+=14;
+        const pr=k.d.price_myr!=null?rm(k.d.price_myr):T("tbd");
+        ctx2(x,pr,cx+ip,ty,cfont(700,pf,"m"),k.d.price_myr!=null?CV.accent:CV.muted);
+        if(k.d.price_myr!=null){x.font=cfont(700,pf,"m");const pw=x.measureText(pr).width;if(pw+40<cw-2*ip)ctx2(x,T("from"),cx+ip+pw+8,ty+pf*.42,cfont(500,Math.round(pf*.55)),CV.muted)}
+        ty+=pf*1.2;
+        if(k.po.old||k.po.tag){let px=cx+ip;if(k.po.tag)px+=cpill(x,k.po.tag,px,ty+6,n<=2?18:15,CV.my,"#fff")+10;if(k.po.old){x.font=cfont(500,n<=2?20:17,"m");const ow=x.measureText(k.po.old).width;if(px+ow<=cx+cw-ip){ctx2(x,k.po.old,px,ty+9,cfont(500,n<=2?20:17,"m"),CV.faint);x.fillStyle=CV.faint;x.fillRect(px,ty+9+(n<=2?10:8.5),ow,2)}}ty+=40}
+        ty+=14;
+        cpill(x,T("leads",wins[i]),cx+ip,ty,n<=2?17:15,wins[i]?"rgba(61,220,151,.16)":"rgba(140,156,184,.12)",wins[i]?CV.win:CV.muted);
+      });
+    }});
+  }
+  /* spec rows */
+  if(one){
+    const lw=270,vx=P+lw+28,vw=W-P-20-vx;let odd=0;
+    groups.forEach(g=>{
+      if(!flat)B.push({h:74,draw(x,y){ctx2(x,g.g,P+4,y+34,cfont(700,23),CV.accent);x.fillStyle=CV.line2;x.fillRect(P,y+72,W-2*P,1)}});
+      g.rows.forEach(r=>{
+        x.font=cfont(500,26);const vl=cwrap(x,r.vals[0],vw,6);x.font=cfont(400,23);const ll=cwrap(x,r.label,lw-20,2);
+        const h=Math.max(vl.length*26*1.38,ll.length*23*1.38)+34,stripe=odd++%2===0;
+        B.push({h,draw(x,y){
+          if(stripe){x.fillStyle="rgba(17,26,43,.75)";x.fillRect(P,y,W-2*P,h)}
+          ll.forEach((l,i)=>ctx2(x,l,P+20,y+19+i*23*1.38,cfont(400,23),CV.muted));
+          vl.forEach((l,i)=>ctx2(x,l,vx,y+17+i*26*1.38,cfont(500,26),CV.ink));
+        }});
+      });
+    });
+    extra.forEach(([t,l])=>{
+      x.font=cfont(400,24);const tl=cwrap(x,l.join(S.lang==="en"?", ":"、"),W-2*P-40,12);
+      B.push({h:74,draw(x,y){ctx2(x,t,P+4,y+34,cfont(700,23),CV.accent);x.fillStyle=CV.line2;x.fillRect(P,y+72,W-2*P,1)}});
+      B.push({h:tl.length*24*1.5+36,draw(x,y){tl.forEach((s,i)=>ctx2(x,s,P+20,y+20+i*24*1.5,cfont(400,24),CV.ink))}});
+    });
+  }else{
+    const G=16,cw=(W-2*P-(n-1)*G)/n,ip=n<=2?22:16,vf=n<=2?28:n===3?25:22;
+    groups.forEach((g,gi)=>{
+      if(!flat)B.push({h:74,draw(x,y){ctx2(x,g.g,P+4,y+34,cfont(700,23),CV.accent);x.fillStyle=CV.line2;x.fillRect(P,y+72,W-2*P,1)}});
+      g.rows.forEach((r,ri)=>{
+        x.font=cfont(600,vf);const lines=r.vals.map(v=>cwrap(x,v,cw-2*ip,3));
+        const h=18+21*1.35+8+Math.max(...lines.map(l=>l.length))*vf*1.32+18,first=flat?gi===0&&ri===0:ri===0;
+        B.push({h,draw(x,y){
+          for(let i=0;i<n;i++){x.fillStyle="rgba(13,20,34,.85)";x.fillRect(P+i*(cw+G),y,cw,h)}
+          if(!first){x.fillStyle=CV.line;x.fillRect(P,y,W-2*P,1)}
+          ctx2(x,r.label,P+ip,y+18,cfont(500,21),CV.muted);
+          lines.forEach((ls,i)=>{
+            const cx=P+i*(cw+G)+ip,good=r.best[i];
+            ls.forEach((l,j)=>ctx2(x,l,cx,y+18+21*1.35+8+j*vf*1.32,cfont(600,vf),r.vals[i]==="—"?CV.faint:good?CV.win:CV.ink));
+            if(good){x.font=cfont(600,vf);const lw2=x.measureText(ls[0]).width;const px=Math.round(vf*.62);if(cx+lw2+10+px*2.2<=P+i*(cw+G)+cw-6)cpill(x,T("best"),cx+lw2+10,y+18+21*1.35+8+(vf-px*1.55)/2,px,"rgba(61,220,151,.18)",CV.win)}
+          });
+        }});
+      });
+    });
+  }
+  /* footer: price date and where to see the latest */
+  B.push({h:156,draw(x,y){
+    x.fillStyle=CV.line2;x.fillRect(P,y+36,W-2*P,1);
+    ctx2(x,T("img_note",MY_TODAY),P,y+60,cfont(400,20),CV.muted);
+    x.font=cfont(500,22);const ml=T("img_more");ctx2(x,ml,P,y+98,cfont(500,22),CV.ink);
+    const mw=x.measureText(ml).width;ctx2(x,SITE.replace(/^https:\/\//,"").replace(/\/$/,""),P+mw+8,y+98,cfont(700,22,"m"),CV.accent);
+    cradar(x,W-P-22,y+82,20);
+    ctx2(x,T("img_daily"),W-P-56,y+72,cfont(500,18),CV.muted,"right");
+  }});
+  const H=Math.ceil(B.reduce((s,b)=>s+b.h,0));
+  cv.height=H;x=cv.getContext("2d");x.textBaseline="top";x.imageSmoothingEnabled=true;x.imageSmoothingQuality="high";
+  x.fillStyle=CV.bg;x.fillRect(0,0,W,H);
+  let y=0;for(const b of B){b.draw(x,y);y+=b.h}
+  return cv;
+}
+
 /* ---------- glue ---------- */
 let toastT=null;
 function toast(msg){const el=$("#toast");$("#toast-t").textContent=msg;el.classList.add("show");clearTimeout(toastT);toastT=setTimeout(()=>el.classList.remove("show"),2000)}
@@ -1474,19 +2150,42 @@ function toggleCmp(id){
   if(S.view==="devices")syncCards();else if(S.view==="compare")renderCompare();else if(S.view==="price")renderPriceRes();
   paintPop();
 }
+/* picture zoom: the product image shown large over everything; any tap or Esc closes it */
+function openZoom(src){
+  const lb=$("#lb"),im=$("#lb-img");if(!lb||!im)return;
+  im.removeAttribute("style");
+  im.onload=()=>{const w=im.naturalWidth||0;if(w)im.style.width=Math.min(w*2,window.innerWidth*.92)+"px"};
+  im.src=src;lb.hidden=false;
+  requestAnimationFrame(()=>requestAnimationFrame(()=>lb.classList.add("show")));
+}
+function closeZoom(){const lb=$("#lb");if(!lb||lb.hidden)return false;lb.classList.remove("show");setTimeout(()=>{if(!lb.classList.contains("show"))lb.hidden=true},200);return true}
 document.addEventListener("click",e=>{
+  if(Date.now()-dragJustEnded<350)return;
   const el=e.target.closest&&e.target.closest("[data-action]");if(!el)return;
   const a=el.dataset.action;
   switch(a){
     case"view":if(el.dataset.v===S.view)toTop();else location.hash=el.dataset.v;break;
     case"lang":if(el.dataset.l!==S.lang){S.lang=el.dataset.l;savePrefs();applyStatic();render();paintPop()}break;
     case"cat":S.cat=el.dataset.c;savePrefs();render();break;
-    case"region":S.region=el.dataset.r;renderNews();break;
+    case"region":S.region=el.dataset.r;renderHeader();renderNews();break;
+    case"cmp-diff":{const c=cmpCat();setOpts(c,{diff:!opts(c).diff});renderCompare();break}
+    case"zoom":openZoom(el.dataset.src);break;
+    case"lb-close":closeZoom();break;
     case"open":{const id=el.dataset.id;if(el.dataset.v!=null&&el.dataset.v!=="")S.vsel[id]=+el.dataset.v;else delete S.vsel[id];S.back=S.pop==="news"?{kind:"news",id:S.open}:null;openPop("device",id);break}
     case"news":S.back=null;openPop("news",el.dataset.id);break;
     case"pop-back":{const b=S.back;S.back=null;if(b)openPop(b.kind,b.id);break}
     case"variant":{const d=BYID.get(el.dataset.id);if(!d)break;const ni=+el.dataset.i;if(ni===vIndex(d))break;const a=curDev(d);S.vsel[d.id]=ni;const b=curDev(d);const keys=[];if(a.price_myr!==b.price_myr)keys.push("price_myr");if(a.launch_my!==b.launch_my)keys.push("launch_my");(SPEC[d.category]||[]).forEach(g=>g.rows.forEach(r=>{if(fmt(val(a,r[0]),r[3])!==fmt(val(b,r[0]),r[3]))keys.push(r[0])}));S.flash={id:d.id,keys};repaintDevice();S.flash=null;break}
     case"xlsx":exportXlsx();break;
+    case"share":shOpen(shareCtx(el.dataset.k,el.dataset.id),"menu");break;
+    case"longimg":shOpen(shareCtx(el.dataset.k,el.dataset.id),"img");break;
+    case"sh-close":shClose();break;
+    case"sh-menu":if(SH){SH.view="menu";shPaint()}break;
+    case"sh-img":if(SH){SH.view="img";makeImg()}break;
+    case"sh-mode":if(SH&&el.dataset.m!==SH.mode){SH.mode=el.dataset.m;makeImg()}break;
+    case"sh-native":shNative();break;
+    case"sh-copy":shCopy();break;
+    case"sh-save":shSave();break;
+    case"sh-ishare":shImgShare();break;
     case"close":closePop();break;
     case"top":toTop();break;
     case"toggle-cmp":toggleCmp(el.dataset.id);break;
@@ -1533,13 +2232,23 @@ document.addEventListener("click",e=>{const t=e.target;if(isBud(t)&&t._sel){t._s
 document.addEventListener("focusout",e=>{const t=e.target;if(t&&(t.id==="budget"||t.id==="range")&&String(t.value).replace(/[^\d]/g,"")==="")t.value=String(t.id==="budget"?S.budget:S.range)});
 document.addEventListener("change",e=>{if(e.target.id==="sort"){S.sort=e.target.value;savePrefs();renderDevices()}});
 document.addEventListener("keydown",e=>{
+  if(e.key==="Escape"&&closeZoom())return;
+  if(e.key==="Escape"&&shClose())return;
   if(e.key==="Escape"&&S.pop){closePop();return}
   if((e.key==="Enter"||e.key===" ")&&e.target&&e.target.dataset&&e.target.dataset.pc){e.preventDefault();e.target.click();return}
   if((e.key==="Enter"||e.key===" ")&&e.target&&e.target.dataset&&e.target.dataset.card){e.preventDefault();openPop("device",e.target.dataset.card)}
   if((e.key==="Enter"||e.key===" ")&&e.target&&e.target.dataset&&e.target.dataset.action==="news"){e.preventDefault();S.back=null;openPop("news",e.target.dataset.id)}
 });
-window.addEventListener("hashchange",()=>setView(location.hash.slice(1)));
-window.addEventListener("resize",()=>{measure();moveInd()});
+window.addEventListener("hashchange",()=>route(location.hash.slice(1)));
+let fitT=null;
+window.addEventListener("resize",()=>{measure();moveInd();clearTimeout(fitT);fitT=setTimeout(()=>{if(S.view==="news")fitChips()},120)});
+document.addEventListener("pointerdown",dragStart);
+document.addEventListener("pointermove",dragMove,{passive:true});
+document.addEventListener("pointerup",dragEnd);
+document.addEventListener("pointercancel",dragEnd);
+/* while a model is being dragged the page must not scroll under the finger */
+document.addEventListener("touchmove",e=>{if(drag&&drag.on&&e.cancelable)e.preventDefault()},{passive:false});
+document.addEventListener("contextmenu",e=>{if(drag&&e.target&&e.target.closest&&e.target.closest(".dcell"))e.preventDefault()});
 window.addEventListener("scroll",onTop,{passive:true});
 document.addEventListener("scroll",onTop,{passive:true,capture:true});
 document.addEventListener("scroll",syncX,{passive:true,capture:true});
@@ -1551,11 +2260,9 @@ document.addEventListener("touchend",()=>{hdrTouch=null},{passive:true});
 loadPrefs();
 dlCap();
 applyStatic();
-setView(location.hash.slice(1)||"news");
+route(location.hash.slice(1)||"news");
 measure();
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>{measure();moveInd()});
 })();
 </script>
-
-
 </body></html>
