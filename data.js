@@ -3,9 +3,193 @@
    features = 配置以外的软件 / 系统功能；ai_features = 官方点名的 AI 功能；health = 手表健康功能；variants = 各内存 / 尺寸版本的独立售价；image = 去背机型图；specs.dimming / cooling / speakers / certs = 调光、散热、扬声器、认证（手机与平板）。
    限时优惠：price_myr = 现在实付价，price_old = 原价，promo_until / promo_from = 优惠起止日（马来西亚日期）；过了 promo_until 页面会自动改回原价。 */
 window.RADAR_DATA = {
- "updated": "2026-11-19T10:35:00+08:00",
+ "updated": "2026-11-20T09:57:00+08:00",
  "schedule": "每天更新一次",
  "devices": [
+  {
+   "id": "airpods-5",
+   "category": "earbuds",
+   "brand": "Apple",
+   "model": "AirPods 5",
+   "launch_my": "2026-09-18",
+   "price_myr": 599,
+   "status": "在售",
+   "price_note": "标准版 RM599；无线充电盒版 RM699（支持 Qi / Apple Watch 充电器，并可在耳机柄上滑动调节音量）",
+   "variants": [
+    {
+     "label": "标准版",
+     "label_en": "Standard",
+     "price_myr": 599,
+     "price_date": "2026-11-20"
+    },
+    {
+     "label": "无线充电盒版",
+     "label_en": "With Wireless Charging Case",
+     "price_myr": 699,
+     "price_date": "2026-11-20",
+     "specs": {
+      "battery_buds_h": 5,
+      "battery_total_h": 22,
+      "wireless_charging": true
+     }
+    }
+   ],
+   "specs": {
+    "anc": true,
+    "anc_db": null,
+    "driver": "Apple 定制高振幅单元",
+    "codecs": null,
+    "spatial_audio": true,
+    "bt_version": 5.3,
+    "multipoint": null,
+    "latency_ms": null,
+    "battery_buds_h": 4,
+    "battery_total_h": 20,
+    "wireless_charging": false,
+    "bud_weight_g": 4.3,
+    "weight_total_g": null,
+    "ip": "IP57"
+   },
+   "features": [
+    "主动降噪（标准版即支持）",
+    "通透模式",
+    "个性化空间音频（头部追踪）",
+    "自适应 EQ",
+    "录音棚级录音",
+    "相机遥控",
+    "充电盒内置扬声器（查找）",
+    "Live Listen 实时收听",
+    "H2 芯片"
+   ],
+   "ai_features": [
+    "自适应音频 (Adaptive Audio)",
+    "对话感知 (Conversation Awareness)",
+    "语音突显 (Voice Isolation)",
+    "Siri 头部手势回应"
+   ],
+   "sources": [
+    "https://www.apple.com/my/airpods-5/specs/",
+    "https://soyacincau.com/2026/09/10/apple-airpods-5-malaysia-anc-available-as-standard-priced-from-rm599/",
+    "https://www.lowyat.net/2026/403890/airpods-5-now-official-in-malaysia/"
+   ]
+  },
+  {
+   "id": "techlife-pad-plus-2",
+   "category": "tablet",
+   "brand": "TechLife",
+   "model": "Pad Plus 2",
+   "launch_my": "2026-06-19",
+   "price_myr": 899,
+   "status": "在售",
+   "price_note": "realme 品牌店与 TechLife 官方 Shopee / Lazada / TikTok Shop 有售",
+   "variants": [
+    {
+     "label": "6+128GB · LTE",
+     "ram_gb": 6,
+     "storage_gb": 128,
+     "price_myr": 899,
+     "price_date": "2026-11-20"
+    }
+   ],
+   "specs": {
+    "display_size_in": 12,
+    "display_type": "IPS LCD",
+    "resolution": "2000×1200",
+    "refresh_hz": 90,
+    "brightness_nits": 450,
+    "chipset": "Helio G100",
+    "ram_gb": 6,
+    "storage_gb": 128,
+    "rear_mp": 8,
+    "front_mp": 5,
+    "battery_mah": 9000,
+    "wired_w": 18,
+    "weight_g": null,
+    "thickness_mm": null,
+    "stylus": null,
+    "cellular": true,
+    "os": "Android 16",
+    "dimming": null,
+    "cooling": null,
+    "speakers": "四扬声器",
+    "certs": null
+   },
+   "features": [
+    "12 吋 5:3 屏幕",
+    "4G LTE",
+    "microSD 扩展至 1TB",
+    "5W 反向充电",
+    "风暴灰 / 月光银两色"
+   ],
+   "ai_features": [],
+   "sources": [
+    "https://www.lowyat.net/2026/396180/techlife-pad-plus-2-smart-watch-l2-wireless-earbuds-2/",
+    "https://technave.com/gadget/TechLife-Pad-Plus-2-tablet-Smart-Watch-L2-and-Wireless-Earbuds-2-available-in-Malaysia-for-RM999-46907.html"
+   ]
+  },
+  {
+   "id": "techlife-smart-watch-l2",
+   "category": "watch",
+   "brand": "TechLife",
+   "model": "Smart Watch L2",
+   "launch_my": "2026-06-19",
+   "price_myr": 229,
+   "status": "在售",
+   "price_note": "realme 品牌店与 TechLife 官方 Shopee / Lazada / TikTok Shop 有售",
+   "specs": {
+    "display_size_in": 2.02,
+    "display_type": null,
+    "brightness_nits": 600,
+    "battery_mah": 300,
+    "battery_days": 10,
+    "water": "IP68"
+   },
+   "features": [
+    "110+ 运动模式",
+    "续航约 7–10 天",
+    "约 80 分钟充满",
+    "黑色 / 钛银两色"
+   ],
+   "health": [
+    "心率",
+    "血氧",
+    "睡眠监测",
+    "生理周期"
+   ],
+   "ai_features": [],
+   "sources": [
+    "https://www.lowyat.net/2026/396180/techlife-pad-plus-2-smart-watch-l2-wireless-earbuds-2/",
+    "https://technave.com/gadget/TechLife-Pad-Plus-2-tablet-Smart-Watch-L2-and-Wireless-Earbuds-2-available-in-Malaysia-for-RM999-46907.html"
+   ]
+  },
+  {
+   "id": "techlife-wireless-earbuds-plus-2",
+   "category": "earbuds",
+   "brand": "TechLife",
+   "model": "Wireless Earbuds+ 2",
+   "launch_my": "2026-06-19",
+   "price_myr": 79,
+   "status": "在售",
+   "price_note": "realme 品牌店与 TechLife 官方 Shopee / Lazada / TikTok Shop 有售",
+   "specs": {
+    "anc": true,
+    "driver": "13mm 动圈单元",
+    "bt_version": 6.0,
+    "battery_total_h": 30,
+    "ip": "IPX4"
+   },
+   "features": [
+    "主动降噪",
+    "通透模式",
+    "触控操作",
+    "黑色 / 奶油色两色"
+   ],
+   "ai_features": [],
+   "sources": [
+    "https://www.lowyat.net/2026/396180/techlife-pad-plus-2-smart-watch-l2-wireless-earbuds-2/",
+    "https://technave.com/gadget/TechLife-Pad-Plus-2-tablet-Smart-Watch-L2-and-Wireless-Earbuds-2-available-in-Malaysia-for-RM999-46907.html"
+   ]
+  },
   {
    "id": "honor-play20a",
    "category": "phone",
@@ -190,16 +374,18 @@ window.RADAR_DATA = {
    "brand": "Huawei",
    "model": "nova 16s Pro",
    "launch_my": "2026-11-19",
-   "price_myr": null,
-   "status": "预购",
+   "price_myr": 2899,
+   "status": "在售",
    "image": "img/phone/huawei-nova-16s-pro.png",
-   "price_note": "11 月 19 日下午 3 点在马发布；现可付 RM100 订金预订，最高 RM600 回扣，赠品最高值 RM1,956；售价未公布",
+   "price_note": "11 月 19 日起开卖：原价 RM3,299，官网即时回扣后 RM2,899，送最高值 RM1,956 赠品（含 1 年无忧换屏服务）；华为官网与官方 Shopee / Lazada / TikTok Shop 有售",
    "variants": [
     {
-     "label": "512GB",
+     "label": "12+512GB",
+     "ram_gb": 12,
      "storage_gb": 512,
-     "price_myr": null,
-     "price_date": "2026-11-15"
+     "price_myr": 2899,
+     "price_old": 3299,
+     "price_date": "2026-11-20"
     }
    ],
    "specs": {
@@ -208,7 +394,7 @@ window.RADAR_DATA = {
     "resolution": "2856×1320",
     "refresh_hz": 120,
     "chipset": "Kirin 9010S",
-    "ram_gb": null,
+    "ram_gb": 12,
     "storage_gb": 512,
     "main_cam_mp": 200,
     "ultrawide_mp": 50,
@@ -245,7 +431,8 @@ window.RADAR_DATA = {
    ],
    "sources": [
     "https://consumer.huawei.com/my/phones/nova16s-pro/specs/",
-    "https://www.lowyat.net/2026/409635/huawei-nova-16s-launch-malaysia/"
+    "https://www.lowyat.net/2026/409635/huawei-nova-16s-launch-malaysia/",
+    "https://consumer.huawei.com/my/offer/phones/nova16s-buy/"
    ]
   },
   {
@@ -254,16 +441,18 @@ window.RADAR_DATA = {
    "brand": "Huawei",
    "model": "nova 16s",
    "launch_my": "2026-11-19",
-   "price_myr": null,
-   "status": "预购",
+   "price_myr": 1999,
+   "status": "在售",
    "image": "img/phone/huawei-nova-16s.png",
-   "price_note": "11 月 19 日下午 3 点在马发布；现可付 RM100 订金预订，最高 RM600 回扣，赠品最高值 RM1,956；售价未公布",
+   "price_note": "11 月 19 日起开卖：原价 RM2,599，官网即时回扣后 RM1,999，送最高值 RM1,956 赠品（含 1 年无忧换屏服务）；华为官网与官方 Shopee / Lazada / TikTok Shop 有售",
    "variants": [
     {
-     "label": "256GB",
+     "label": "12+256GB",
+     "ram_gb": 12,
      "storage_gb": 256,
-     "price_myr": null,
-     "price_date": "2026-11-15"
+     "price_myr": 1999,
+     "price_old": 2599,
+     "price_date": "2026-11-20"
     }
    ],
    "specs": {
@@ -272,7 +461,7 @@ window.RADAR_DATA = {
     "resolution": "2800×1280",
     "refresh_hz": 120,
     "chipset": "Kirin 8020",
-    "ram_gb": null,
+    "ram_gb": 12,
     "storage_gb": 256,
     "main_cam_mp": 50,
     "tele_mp": 50,
@@ -309,7 +498,8 @@ window.RADAR_DATA = {
    ],
    "sources": [
     "https://consumer.huawei.com/my/phones/nova16s/specs/",
-    "https://www.lowyat.net/2026/409635/huawei-nova-16s-launch-malaysia/"
+    "https://www.lowyat.net/2026/409635/huawei-nova-16s-launch-malaysia/",
+    "https://consumer.huawei.com/my/offer/phones/nova16s-buy/"
    ]
   },
   {
@@ -320,14 +510,14 @@ window.RADAR_DATA = {
    "launch_my": "2026-11-10",
    "price_myr": 1399,
    "status": "在售",
-   "price_note": "首发优惠价至 11 月 25 日，之后恢复 RM1,899（8+256GB）/ RM2,099（12+512GB）；mi.com 与官方 Shopee / Lazada / TikTok Shop；mi.com 上 8+256GB 目前缺货",
+   "price_note": "首发优惠价至 11 月 25 日，之后恢复 RM1,899（8+256GB）/ RM2,099（12+512GB）；mi.com 与官方 Shopee / Lazada / TikTok Shop；两个版本目前都可下单",
    "variants": [
     {
      "label": "8+256GB",
      "ram_gb": 8,
      "storage_gb": 256,
      "price_myr": 1399,
-     "price_date": "2026-11-12",
+     "price_date": "2026-11-20",
      "price_old": 1899,
      "promo_until": "2026-11-25"
     },
@@ -336,7 +526,7 @@ window.RADAR_DATA = {
      "ram_gb": 12,
      "storage_gb": 512,
      "price_myr": 1699,
-     "price_date": "2026-11-12",
+     "price_date": "2026-11-20",
      "price_old": 2099,
      "promo_until": "2026-11-25"
     }
@@ -470,8 +660,8 @@ window.RADAR_DATA = {
    "model": "Magic9 Pro Max",
    "launch_my": "2026-11-24",
    "price_myr": null,
-   "status": "即将上市",
-   "price_note": "11 月 24 日下午 3 点在马发布（HONOR Malaysia Facebook 直播），售价未公布（中国版 ¥6,499 起）· 规格按中国版，大马版可能不同",
+   "status": "预购",
+   "price_note": "官网与门店开放 RM300 订金早鸟预订至 11 月 23 日（赠品总值 RM5,006）；11 月 24 日下午 3 点发布，售价未公布（中国版 ¥6,499 起）· 规格按中国版，大马版可能不同",
    "specs": {
     "display_size_in": 6.8,
     "display_type": "LTPO OLED",
@@ -507,7 +697,9 @@ window.RADAR_DATA = {
     "https://www.lowyat.net/2026/409208/honor-magic9-pro-max-malaysia/",
     "https://www.gsmarena.com/honor_magic9_pro_max-14940.php",
     "https://nanoreview.net/en/phone/honor-magic-9-pro-max",
-    "https://www.fonearena.com/blog/493508/honor-magic-9-pro-max-price-specifications-magic-9-magic-9-super-edition.html"
+    "https://www.fonearena.com/blog/493508/honor-magic-9-pro-max-price-specifications-magic-9-magic-9-super-edition.html",
+    "https://www.honor.com/my/phones/rm300-online-early-bird-special/",
+    "https://productnation.co/my/32333/honor-magic9-pro-max-malaysia-rm300-deposit-early-bird-oe2E/"
    ],
    "image": "img/phone/honor-magic9-pro-max.png"
   },
@@ -1359,16 +1551,16 @@ window.RADAR_DATA = {
    "brand": "Honor",
    "model": "600S 5G",
    "launch_my": "2026-09",
-   "price_myr": 1199,
+   "price_myr": 1299,
    "status": "在售",
    "image": "img/phone/honor-600s-5g.png",
    "price_note": "",
    "variants": [
     {
      "label": "4+256GB",
-     "price_myr": 1199,
+     "price_myr": 1299,
      "price_old": 1398,
-     "price_date": "2026-10-19",
+     "price_date": "2026-11-20",
      "ram_gb": 4,
      "storage_gb": 256
     }
@@ -1475,16 +1667,15 @@ window.RADAR_DATA = {
    "brand": "Honor",
    "model": "X5d Plus",
    "launch_my": "2026-09",
-   "price_myr": 549,
+   "price_myr": 599,
    "status": "在售",
    "image": "img/phone/honor-x5d-plus.png",
-   "price_note": "",
+   "price_note": "官网恢复原价 RM599，目前显示「到货通知」（缺货）",
    "variants": [
     {
      "label": "4+128GB",
-     "price_myr": 549,
-     "price_old": 599,
-     "price_date": "2026-09-14",
+     "price_myr": 599,
+     "price_date": "2026-11-20",
      "ram_gb": 4,
      "storage_gb": 128
     }
@@ -1529,24 +1720,24 @@ window.RADAR_DATA = {
    "brand": "Honor",
    "model": "X9e Pro 5G",
    "launch_my": "2026-09",
-   "price_myr": 1799,
+   "price_myr": 1899,
    "status": "在售",
    "image": "img/phone/honor-x9e-pro-5g.png",
    "price_note": "",
    "variants": [
     {
      "label": "8+256GB",
-     "price_myr": 1799,
-     "price_old": 2826,
-     "price_date": "2026-10-19",
+     "price_myr": 1899,
+     "price_old": 3125,
+     "price_date": "2026-11-20",
      "ram_gb": 8,
      "storage_gb": 256
     },
     {
      "label": "8+512GB",
-     "price_myr": 2299,
-     "price_old": 3326,
-     "price_date": "2026-10-19",
+     "price_myr": 2399,
+     "price_old": 3625,
+     "price_date": "2026-11-20",
      "ram_gb": 8,
      "storage_gb": 512
     }
@@ -18878,7 +19069,7 @@ window.RADAR_DATA = {
    "price_myr": 149,
    "status": "在售",
    "image": "img/earbuds/oppo-enco-buds3s.png",
-   "price_note": "",
+   "price_note": "OPPO 官网 RM149（划线价 RM249）",
    "specs": {
     "driver": "12.4mm 动圈单元, 114 dB@1kHz, 20 Hz~20 KHz",
     "codecs": "AAC, SBC, OPPO Alive Audio",
@@ -18903,7 +19094,8 @@ window.RADAR_DATA = {
     "充电 10 分钟听 8 小时"
    ],
    "ai_features": [],
-   "sources": []
+   "sources": [],
+   "price_old": 249
   },
   {
    "id": "honor-choice-headphones-max",
@@ -19649,9 +19841,9 @@ window.RADAR_DATA = {
    "brand": "Sony",
    "model": "WF-1000XM6",
    "launch_my": "2026-03-03",
-   "price_myr": 1599,
+   "price_myr": 1199,
    "status": "在售",
-   "price_note": "RM1,599（黑色 / 铂金银）",
+   "price_note": "Sony Store 现售 RM1,199（原价 RM1,599），未注明截止日期",
    "specs": {
     "anc": true,
     "driver": "新一代多材料振膜单元",
@@ -19674,9 +19866,11 @@ window.RADAR_DATA = {
     "AI 波束成形通话降噪"
    ],
    "sources": [
-    "https://hitechcentury.com/sony-wf-1000xm6-malaysia/"
+    "https://hitechcentury.com/sony-wf-1000xm6-malaysia/",
+    "https://store.sony.com.my/products/wf-1000xm6"
    ],
-   "image": "img/earbuds/sony-wf-1000xm6.png"
+   "image": "img/earbuds/sony-wf-1000xm6.png",
+   "price_old": 1599
   },
   {
    "id": "redmi-buds-8-pro",
@@ -25681,31 +25875,87 @@ window.RADAR_DATA = {
    "brand": "vivo",
    "model": "V80 5G",
    "launch_my": "2026-11",
-   "price_myr": null,
+   "price_myr": 2399,
    "status": "预购",
    "image": "img/phone/vivo-v80-5g.png",
-   "price_note": "11 月 10–18 日官网 RM5 预订（送 RM10 购机券与抽奖），11 月 19–27 日正式预购；售价未公布",
+   "price_note": "11 月 19–27 日正式预购：官网预购价 RM2,399 / RM2,699 / RM3,299（原价 RM2,599 / RM2,899 / RM3,499），另享 RM200 回扣、礼品套装与 2 年 vivo Care 等（总值最高 RM2,042）；vivo 官网与官方 Shopee / Lazada / TikTok Shop",
    "specs": {
     "refresh_hz": 144,
     "tele_mp": 50,
     "battery_mah": 7200,
     "wired_w": 90,
     "dimming": null,
-    "cooling": null,
-    "speakers": null,
-    "certs": null
+    "cooling": "VC 均热板",
+    "speakers": "立体声双扬声器",
+    "certs": "SGS 整机抗摔认证",
+    "display_size_in": 6.59,
+    "display_type": "AMOLED",
+    "resolution": "2750×1260",
+    "brightness_nits": 5000,
+    "chipset": "Snapdragon 7 Gen 4",
+    "antutu": 1400432,
+    "ram_gb": 8,
+    "storage_gb": 512,
+    "main_cam_mp": 50,
+    "ultrawide_mp": 8,
+    "zoom_x": 3,
+    "front_mp": 50,
+    "weight_g": 203,
+    "thickness_mm": 7.69,
+    "ip": "IP68 / IP69",
+    "os": "OriginOS 7 (Android 17)"
    },
    "features": [
-    "3D 星河设计",
-    "50MP 蔡司人像镜头（85mm / 100mm）",
-    "1.5K 144Hz 高亮屏",
-    "7200mAh 电池",
-    "90W 闪充",
-    "星愿紫 / 漫游绿 / 辽阔灰三色"
+    "3D 星河设计（星愿紫）",
+    "50MP 蔡司 OIS 主摄（LYTIA 700V）",
+    "50MP 蔡司潜望长焦（3 倍光学变焦）",
+    "蔡司人像镜头（85mm / 100mm）",
+    "前后 4K 60fps 录像",
+    "超声波屏下指纹",
+    "Snap Note 拍照转文档",
+    "vivo Office Kit 跨设备互联",
+    "Apple Watch 健康与通知同步",
+    "72 个月流畅 · 6 年安全更新",
+    "NFC"
    ],
-   "ai_features": [],
+   "ai_features": [
+    "AI 最佳表情 (AI Best Face)",
+    "AI 创意相机",
+    "AI 修图 (AI Retouch)",
+    "AI 录音转写与摘要 (AI Recorder)",
+    "Google Gemini"
+   ],
    "sources": [
-    "https://shop.vivo.com/my/product/2780?skuId=9784"
+    "https://www.vivo.com/my/products/param/v80",
+    "https://shop.vivo.com/my/",
+    "https://www.lowyat.net/2026/410029/vivo-v80-malaysia-launch/",
+    "https://nanoreview.net/en/phone/vivo-v80"
+   ],
+   "variants": [
+    {
+     "label": "8+128GB",
+     "ram_gb": 8,
+     "storage_gb": 128,
+     "price_myr": 2399,
+     "price_old": 2599,
+     "price_date": "2026-11-20"
+    },
+    {
+     "label": "8+256GB",
+     "ram_gb": 8,
+     "storage_gb": 256,
+     "price_myr": 2699,
+     "price_old": 2899,
+     "price_date": "2026-11-20"
+    },
+    {
+     "label": "8+512GB",
+     "ram_gb": 8,
+     "storage_gb": 512,
+     "price_myr": 3299,
+     "price_old": 3499,
+     "price_date": "2026-11-20"
+    }
    ]
   },
   {
@@ -26219,10 +26469,10 @@ window.RADAR_DATA = {
    "brand": "realme",
    "model": "Watch S5",
    "launch_my": "2026-11",
-   "price_myr": null,
-   "status": "即将上市",
+   "price_myr": 499,
+   "status": "在售",
    "image": "img/watch/realme-watch-s5.png",
-   "price_note": "大马官网已上架介绍页，尚未标价、未开放购买；大马售价未公布",
+   "price_note": "官网「Buy Now」已链接到 realme 官方 Lazada 店，标价 RM499，目前缺货；未见官方发布消息",
    "specs": {
     "display_size_in": 1.43,
     "display_type": "AMOLED",
@@ -26256,7 +26506,8 @@ window.RADAR_DATA = {
     "一键唤醒 Gemini AI 助手"
    ],
    "sources": [
-    "https://www.realme.com/my/realme-watch-s5"
+    "https://www.realme.com/my/realme-watch-s5",
+    "https://www.lazada.com.my/products/i14930405301.html"
    ]
   },
   {
@@ -26560,6 +26811,105 @@ window.RADAR_DATA = {
  ],
  "news": [
   {
+   "id": "2026-11-20-huawei-nova-16s-on-sale-my",
+   "region": "MY",
+   "category": "phone",
+   "kind": "上市",
+   "date": "2026-11-20",
+   "source": "HUAWEI Malaysia",
+   "url": "https://consumer.huawei.com/my/offer/phones/nova16s-buy/",
+   "title": "华为 nova 16s 系列在马开卖，回扣后 RM1,999 起",
+   "summary": "nova 16s 12+256GB 原价 RM2,599、回扣后 RM1,999；nova 16s Pro 12+512GB 原价 RM3,299、回扣后 RM2,899，另送最高值 RM1,956 赠品。",
+   "device_ids": [
+    "huawei-nova-16s",
+    "huawei-nova-16s-pro"
+   ]
+  },
+  {
+   "id": "2026-11-20-vivo-v80-preorder-my",
+   "region": "MY",
+   "category": "phone",
+   "kind": "上市",
+   "date": "2026-11-20",
+   "source": "Lowyat.NET",
+   "url": "https://www.lowyat.net/2026/410029/vivo-v80-malaysia-launch/",
+   "title": "vivo V80 在马发布并开放预购，RM2,399 起",
+   "summary": "骁龙 7 Gen 4、6.59 吋 144Hz 屏、50MP 蔡司主摄 + 50MP 3 倍潜望长焦、7200mAh 电池与 90W 快充；预购至 11 月 27 日，官网 RM2,399 / RM2,699 / RM3,299。",
+   "device_ids": [
+    "vivo-v80-5g"
+   ]
+  },
+  {
+   "id": "2026-11-20-honor-magic9-pro-max-deposit-my",
+   "region": "MY",
+   "category": "phone",
+   "kind": "上市",
+   "date": "2026-11-20",
+   "source": "ProductNation",
+   "url": "https://productnation.co/my/32333/honor-magic9-pro-max-malaysia-rm300-deposit-early-bird-oe2E/",
+   "title": "荣耀 Magic9 Pro Max 开放 RM300 订金早鸟预订",
+   "summary": "订金预订开放至 11 月 23 日，赠品总值 RM5,006（含 VVIP Magic Care+）；手机将于 11 月 24 日发布，届时公布售价。",
+   "device_ids": [
+    "honor-magic9-pro-max"
+   ]
+  },
+  {
+   "id": "2026-11-20-honor-price-changes-my",
+   "region": "MY",
+   "category": "phone",
+   "kind": "价格",
+   "date": "2026-11-20",
+   "source": "HONOR Malaysia",
+   "url": "https://www.honor.com/my/phones/honor-x9e-pro/buy/",
+   "title": "荣耀官网调价：X9e Pro 涨 RM100，600s 5G 回到 RM1,299",
+   "summary": "X9e Pro 8+256GB 由 RM1,799 调至 RM1,899、8+512GB 调至 RM2,399；600s 5G 4+256GB 由 RM1,199 调至 RM1,299；X5d Plus 恢复 RM599 且暂时缺货。",
+   "device_ids": [
+    "honor-x9e-pro-5g",
+    "honor-600s-5g",
+    "honor-x5d-plus"
+   ]
+  },
+  {
+   "id": "2026-11-20-sony-wf-1000xm6-price-my",
+   "region": "MY",
+   "category": "earbuds",
+   "kind": "价格",
+   "date": "2026-11-20",
+   "source": "Sony Store Malaysia",
+   "url": "https://store.sony.com.my/products/wf-1000xm6",
+   "title": "Sony WF-1000XM6 官网降至 RM1,199",
+   "summary": "Sony Store Malaysia 现以 RM1,199 出售 WF-1000XM6，比原价 RM1,599 便宜 RM400，未注明优惠截止日期。",
+   "device_ids": [
+    "sony-wf-1000xm6"
+   ]
+  },
+  {
+   "id": "2026-11-20-huawei-osta-sub-brand",
+   "region": "INTL",
+   "category": "phone",
+   "kind": "行业",
+   "date": "2026-11-20",
+   "source": "Lowyat.NET",
+   "url": "https://www.lowyat.net/2026/409895/huawei-osta-o1-pro-wide-screen-revealed/",
+   "title": "华为新子品牌 OSTA 今日在中国亮相，首发宽屏 O1 Pro",
+   "summary": "余承东确认子品牌（中文名「星芒」）11 月 20 日发布；O1 Pro 为宽屏手机，最高 16GB+1TB，已在中国开放预订，暂无海外上市消息。",
+   "device_ids": []
+  },
+  {
+   "id": "2026-11-20-realme-watch-s5-lazada-my",
+   "region": "MY",
+   "category": "watch",
+   "kind": "上市",
+   "date": "2026-11-20",
+   "source": "realme Malaysia",
+   "url": "https://www.realme.com/my/realme-watch-s5",
+   "title": "realme Watch S5 悄悄开卖，官方 Lazada 店标价 RM499",
+   "summary": "大马官网的「Buy Now」已链接到 realme 官方 Lazada 店，标价 RM499，目前显示缺货；未见官方发布消息。",
+   "device_ids": [
+    "realme-watch-s5"
+   ]
+  },
+  {
    "id": "2026-11-19-redmi-note-17-prices-back-my",
    "region": "MY",
    "category": "phone",
@@ -26635,6 +26985,18 @@ window.RADAR_DATA = {
    "device_ids": [
     "realme-watch-s5"
    ]
+  },
+  {
+   "id": "2026-11-19-honor-magic-v7-rumour",
+   "region": "INTL",
+   "category": "phone",
+   "kind": "传闻",
+   "date": "2026-11-19",
+   "source": "PhoneWorld",
+   "url": "https://www.phoneworld.com.pk/honor-magic-v7-may-launch-as-a-wide-foldable-phone-in-2027/",
+   "title": "传荣耀 Magic V7 将是宽屏折叠屏，2027 年推出",
+   "summary": "爆料称荣耀正准备以 Magic V7 之名推出宽屏折叠手机；荣耀尚未确认名称、规格、售价与发布时间。",
+   "device_ids": []
   },
   {
    "id": "2026-11-18-xiaomi-18-pro-series-my",
@@ -27323,22 +27685,6 @@ window.RADAR_DATA = {
    "device_ids": [
     "apple-watch-series-12",
     "apple-watch-ultra-4"
-   ]
-  },
-  {
-   "id": "2026-08-12-pixel-11-my",
-   "region": "MY",
-   "category": "phone",
-   "kind": "上市",
-   "date": "2026-08-12",
-   "source": "Lowyat.NET",
-   "url": "https://www.lowyat.net/2026/401301/google-pixel-11-malaysia/",
-   "title": "Pixel 11 系列在马推出，RM3,999 起",
-   "summary": "Pixel 11 RM3,999、11 Pro RM4,999、11 Pro XL RM5,999、11 Pro Fold RM7,999；Pixel Watch 5 RM1,799 起，8 月 20 日开卖。",
-   "device_ids": [
-    "pixel-11",
-    "pixel-11-pro",
-    "pixel-watch-5"
    ]
   }
  ]

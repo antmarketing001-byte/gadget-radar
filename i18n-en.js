@@ -4,7 +4,7 @@
 window.RADAR_EN = {
  "devices": {
   "poco-x8s": {
-   "price_note": "Launch promo price until 25 November, then back to RM1,899 (8+256GB) / RM2,099 (12+512GB); on mi.com and the official Shopee / Lazada / TikTok Shop stores; the 8+256GB version is currently sold out on mi.com",
+   "price_note": "Launch promo price until 25 November, then back to RM1,899 (8+256GB) / RM2,099 (12+512GB); on mi.com and the official Shopee / Lazada / TikTok Shop stores; both versions can be ordered now",
    "features": [
     "Game Turbo",
     "Enhanced touch (up to 480Hz sampling)",
@@ -37,7 +37,7 @@ window.RADAR_EN = {
    }
   },
   "honor-magic9-pro-max": {
-   "price_note": "Malaysia launch on 24 Nov, 3pm (livestream on HONOR Malaysia Facebook); price not announced (China from CNY6,499) · specs are the China version and may differ here",
+   "price_note": "Early-bird reservations with an RM300 deposit are open online and in stores until 23 November (gifts worth RM5,006 in total); launches 24 November at 3 PM, price not announced (China from CNY6,499) · specs follow the China model and the Malaysian version may differ",
    "features": [
     "Silicon-carbon battery"
    ],
@@ -393,7 +393,8 @@ window.RADAR_EN = {
    ],
    "specs": {
     "speakers": "Single speaker"
-   }
+   },
+   "price_note": "Back to the regular RM599 on the official store; currently shows \"Notify me\" (out of stock)"
   },
   "honor-x9e-pro-5g": {
    "features": [
@@ -6142,7 +6143,8 @@ window.RADAR_EN = {
    ],
    "specs": {
     "driver": "12.4mm Dynamic driver, 114 dB@1kHz, 20 Hz~20 KHz"
-   }
+   },
+   "price_note": "RM149 on the OPPO store (list price RM249)"
   },
   "honor-choice-headphones-max": {
    "features": [
@@ -6490,7 +6492,7 @@ window.RADAR_EN = {
    ]
   },
   "sony-wf-1000xm6": {
-   "price_note": "RM1,599 (Black / Platinum Silver)",
+   "price_note": "RM1,199 on Sony Store Malaysia (regular RM1,599); no end date stated",
    "specs": {
     "driver": "New multi-material diaphragm driver"
    },
@@ -8898,14 +8900,31 @@ window.RADAR_EN = {
    }
   },
   "vivo-v80-5g": {
-   "price_note": "RM5 pre-booking on the official store 10–18 November (RM10 voucher and lucky draw), pre-orders 19–27 November; price not announced",
+   "price_note": "Pre-orders 19–27 November: RM2,399 / RM2,699 / RM3,299 on the official store (regular RM2,599 / RM2,899 / RM3,499), plus an RM200 rebate, gift set and 2 years of vivo Care (worth up to RM2,042); vivo E-Store and official Shopee / Lazada / TikTok Shop",
    "features": [
-    "3D Stellar design",
-    "50MP ZEISS portrait camera (85mm / 100mm)",
-    "1.5K 144Hz high-brightness display",
-    "7200mAh battery",
-    "90W FlashCharge",
-    "Starwish Purple / Wander Green / Vast Gray"
+    "3D Stellar Design (Starwish Purple)",
+    "50MP ZEISS OIS main camera (LYTIA 700V)",
+    "50MP ZEISS periscope telephoto (3x optical zoom)",
+    "ZEISS portrait lenses (85mm / 100mm)",
+    "Front & rear 4K 60fps video",
+    "Ultrasonic in-display fingerprint",
+    "Snap Note",
+    "vivo Office Kit cross-device",
+    "Apple Watch health & notification sync",
+    "72-month smooth experience · 6 years of security updates",
+    "NFC"
+   ],
+   "specs": {
+    "cooling": "Vapor chamber",
+    "speakers": "Stereo speakers",
+    "certs": "SGS drop resistance"
+   },
+   "ai_features": [
+    "AI Best Face",
+    "AI Creative Camera",
+    "AI Retouch",
+    "AI Recorder (transcribe & summarise)",
+    "Google Gemini"
    ]
   },
   "infinix-xpad-30-pro": {
@@ -9002,7 +9021,7 @@ window.RADAR_EN = {
    "price_note": "RM399 (launch price)"
   },
   "huawei-nova-16s": {
-   "price_note": "Launches in Malaysia on 19 November at 3 PM; reservations open with an RM100 deposit, up to RM600 rebate and gifts worth up to RM1,956; price not announced",
+   "price_note": "On sale from 19 November: RRP RM2,599, RM1,999 after the instant rebate on the official store, with gifts worth up to RM1,956 (incl. 1-year Worry-Free Care); sold on the HUAWEI Store and official Shopee / Lazada / TikTok Shop",
    "features": [
     "300 Hz touch sampling rate",
     "P3 wide colour gamut",
@@ -9023,7 +9042,7 @@ window.RADAR_EN = {
    ]
   },
   "huawei-nova-16s-pro": {
-   "price_note": "Launches in Malaysia on 19 November at 3 PM; reservations open with an RM100 deposit, up to RM600 rebate and gifts worth up to RM1,956; price not announced",
+   "price_note": "On sale from 19 November: RRP RM3,299, RM2,899 after the instant rebate on the official store, with gifts worth up to RM1,956 (incl. 1-year Worry-Free Care); sold on the HUAWEI Store and official Shopee / Lazada / TikTok Shop",
    "features": [
     "1–120 Hz LTPO adaptive refresh rate",
     "300 Hz touch sampling rate",
@@ -9190,7 +9209,7 @@ window.RADAR_EN = {
    ]
   },
   "realme-watch-s5": {
-   "price_note": "Product page is up on realme Malaysia, but no price or purchase option yet; Malaysian price not announced",
+   "price_note": "\"Buy Now\" on the official site now links to the realme Official Store on Lazada, listed at RM499 and currently out of stock; no official announcement seen",
    "features": [
     "Triple-action button design",
     "110 sports modes",
@@ -9295,6 +9314,69 @@ window.RADAR_EN = {
    "specs": {
     "speakers": "JBL 9-unit speakers · Dolby Atmos"
    }
+  },
+  "airpods-5": {
+   "price_note": "Standard RM599; with Wireless Charging Case RM699 (charges on Qi / Apple Watch chargers and adds swipe-to-adjust volume on the stem)",
+   "specs": {
+    "driver": "Apple custom high-excursion driver"
+   },
+   "features": [
+    "Active Noise Cancellation (standard model too)",
+    "Transparency mode",
+    "Personalised Spatial Audio with head tracking",
+    "Adaptive EQ",
+    "Studio-quality audio recording",
+    "Camera remote",
+    "Speaker in the case (Find My)",
+    "Live Listen",
+    "H2 chip"
+   ],
+   "ai_features": [
+    "Adaptive Audio",
+    "Conversation Awareness",
+    "Voice Isolation",
+    "Siri head gestures"
+   ]
+  },
+  "techlife-pad-plus-2": {
+   "price_note": "Sold at realme brand stores and the official TechLife Shopee / Lazada / TikTok Shop stores",
+   "specs": {
+    "speakers": "Quad speakers"
+   },
+   "features": [
+    "12-inch 5:3 display",
+    "4G LTE",
+    "microSD up to 1TB",
+    "5W reverse charging",
+    "Storm Grey / Moonlight Silver"
+   ]
+  },
+  "techlife-smart-watch-l2": {
+   "price_note": "Sold at realme brand stores and the official TechLife Shopee / Lazada / TikTok Shop stores",
+   "features": [
+    "110+ sport modes",
+    "About 7–10 days of battery life",
+    "Full charge in about 80 minutes",
+    "Black / Titanium Silver"
+   ],
+   "health": [
+    "Heart rate",
+    "Blood oxygen",
+    "Sleep tracking",
+    "Menstrual cycle"
+   ]
+  },
+  "techlife-wireless-earbuds-plus-2": {
+   "price_note": "Sold at realme brand stores and the official TechLife Shopee / Lazada / TikTok Shop stores",
+   "specs": {
+    "driver": "13mm dynamic driver"
+   },
+   "features": [
+    "Active noise cancellation",
+    "Transparency mode",
+    "Touch controls",
+    "Black / Cream"
+   ]
   }
  },
  "news": {
@@ -9513,6 +9595,38 @@ window.RADAR_EN = {
   "2026-11-19-realme-watch-s5-listed-my": {
    "title": "realme Watch S5 quietly listed on realme Malaysia, price not announced",
    "summary": "The product page shows a 1.43-inch 1500-nit AMOLED, 20-day battery, independent GPS, 5ATM and one-touch Gemini; no price or purchase option yet and no official announcement seen."
+  },
+  "2026-11-20-huawei-nova-16s-on-sale-my": {
+   "title": "Huawei nova 16s series goes on sale in Malaysia from RM1,999 after rebate",
+   "summary": "nova 16s 12+256GB is RM2,599, or RM1,999 after the rebate; nova 16s Pro 12+512GB is RM3,299, or RM2,899 after the rebate, with gifts worth up to RM1,956."
+  },
+  "2026-11-20-vivo-v80-preorder-my": {
+   "title": "vivo V80 launches in Malaysia, pre-orders from RM2,399",
+   "summary": "Snapdragon 7 Gen 4, 6.59-inch 144Hz display, 50MP ZEISS main + 50MP 3x periscope telephoto, 7,200mAh battery with 90W charging; pre-orders until 27 November at RM2,399 / RM2,699 / RM3,299 on the official store."
+  },
+  "2026-11-20-honor-magic9-pro-max-deposit-my": {
+   "title": "HONOR Magic9 Pro Max opens RM300-deposit early-bird reservations",
+   "summary": "Reservations run until 23 November with gifts worth RM5,006 in total (incl. VVIP Magic Care+); the phone launches on 24 November, when the price will be announced."
+  },
+  "2026-11-20-honor-price-changes-my": {
+   "title": "HONOR store price changes: X9e Pro up RM100, 600s 5G back to RM1,299",
+   "summary": "X9e Pro 8+256GB goes from RM1,799 to RM1,899 and 8+512GB to RM2,399; 600s 5G 4+256GB from RM1,199 to RM1,299; X5d Plus is back to RM599 and out of stock for now."
+  },
+  "2026-11-20-sony-wf-1000xm6-price-my": {
+   "title": "Sony WF-1000XM6 drops to RM1,199 on Sony Store",
+   "summary": "Sony Store Malaysia now sells the WF-1000XM6 at RM1,199, RM400 below the RM1,599 regular price; no end date is stated."
+  },
+  "2026-11-20-huawei-osta-sub-brand": {
+   "title": "Huawei's new OSTA sub-brand debuts in China today with the wide O1 Pro",
+   "summary": "Richard Yu confirmed the sub-brand launches on 20 November; the O1 Pro is a wide-screen phone with up to 16GB+1TB and pre-orders open in China, with no word on markets outside China."
+  },
+  "2026-11-19-honor-magic-v7-rumour": {
+   "title": "HONOR Magic V7 rumoured to be a wide foldable for 2027",
+   "summary": "A leak says HONOR is preparing a wide-screen foldable under the Magic V7 name; HONOR has not confirmed the name, specs, price or timing."
+  },
+  "2026-11-20-realme-watch-s5-lazada-my": {
+   "title": "realme Watch S5 quietly goes on sale at RM499 on the official Lazada store",
+   "summary": "\"Buy Now\" on realme's Malaysian site now links to the official Lazada store, where it is listed at RM499 and currently out of stock; no official announcement seen."
   }
  }
 };
