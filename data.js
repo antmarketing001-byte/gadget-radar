@@ -3,7 +3,7 @@
    features = 配置以外的软件 / 系统功能；ai_features = 官方点名的 AI 功能；health = 手表健康功能；variants = 各内存 / 尺寸版本的独立售价；image = 去背机型图；specs.dimming / cooling / speakers / certs = 调光、散热、扬声器、认证（手机与平板）。
    限时优惠：price_myr = 现在实付价，price_old = 原价，promo_until / promo_from = 优惠起止日（马来西亚日期）；过了 promo_until 页面会自动改回原价。 */
 window.RADAR_DATA = {
- "updated": "2026-11-20T09:57:00+08:00",
+ "updated": "2026-11-21T08:53:00+08:00",
  "schedule": "每天更新一次",
  "devices": [
   {
@@ -314,7 +314,7 @@ window.RADAR_DATA = {
    "price_myr": 2999,
    "status": "在售",
    "image": "img/phone/sony-xperia-10-viii.png",
-   "price_note": "8+128GB 单一版本；早鸟优惠至 11 月 30 日（内容未核实）",
+   "price_note": "8+128GB 单一版本；早鸟优惠至 11 月 30 日（内容未核实）；Sony 官网另有 Sanrio Hello Kitty 版 RM3,399",
    "variants": [
     {
      "label": "8+128GB",
@@ -365,7 +365,8 @@ window.RADAR_DATA = {
    "sources": [
     "https://www.sony.co.th/en/smartphones/products/xperia-10m8/spec",
     "https://soyacincau.com/2026/11/02/sony-xperia-10-viii-malaysia-launch-price-specs/",
-    "https://www.mymobileindia.com/sony-xperia-10-viii-malaysia-price-rises-by-rm800-despite-minimal-upgrades/"
+    "https://www.mymobileindia.com/sony-xperia-10-viii-malaysia-price-rises-by-rm800-despite-minimal-upgrades/",
+    "https://store.sony.com.my/products/xperia10viii-sanrio"
    ]
   },
   {
@@ -1617,7 +1618,7 @@ window.RADAR_DATA = {
    "price_myr": 499,
    "status": "在售",
    "image": "img/phone/honor-x5d.png",
-   "price_note": "",
+   "price_note": "官网目前显示「到货通知」（缺货）",
    "variants": [
     {
      "label": "4+64GB",
@@ -1802,14 +1803,15 @@ window.RADAR_DATA = {
    "launch_my": "2026-09",
    "price_myr": 999,
    "status": "在售",
-   "price_note": "",
+   "price_note": "OPPO 官网 RM999（划线价 RM1,099）",
    "variants": [
     {
      "label": "4+128GB",
      "price_myr": 999,
-     "price_date": "2026-10-13",
+     "price_date": "2026-11-21",
      "ram_gb": 4,
-     "storage_gb": 128
+     "storage_gb": 128,
+     "price_old": 1099
     }
    ],
    "specs": {
@@ -1852,7 +1854,8 @@ window.RADAR_DATA = {
     "AI 消除 2.0"
    ],
    "sources": [
-    "https://www.oppo.com/my/smartphones/series-a/a6x-5g/"
+    "https://www.oppo.com/my/smartphones/series-a/a6x-5g/",
+    "https://www.oppo.com/my/product/oppo-a6x-5g.P.P1100520"
    ],
    "image": "img/phone/oppo-a6x-5g.png"
   },
@@ -18771,7 +18774,7 @@ window.RADAR_DATA = {
    "price_myr": 49,
    "status": "在售",
    "image": "img/earbuds/honor-earbuds-x10-play.png",
-   "price_note": "官网限时减 RM10 至 11 月 30 日，原价 RM59",
+   "price_note": "官网限时减 RM10 至 11 月 30 日，原价 RM59；目前显示「到货通知」（缺货）",
    "specs": {
     "driver": "13mm 强劲单元, 20 Hz - 20 kHz",
     "codecs": "AAC, SBC, HONOR Lab EQ Preset Optimization Configuration",
@@ -18931,7 +18934,7 @@ window.RADAR_DATA = {
    "price_myr": 159,
    "status": "在售",
    "image": "img/earbuds/huawei-freebuds-se-5-max.png",
-   "price_note": "",
+   "price_note": "首发优惠价 RM159，官方原价 RM249（截止日期未公布）",
    "specs": {
     "driver": "10mm 动圈单元, 20 Hz - 20 kHz",
     "codecs": "LDAC, AAC, SBC, mSBC, Certified Hi-Res Audio Wireless",
@@ -18956,8 +18959,11 @@ window.RADAR_DATA = {
    ],
    "ai_features": [],
    "sources": [
-    "https://www.lowyat.net/2026/409083/huawei-watch-6-series-launch-malaysia/"
-   ]
+    "https://www.lowyat.net/2026/409083/huawei-watch-6-series-launch-malaysia/",
+    "https://technave.com/gadget/HUAWEI-FreeBuds-SE-5-Max-Malaysia-Launch-Up-to-10-Hours-of-Battery-Life-and-Adaptive-ANC-priced-at-RM249-47800.html"
+   ],
+   "price_old": 249,
+   "price_date": "2026-11-21"
   },
   {
    "id": "nothing-headphone-1-pro",
@@ -20577,7 +20583,7 @@ window.RADAR_DATA = {
    "launch_my": null,
    "price_myr": 149,
    "status": "在售",
-   "price_note": "",
+   "price_note": "vivo 官网 RM149（划线价 RM199）",
    "specs": {
     "driver": "10mm, 20 Hz-20000 Hz",
     "codecs": "AAC, SBC, DeepX 4.0 stereo sound",
@@ -20599,7 +20605,9 @@ window.RADAR_DATA = {
    ],
    "ai_features": [],
    "sources": [],
-   "image": "img/earbuds/iqoo-buds-pro.png"
+   "image": "img/earbuds/iqoo-buds-pro.png",
+   "price_old": 199,
+   "price_date": "2026-11-21"
   },
   {
    "id": "nothing-cmf-buds-2",
@@ -26548,19 +26556,19 @@ window.RADAR_DATA = {
    "price_myr": 259,
    "status": "预购",
    "image": "img/earbuds/sony-mdr-3r.png",
-   "price_note": "有线耳机（USB-C）；Sony 大马官网预购，标准版 11 月中旬起发货；Stranger Things 版 RM299，年底发货",
+   "price_note": "有线耳机（USB-C）；Sony 大马官网两款目前均显示缺货（标准版原定 11 月中旬发货）；Stranger Things 版 RM299，年底发货",
    "variants": [
     {
      "label": "标准版",
      "label_en": "Standard",
      "price_myr": 259,
-     "price_date": "2026-11-19"
+     "price_date": "2026-11-21"
     },
     {
      "label": "Stranger Things 版",
      "label_en": "Stranger Things Edition",
      "price_myr": 299,
-     "price_date": "2026-11-19"
+     "price_date": "2026-11-21"
     }
    ],
    "specs": {
@@ -26810,6 +26818,37 @@ window.RADAR_DATA = {
   }
  ],
  "news": [
+  {
+   "id": "2026-11-21-samsung-black-friday-my",
+   "region": "MY",
+   "category": "phone",
+   "kind": "优惠",
+   "date": "2026-11-21",
+   "source": "Samsung Malaysia",
+   "url": "https://www.samsung.com/my/offer/black-friday",
+   "title": "三星大马黑色星期五优惠进行中，持续到 11 月 30 日",
+   "summary": "Samsung.com 黑五活动主推 Galaxy S26 Ultra、S26+、Z Fold8 与 Z Flip8；用 CIMB、Maybank 或 RHB 卡结账最高回扣 RM800，另有最高 RM400 Samsung Rewards 积分加码与以旧换新。",
+   "device_ids": [
+    "galaxy-s26-ultra",
+    "samsung-galaxy-s26plus",
+    "galaxy-z-fold8",
+    "galaxy-z-flip8"
+   ]
+  },
+  {
+   "id": "2026-11-21-xperia-10-viii-hello-kitty-my",
+   "region": "MY",
+   "category": "phone",
+   "kind": "上市",
+   "date": "2026-11-21",
+   "source": "Sony Store Malaysia",
+   "url": "https://store.sony.com.my/products/xperia10viii-sanrio",
+   "title": "Xperia 10 VIII Hello Kitty 版悄悄上架 Sony 大马官网，RM3,399",
+   "summary": "Sony 大马官网上架 Xperia 10 VIII Sanrio Hello Kitty 版，灰、薰衣草紫、白三色，售价 RM3,399（标准版 RM2,999）；未见官方发布消息。",
+   "device_ids": [
+    "sony-xperia-10-viii"
+   ]
+  },
   {
    "id": "2026-11-20-huawei-nova-16s-on-sale-my",
    "region": "MY",

@@ -378,7 +378,8 @@ window.RADAR_EN = {
    ],
    "specs": {
     "speakers": "Single speaker"
-   }
+   },
+   "price_note": "The official store currently shows \"Notify me\" (out of stock)"
   },
   "honor-x5d-plus": {
    "features": [
@@ -443,7 +444,8 @@ window.RADAR_EN = {
     "AI Perfect Shot",
     "AI Recompose",
     "AI Eraser 2.0"
-   ]
+   ],
+   "price_note": "RM999 on the OPPO online store (struck-through price RM1,099)"
   },
   "oppo-a7-pro-5g": {
    "features": [
@@ -6022,7 +6024,7 @@ window.RADAR_EN = {
    "specs": {
     "driver": "13mm Energetic Driver, 20 Hz - 20 kHz"
    },
-   "price_note": "RM10 off on the official store until 30 November; regular price RM59"
+   "price_note": "RM10 off on the official store until 30 November, regular price RM59; currently shows \"Notify me\" (out of stock)"
   },
   "vivo-buds-clip": {
    "features": [
@@ -6093,7 +6095,8 @@ window.RADAR_EN = {
    ],
    "specs": {
     "driver": "10mm Dynamic Driver Unit, 20 Hz - 20 kHz"
-   }
+   },
+   "price_note": "Introductory price RM159, official retail price RM249 (end date not announced)"
   },
   "nothing-headphone-1-pro": {
    "features": [
@@ -6761,7 +6764,8 @@ window.RADAR_EN = {
     "Google Fast Pair",
     "Find My Earphones",
     "10-min charge: 3.5 Hours"
-   ]
+   ],
+   "price_note": "RM149 on the vivo online store (struck-through price RM199)"
   },
   "nothing-cmf-buds-2": {
    "features": [
@@ -9062,7 +9066,7 @@ window.RADAR_EN = {
    ]
   },
   "sony-xperia-10-viii": {
-   "price_note": "Single 8+128GB version; early-bird offer until 30 November (details not verified)",
+   "price_note": "Single 8+128GB version; early-bird offer until 30 November (details not verified); the Sony online store also sells a Sanrio Hello Kitty edition at RM3,399",
    "specs": {
     "speakers": "Front stereo speakers"
    },
@@ -9249,7 +9253,7 @@ window.RADAR_EN = {
    }
   },
   "sony-mdr-3r": {
-   "price_note": "Wired headphones (USB-C); pre-order on Sony Malaysia online store, standard model ships from mid-November; Stranger Things Edition RM299, ships towards year-end",
+   "price_note": "Wired headphones (USB-C); both versions currently show out of stock on the Sony Malaysia online store (standard model was due to ship from mid-November); Stranger Things Edition RM299, ships towards year-end",
    "features": [
     "Wired USB-C, no charging or pairing",
     "In-line remote and mic",
@@ -9627,6 +9631,14 @@ window.RADAR_EN = {
   "2026-11-20-realme-watch-s5-lazada-my": {
    "title": "realme Watch S5 quietly goes on sale at RM499 on the official Lazada store",
    "summary": "\"Buy Now\" on realme's Malaysian site now links to the official Lazada store, where it is listed at RM499 and currently out of stock; no official announcement seen."
+  },
+  "2026-11-21-samsung-black-friday-my": {
+   "title": "Samsung Malaysia Black Friday deals run until 30 November",
+   "summary": "Samsung.com's Black Friday campaign features the Galaxy S26 Ultra, S26+, Z Fold8 and Z Flip8, with up to RM800 rebate when paying with CIMB, Maybank or RHB cards, up to RM400 Samsung Rewards points booster and trade-in offers."
+  },
+  "2026-11-21-xperia-10-viii-hello-kitty-my": {
+   "title": "Xperia 10 VIII Hello Kitty edition quietly listed on Sony Malaysia's store at RM3,399",
+   "summary": "Sony Malaysia's online store lists the Xperia 10 VIII Sanrio Hello Kitty edition in grey, lavender and white at RM3,399 (standard model RM2,999); no official announcement seen."
   }
  }
 };
